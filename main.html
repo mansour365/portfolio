@@ -7,15 +7,48 @@
     <style>
         p{font-family: helvetica;}
         h1{font-family: helvetica;}
+        a{font-family: helvetica;}
+        #menu{
+            text-align: right;
+        }
+        a:link{
+            color: grey;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:visited{
+            color: grey;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:hover{
+            color: black;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:active{
+            color: black;
+            background-color: transparent;
+            text-decoration: none;
+        }
     </style>
     <script src=""></script>
     
     
     
     <body>
+        <div id="menu">
+            <a href=#edu>Education</a>
+            <a href=#exp>Experience</a>
+            <a href=#tec>Technical Skills</a>
+            <a href=#prj>Projects</a>
+            <a href="https://linkedin.com/in/mansour-maqsoudi/" target="_blank">Linkedin</a>
+            <a href="https://github.com/mansour365" target="_blank">GitHub</a>
+            <a href=#con>Contact Me</a>
+        </div>
         <!-- Maybe an AI generated image of an owl -->
         
-        <h1>Mansour Maqsoudi</h1>
+        <h1 id="top">Mansour Maqsoudi</h1>
         
         <p>
             - Adept at learning new programming languages and applying technical skills to develop innovative solutions.<br>
@@ -24,20 +57,10 @@
         </p>
         
         <br>
-        <p>Links: 
-            <a href="linkedin.com/in/mansour-maqsoudi/">Linkedin</a>
-            <a href="https://github.com/mansour365">GitHub</a>
-        </p>
-        
-        <address>
-            <b>Email:</b> maqsoudi99@gmail.com <br>                                                   
-            <b>Phone:</b>   (514) 241-9264<br>
-            <b>Address:</b> 1445 Painter Circle, Montreal, Quebec, Canada  H4L 3C2<br>
-        </address>
         
         <hr>
         
-        <h1>Education</h1>
+        <h1 id="edu">Education</h1>
         <p><b>Bachelor of Computer Science</b>   |   2021	<br>
             -<b>Concordia University</b>, Montreal, Quebec, Canada<br>
             -<b>Relevant Courses:</b> Data Structures and Algorithms, Data Analytics, Web Programming, Databases<br>
@@ -52,7 +75,7 @@
         <!-- Maybe Image of vanier -->
         <hr>
         
-        <h1>Experience</h1>
+        <h1 id="exp">Experience</h1>
         <p><b>Remote Quality Assurance Tester</b>   |   2013 - Present	<br>
         VMC Game Labs, Montreal, Quebec, Canada<br>
         -	Bug reporting, Document logs, Handle confidential information <br>
@@ -67,7 +90,7 @@
         </p>
         <hr>
         
-        <h1>Technical Skills</h1>
+        <h1 id="tec">Technical Skills</h1>
         <p>
             <b>Operating Systems:</b> Windows • macOS<br><br>
             <b>Applications:</b>  Eclipse • Microsoft Visual Studio • NetBeans • Android Studio • Microsoft Office: Word • Excel • PowerPoint<br><br>
@@ -77,7 +100,7 @@
         </p>
         <hr>
         
-        <h1>Projects</h1>
+        <h1 id="prj">Projects</h1>
         <p>
             <b>Counter Android Application</b> - Developed an Android app used for counting. Coded in Android Studio IDE, using Java and the Android SDK. Features vibration after a certain count interval, full-screen mode, vibration toggles and duration. These features can be adjusted in the settings page of the app. User interface takes advantage of the power saving features of an OLED display.<br>
             <!-- Maybe Image of the app inside a phone model -->
@@ -88,6 +111,14 @@
             <br>
 
         </p>
+        
+        <hr>
+        <h1 id="con">Contact Me</h1>
+        <address>
+            <b>Email:</b> <a href="mailto:maqsoudi99@gmail.com">maqsoudi99@gmail.com</a><br>                                                   
+            <b>Phone:</b>   (514) 241-9264<br>
+            <b>Address:</b> 1445 Painter Circle, Montreal, Quebec, Canada  H4L 3C2<br>
+        </address>
         
 
     </body>
