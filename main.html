@@ -1,50 +1,80 @@
  <!DOCTYPE html>
 <html lang="en">
-    <meta charset="UTF-8">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="">
-    <style>
-        p{font-family: helvetica;}
-        h1{font-family: helvetica;}
-        a{font-family: helvetica;}
-        #menu{
-            text-align: right;
-        }
-        a:link{
-            color: grey;
-            background-color: transparent;
-            text-decoration: none;
-        }
-        a:visited{
-            color: grey;
-            background-color: transparent;
-            text-decoration: none;
-        }
-        a:hover{
-            color: black;
-            background-color: transparent;
-            text-decoration: none;
-        }
-        a:active{
-            color: black;
-            background-color: transparent;
-            text-decoration: none;
-        }
-    </style>
-    <script src=""></script>
-    
+    <head>
+        <meta charset="UTF-8">
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            p{font-family: helvetica;}
+            h1{font-family: helvetica;}
+            a{font-family: helvetica;}
+            
+            /*Create a sticky navbar*/
+            #navbar{
+                overflow: hidden;
+                background-color: #f1f1f1; /*temporary just to see its size */
+                padding: 90px 10px; /*using 2 number, first number: top bottom, second number: left right*/
+                transition: 0.4s; /*transition effect when padding is decreased */
+                position: fixed; /*this make it sticky/fixed nav bar*/
+                width: 100%;
+                top: 0; /* 0 pixels away from the top */
+                z-index: 99; /* make sure its always on top of everything else: put a big value */
+                
+            }
+            
+            /*Style the navbar links*/
+            #navbar a {
+                text-decoration: none;
+                float: left;
+                padding: 12px;
+                text-align: center;
+                color: grey;
+                background-color: transparent;
+                font-size: 13px;
+                line-height: 25px;
+            }
+            
+            #navbar #logo {
+                font-family: cursive;
+                font-size: 40px;
+                font-weight: bold;
+                transition: 0.4s;
+                float: left;
+                padding-left: 11%;
+            }
+            
+            #navbar a:hover{
+                color: black;
+                background-color: transparent;
+            }
+            
+            #navbar a:active{
+                color: black;
+                background-color: transparent;
+            }
+            
+            #navbar-right {
+                float:right;
+                padding-right: 12%;
+            }
+        </style>
+        <script src=""></script>
+    </head>
     
     
     <body>
-        <div id="menu">
-            <a href=#edu>Education</a>
-            <a href=#exp>Experience</a>
-            <a href=#tec>Technical Skills</a>
-            <a href=#prj>Projects</a>
-            <a href="https://linkedin.com/in/mansour-maqsoudi/" target="_blank">Linkedin</a>
-            <a href="https://github.com/mansour365" target="_blank">GitHub</a>
-            <a href=#con>Contact Me</a>
+        <div id="navbar">
+            <a href="#default" id="logo">Portfolio</a>
+                <div id = "navbar-right">
+                    <a href=#edu>EDUCATION</a>
+                    <a href=#exp>EXPERIENCE</a>
+                    <a href=#tec>SKILLS</a>
+                    <a href=#prj>PROJECTS</a>
+                    <a href="https://linkedin.com/in/mansour-maqsoudi/" target="_blank">LINKEDIN</a>
+                    <a href="https://github.com/mansour365" target="_blank">GITHUB</a>
+                    <a href=#con>CONTACT</a>
+                </div>
         </div>
         <!-- Maybe an AI generated image of an owl -->
         
