@@ -13,14 +13,14 @@
             /*Create a sticky navbar*/
             #navbar{
                 overflow: hidden;
-                background-color: #f1f1f1; /*temporary just to see its size */
+                background-color: grey; /*temporary just to see its size */
                 padding: 90px 10px; /*using 2 number, first number: top bottom, second number: left right*/
                 transition: 0.4s; /*transition effect when padding is decreased */
                 position: fixed; /*this make it sticky/fixed nav bar*/
                 width: 100%;
                 top: 0; /* 0 pixels away from the top */
                 z-index: 99; /* make sure its always on top of everything else: put a big value */
-                padding-bottom: 15px;
+                /*padding-bottom: 15px; /*without this the navbar eats part of the content*/
             }
             
             /*Style the navbar links*/
@@ -35,36 +35,61 @@
                 line-height: 25px;
             }
             
+            /*Style the logo*/
             #navbar #logo {
                 font-family: cursive;
-                font-size: 40px;
+                font-size: 35px;
                 font-weight: bold;
                 transition: 0.4s;
                 float: left;
-                padding-left: 11%;
+                padding-left: 15%;
             }
-            
+            /*behaviour of the nav links*/
             #navbar a:hover{
                 color: black;
                 background-color: transparent;
             }
-            
             #navbar a:active{
                 color: black;
                 background-color: transparent;
             }
             
+            /*position of the links*/
             #navbar-right {
                 float:right;
-                padding-right: 12%;
+                padding-right: 15%;
             }
             
-            
-            
-            #first{
-                margin-top:250px;
+            /* Main content of website*/
+            /* Main content needs to be before the smaller screens, so that it will take effect
+            for both big and small screens*/
+            #content{
+                margin-top:350px;
                 padding-top:15px;
+                padding-left: 15%;
+                padding-right: 15%;
             }
+            
+            /*FOR SMALLER SCREENS*/
+            @media screen and (max-width: 670px){
+                #navbar{
+                    padding: 20px 10px  !important;
+                }
+                #navbar a{
+                    float: none;
+                    display: block;
+                    text-align: left;
+                }
+                #navbar-right{
+                    float:none;
+                }
+                #navbar #logo {
+                text-align: left;
+                float: none;
+                
+            }
+            
+
         </style>
         <script src=""></script>
     </head>
@@ -74,111 +99,127 @@
         <nav id="navbar">
             <a href="#default" id="logo">Portfolio</a>
                 <div id = "navbar-right">
+                    <a href=#abu>ABOUT</a>
                     <a href=#edu>EDUCATION</a>
                     <a href=#exp>EXPERIENCE</a>
                     <a href=#tec>SKILLS</a>
                     <a href=#prj>PROJECTS</a>
-                    <a href="https://linkedin.com/in/mansour-maqsoudi/" target="_blank">LINKEDIN</a>
-                    <a href="https://github.com/mansour365" target="_blank">GITHUB</a>
                     <a href=#con>CONTACT</a>
                 </div>
         </nav>
         
 
-        <!-- Maybe an AI generated image of an owl -->
-        <section id="first">
-            <h1 id="top">Mansour Maqsoudi</h1>
-
-            <p>
-                - Adept at learning new programming languages and applying technical skills to develop innovative solutions.<br>
-                - Exceptional eye for detail gained through video game quality assurance testing.<br>
-                - Proactive team member due to patience and communication skills.<br>
-            </p>
-        </section>
-        
-        
-        <br>
-        <hr>
-        
-        
-        <section>
-            <h1 id="edu">Education</h1>
-            <p><b>Bachelor of Computer Science</b>   |   2021	<br>
-                -<b>Concordia University</b>, Montreal, Quebec, Canada<br>
-                -<b>Relevant Courses:</b> Data Structures and Algorithms, Data Analytics, Web Programming, Databases<br>
-            </p>
-
-            <!-- Maybe Image of concordia university -->
-            <p>
-                <b>Diploma of College Studies in Social Science</b>   |   2014 <br>						  
-                -<b>Vanier College</b>, Montreal, Quebec, Canada <br>
-                -<b>Relevant Courses:</b> Quantitative Methods, Macroeconomics, Microeconomics, Research Methods <br>
-            </p>
-            <!-- Maybe Image of vanier -->
-        </section>
-        
-        
-        <hr>
-        
-        
-        <section>
-            <h1 id="exp">Experience</h1>
-            <p><b>Remote Quality Assurance Tester</b>   |   2013 - Present	<br>
-            VMC Game Labs, Montreal, Quebec, Canada<br>
-            -	Bug reporting, Document logs, Handle confidential information <br>
-            <br>
-            <b>Volunteer</b>   |   2013 - 2014	<br>
-            Montreal General Hospital, Montreal, Quebec, Canada<br>
-            -	Staff and Patient Assistant <br>
-            <br>
-            <b>Other Non-Office Employment</b><br>
-            Hypertec Group, Montreal, Quebec, Canada<br>
-            Restaurant Da Franco, Montreal, Quebec, Canada<br>
-            </p>
-        </section>
+        <nav id="content">
+            <!-- Maybe an AI generated image of an owl -->
+            <section>
+                <h1 id="top">Mansour Maqsoudi</h1>
+                <br>
+                <br>
+                <br><p>Some Image</p>
+                <br>
+                <br>
+                <br>
+                <br>
+            </section>
             
-        
+            <br>
+            <hr>
+            
+            <section>
+                <h1 id="abu">About</h1>
+                <p>
+                    - Adept at learning new programming languages and applying technical skills to develop innovative solutions.<br>
+                    - Exceptional eye for detail gained through video game quality assurance testing.<br>
+                    - Proactive team member due to patience and communication skills.<br>
+                </p>
+            </section>
 
-        <hr>
-        <section>
-            <h1 id="tec">Technical Skills</h1>
-            <p>
-                <b>Operating Systems:</b> Windows • macOS<br><br>
-                <b>Applications:</b>  Eclipse • Microsoft Visual Studio • NetBeans • Android Studio • Microsoft Office: Word • Excel • PowerPoint<br><br>
-                <b>Programming:</b> Java • C++ • HTML • CSS • JavaScript • Document Object Model (DOM) • ReactJS • PHP • mySQL • Python • C • Ruby • C# • Prolog • Aspect-J • Lisp<br><br>
-                <b>Other:</b>  GitHub version control • Data Structures and Algorithms • Data Analytics (OpenRefine and Jupyter Notebook) • Multicore programming (Intel TBB, OpenCL and CUDA) • Final Cut Pro<br>
 
-            </p>
-        </section>
-        
-        
-        <hr>
-        
-        
-        <section>
-            <h1 id="prj">Projects</h1>
-            <p>
-                <b>Counter Android Application</b> - Developed an Android app used for counting. Coded in Android Studio IDE, using Java and the Android SDK. Features vibration after a certain count interval, full-screen mode, vibration toggles and duration. These features can be adjusted in the settings page of the app. User interface takes advantage of the power saving features of an OLED display.<br>
-                <!-- Maybe Image of the app inside a phone model -->
-                <br>
-                <b>Snake game</b> - Developed a snake game with a graphical user interface using C++ and OpenGL. Coded in Microsoft Visual Studio IDE. Features collision detection and real time user keyboard input. User interface designed using OpenGL.<br>
-                <br>
-                <b>Battleship game</b> - Developed a battleship game in Eclipse IDE using Java. Makes use of object-oriented programming concepts. Takes advantage of random number generation.<br>
-                <br>
+            <br>
+            <hr>
 
-            </p>
-        </section>
-        
-        <hr>
-        
-        <section>
-            <h1 id="con">Contact Me</h1>
-            <address>
-                <b>Email:</b> <a href="mailto:maqsoudi99@gmail.com">maqsoudi99@gmail.com</a><br>                                                   
-                <b>Phone:</b>   (514) 241-9264<br>
-                <b>Address:</b> 1445 Painter Circle, Montreal, Quebec, Canada  H4L 3C2<br>
-            </address>
-        </section>
+
+            <section>
+                <h1 id="edu">Education</h1>
+                <p><b>Bachelor of Computer Science</b>   |   2021	<br>
+                    -<b>Concordia University</b>, Montreal, Quebec, Canada<br>
+                    -<b>Relevant Courses:</b> Data Structures and Algorithms, Data Analytics, Web Programming, Databases<br>
+                </p>
+
+                <!-- Maybe Image of concordia university -->
+                <p>
+                    <b>Diploma of College Studies in Social Science</b>   |   2014 <br>						  
+                    -<b>Vanier College</b>, Montreal, Quebec, Canada <br>
+                    -<b>Relevant Courses:</b> Quantitative Methods, Macroeconomics, Microeconomics, Research Methods <br>
+                </p>
+                <!-- Maybe Image of vanier -->
+            </section>
+
+
+            <hr>
+
+
+            <section>
+                <h1 id="exp">Experience</h1>
+                <p><b>Remote Quality Assurance Tester</b>   |   2013 - Present	<br>
+                VMC Game Labs, Montreal, Quebec, Canada<br>
+                -	Bug reporting, Document logs, Handle confidential information <br>
+                <br>
+                <b>Volunteer</b>   |   2013 - 2014	<br>
+                Montreal General Hospital, Montreal, Quebec, Canada<br>
+                -	Staff and Patient Assistant <br>
+                <br>
+                <b>Other Non-Office Employment</b><br>
+                Hypertec Group, Montreal, Quebec, Canada<br>
+                Restaurant Da Franco, Montreal, Quebec, Canada<br>
+                </p>
+            </section>
+
+
+
+            <hr>
+            <section>
+                <h1 id="tec">Technical Skills</h1>
+                <p>
+                    <b>Operating Systems:</b> Windows • macOS<br><br>
+                    <b>Applications:</b>  Eclipse • Microsoft Visual Studio • NetBeans • Android Studio • Microsoft Office: Word • Excel • PowerPoint<br><br>
+                    <b>Programming:</b> Java • C++ • HTML • CSS • JavaScript • Document Object Model (DOM) • ReactJS • PHP • mySQL • Python • C • Ruby • C# • Prolog • Aspect-J • Lisp<br><br>
+                    <b>Other:</b>  GitHub version control • Data Structures and Algorithms • Data Analytics (OpenRefine and Jupyter Notebook) • Multicore programming (Intel TBB, OpenCL and CUDA) • Final Cut Pro<br>
+
+                </p>
+            </section>
+
+
+            <hr>
+
+
+            <section>
+                <h1 id="prj">Projects</h1>
+                <p>
+                    <a href="https://github.com/mansour365" target="_blank">GITHUB</a>
+                    <br>
+                    <b>Counter Android Application</b> - Developed an Android app used for counting. Coded in Android Studio IDE, using Java and the Android SDK. Features vibration after a certain count interval, full-screen mode, vibration toggles and duration. These features can be adjusted in the settings page of the app. User interface takes advantage of the power saving features of an OLED display.<br>
+                    <!-- Maybe Image of the app inside a phone model -->
+                    <br>
+                    <b>Snake game</b> - Developed a snake game with a graphical user interface using C++ and OpenGL. Coded in Microsoft Visual Studio IDE. Features collision detection and real time user keyboard input. User interface designed using OpenGL.<br>
+                    <br>
+                    <b>Battleship game</b> - Developed a battleship game in Eclipse IDE using Java. Makes use of object-oriented programming concepts. Takes advantage of random number generation.<br>
+                    <br>
+
+                </p>
+            </section>
+
+            <hr>
+
+            <section>
+                <h1 id="con">Contact Me</h1>
+                <address>
+                    <b>Email:</b> <a href="mailto:maqsoudi99@gmail.com">maqsoudi99@gmail.com</a><br>         <b>Phone:</b>   (514) 241-9264<br>
+                    Montreal, Quebec, Canada <br>
+                    <a href="https://linkedin.com/in/mansour-maqsoudi/" target="_blank">LINKEDIN</a>
+                </address>
+            </section>
+        </nav>
 
     </body>
     
