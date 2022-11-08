@@ -10,11 +10,11 @@
             h1{font-family: helvetica;}
             a{font-family: helvetica;}
             
-            /*Create a sticky navbar*/
+            /*Create a sticky/fixed navbar*/
             #navbar{
                 overflow: hidden;
                 background-color: grey; /*temporary just to see its size */
-                padding: 90px 10px; /*using 2 number, first number: top bottom, second number: left right*/
+                padding: 54px 10px; /* first number: top bottom, second number: left right*/
                 transition: 0.4s; /*transition effect when padding is decreased */
                 position: fixed; /*this make it sticky/fixed nav bar*/
                 width: 100%;
@@ -27,7 +27,7 @@
             #navbar a {
                 text-decoration: none;
                 float: left;
-                padding: 12px;
+                padding: 12px; /*Padding around each link*/
                 text-align: center;
                 color: grey;
                 background-color: transparent;
@@ -42,7 +42,7 @@
                 font-weight: bold;
                 transition: 0.4s;
                 float: left;
-                padding-left: 15%;
+                padding-left: 13%;
             }
             /*behaviour of the nav links*/
             #navbar a:hover{
@@ -73,25 +73,32 @@
             /*FOR SMALLER SCREENS*/
             @media screen and (max-width: 670px){
                 #navbar{
-                    padding: 20px 10px  !important;
+                    /*Because we make it vertical, reduce top and bottom padding*/
+                    padding: 20px 10px  !important; 
                 }
                 #navbar a{
                     float: none;
                     display: block;
+                    padding: 4px;   /*reduce padding between links */
+                    padding-left: 15%;  /*Add left padding, so doesnt touch left edge of screen*/
                     text-align: left;
                 }
                 #navbar-right{
                     float:none;
                 }
                 #navbar #logo {
-                text-align: left;
-                float: none;
+                    text-align: left;
+                    float: none;
+                    padding-bottom: 25px; /* Add padding under logo, so not too close to links*/
                 
+                }
             }
             
 
         </style>
-        <script src=""></script>
+        <script>
+
+        </script>
     </head>
     
     
@@ -123,7 +130,7 @@
             </section>
             
             <br>
-            <hr>
+            <hrgit>
             
             <section>
                 <h1 id="abu">About</h1>
