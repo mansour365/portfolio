@@ -9,11 +9,12 @@
             p{font-family: helvetica;}
             h1{font-family: helvetica;}
             a{font-family: helvetica;}
+            body{background-color: rgb(248, 248, 247);}
             
             /*Create a sticky/fixed navbar*/
             #navbar{
                 overflow: hidden;
-                background-color: grey; /*temporary just to see its size */
+                background-color: white; /*background color of navbar */
                 padding: 54px 10px; /* first number: top bottom, second number: left right*/
                 transition: 0.4s; /*transition effect when padding is decreased */
                 position: fixed; /*this make it sticky/fixed nav bar*/
@@ -29,7 +30,7 @@
                 float: left;
                 padding: 12px; /*Padding around each link*/
                 text-align: center;
-                color: grey;
+                color: rgb(173, 173, 173);
                 background-color: transparent;
                 font-size: 13px;
                 line-height: 25px;
@@ -37,7 +38,7 @@
             
             /*Style the logo*/
             #navbar #logo {
-                font-family: cursive;
+                font-family: helvetica;
                 font-size: 35px;
                 font-weight: bold;
                 transition: 0.4s;
@@ -96,8 +97,23 @@
             
 
         </style>
+            
         <script>
+            //When user scrolls down 80px from top -> resize navbar padding and logo font size
+            /*
+            window.onscroll = function() {scrollFunction()};
 
+            function scrollFunction() {
+                if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                    document.getElementById("navbar").style.padding = "30px 10px"; //padding when scroll
+                    document.getElementById("logo").style.fontSize = "25px"; //logo size when scroll
+                } 
+                else {
+                    document.getElementById("navbar").style.padding = "54px 10px"; //padding when didn't scroll
+                    document.getElementById("logo").style.fontSize = "35px"; //logo size when didn't scroll
+                }
+            }
+            */
         </script>
     </head>
     
@@ -111,7 +127,7 @@
                     <a href=#exp>EXPERIENCE</a>
                     <a href=#tec>SKILLS</a>
                     <a href=#prj>PROJECTS</a>
-                    <a href=#con>CONTACT</a>
+                    <a href=#con>CONTACT</a> 
                 </div>
         </nav>
         
@@ -122,7 +138,7 @@
                 <h1 id="top">Mansour Maqsoudi</h1>
                 <br>
                 <br>
-                <br><p>Some Image</p>
+                <br><p>Some Images</p>
                 <br>
                 <br>
                 <br>
