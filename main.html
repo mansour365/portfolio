@@ -23,7 +23,8 @@
                 z-index: 99; /* make sure its always on top of everything else: put a big value */
                 /*padding-bottom: 15px; /*without this the navbar eats part of the content*/
             }
-            
+
+
             /*Style the navbar links*/
             #navbar a {
                 text-decoration: none;
@@ -43,7 +44,17 @@
                 font-weight: bold;
                 transition: 0.4s;
                 float: left;
-                padding-left: 13%;
+                border: 3px solid blue; /*for testing puposes*/
+                /*padding-left: 13%;*/
+            }
+            
+            /*position of the links*/
+            #navbar-right {
+                float:right;
+                /*padding-right: 15%;*/
+                /*width:990px;*/
+                /*margin: auto;*/
+                border: 3px solid red; /*for testing puposes*/
             }
             /*behaviour of the nav links*/
             #navbar a:hover{
@@ -55,24 +66,36 @@
                 background-color: transparent;
             }
             
-            /*position of the links*/
-            #navbar-right {
-                float:right;
-                padding-right: 15%;
+            
+            /*This is for both the logo and navbar links*/
+            #navbar-content{
+                width:990px;
+                margin: auto;
             }
             
             /* Main content of website*/
             /* Main content needs to be before the smaller screens, so that it will take effect
             for both big and small screens*/
             #content{
+                width:990px; /*approximately the proper fixed wdith for content*/
                 margin-top:350px;
                 padding-top:15px;
-                padding-left: 15%;
-                padding-right: 15%;
+                border: 3px solid green; /*for testing puposes*/
+                margin: auto; /*this centers the container in the middle*/
+                /*padding-left: 15%;*/
+                /*padding-right: 15%;*/
+                
+            }
+
+            /*FOR SMALLER SCREENS*/
+            @media screen and (max-width: 990px){
+                #navbar-content{
+                    width:auto;
+                }
             }
             
-            /*FOR SMALLER SCREENS*/
-            @media screen and (max-width: 670px){
+            /*FOR EVEN SMALLER SCREENS*/
+            @media screen and (max-width: 720px){
                 #navbar{
                     /*Because we make it vertical, reduce top and bottom padding*/
                     padding: 20px 10px  !important; 
@@ -120,15 +143,17 @@
     
     <body>
         <nav id="navbar">
-            <a href="#default" id="logo">Portfolio</a>
-                <div id = "navbar-right">
-                    <a href=#abo>ABOUT</a>
-                    <a href=#edu>EDUCATION</a>
-                    <a href=#exp>EXPERIENCE</a>
-                    <a href=#tec>SKILLS</a>
-                    <a href=#prj>PROJECTS</a>
-                    <a href=#con>CONTACT</a> 
-                </div>
+            <div id = "navbar-content">
+                <a href="#default" id="logo">Portfolio</a>
+                    <div id = "navbar-right">
+                        <a href=#abo>ABOUT</a>
+                        <a href=#edu>EDUCATION</a>
+                        <a href=#exp>EXPERIENCE</a>
+                        <a href=#tec>SKILLS</a>
+                        <a href=#prj>PROJECTS</a>
+                        <a href=#con>CONTACT</a> 
+                    </div>
+            </div>
         </nav>
         
 
