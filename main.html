@@ -13,12 +13,12 @@
             
             /*Create a sticky/fixed navbar*/
             #navbar{
-                overflow: hidden;
                 background-color: white; /*background color of navbar */
-                padding: 54px 10px; /* first number: top bottom, second number: left right*/
-                transition: 0.4s; /*transition effect when padding is decreased */
+                padding-top: 54px; /*give the navbar the desired thickness*/
+                padding-bottom: 54px; /*give the navbar the desired thickness*/
+                transition: 0.4s; /*transition effect length when padding is decreased */
                 position: fixed; /*this make it sticky/fixed nav bar*/
-                width: 100%;
+                width: 100%; /*Make sure navbar take full span of screen*/
                 top: 0; /* 0 pixels away from the top */
                 z-index: 99; /* make sure its always on top of everything else: put a big value */
                 /*padding-bottom: 15px; /*without this the navbar eats part of the content*/
@@ -28,32 +28,26 @@
             /*Style the navbar links*/
             #navbar a {
                 text-decoration: none;
-                float: left;
+                float: left; /*All of the navbar links float on same line (left)*/
                 padding: 12px; /*Padding around each link*/
-                text-align: center;
-                color: rgb(173, 173, 173);
-                background-color: transparent;
-                font-size: 13px;
-                line-height: 25px;
+                color: rgb(173, 173, 173); /*color of the links in the navbar*/
+                line-height: 25px; /*the height of the navbar link button */
             }
             
             /*Style the logo*/
             #navbar #logo {
-                font-family: helvetica;
-                font-size: 35px;
-                font-weight: bold;
-                transition: 0.4s;
-                float: left;
+                font-family: helvetica; /*font familly of logo*/
+                font-size: 35px; /*font size of logo*/
+                font-weight: bold; /*logo in bold*/
+                transition: 0.4s; /*transition speed of the logo when navbar size changes */
+                float: left; /*logo floats to left by default*/
                 border: 3px solid blue; /*for testing puposes*/
-                /*padding-left: 13%;*/
             }
             
             /*position of the links*/
             #navbar-right {
                 float:right;
-                /*padding-right: 15%;*/
-                /*width:990px;*/
-                /*margin: auto;*/
+                font-size: 13px;
                 border: 3px solid red; /*for testing puposes*/
             }
             /*behaviour of the nav links*/
@@ -71,6 +65,7 @@
             #navbar-content{
                 width:990px;
                 margin: auto;
+                border: 3px solid purple; /*for testing puposes*/
             }
             
             /* Main content of website*/
@@ -78,13 +73,10 @@
             for both big and small screens*/
             #content{
                 width:990px; /*approximately the proper fixed wdith for content*/
+                margin: auto; /*this centers the container in the middle*/
                 margin-top:350px;
                 padding-top:15px;
                 border: 3px solid green; /*for testing puposes*/
-                margin: auto; /*this centers the container in the middle*/
-                /*padding-left: 15%;*/
-                /*padding-right: 15%;*/
-                
             }
 
             /*FOR SMALLER SCREENS*/
@@ -95,23 +87,24 @@
             }
             
             /*FOR EVEN SMALLER SCREENS*/
-            @media screen and (max-width: 720px){
+            @media screen and (max-width: 750px){
                 #navbar{
                     /*Because we make it vertical, reduce top and bottom padding*/
-                    padding: 20px 10px  !important; 
+                    padding: 20px 0px  !important; 
                 }
                 #navbar a{
                     float: none;
                     display: block;
                     padding: 4px;   /*reduce padding between links */
-                    padding-left: 15%;  /*Add left padding, so doesnt touch left edge of screen*/
                     text-align: left;
                 }
                 #navbar-right{
                     float:none;
+                    padding-left:10%; /*Add left padding, so links don't touch left edge of screen*/
+
                 }
                 #navbar #logo {
-                    text-align: left;
+                    text-align: center;
                     float: none;
                     padding-bottom: 25px; /* Add padding under logo, so not too close to links*/
                 
@@ -128,11 +121,11 @@
 
             function scrollFunction() {
                 if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-                    document.getElementById("navbar").style.padding = "30px 10px"; //padding when scroll
+                    document.getElementById("navbar").style.padding = "30px 0px"; //padding when scroll
                     document.getElementById("logo").style.fontSize = "25px"; //logo size when scroll
                 } 
                 else {
-                    document.getElementById("navbar").style.padding = "54px 10px"; //padding when didn't scroll
+                    document.getElementById("navbar").style.padding = "54px 0px"; //padding when didn't scroll
                     document.getElementById("logo").style.fontSize = "35px"; //logo size when didn't scroll
                 }
             }
