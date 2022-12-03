@@ -4,6 +4,10 @@
         <meta charset="UTF-8">
         <title>Page Title</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
         <link rel="stylesheet" href="">
         <style>
             html{scroll-padding-top: 150px; /* height of sticky header when shrunk */} /*Experimental to fix anchor bookmarks */
@@ -85,6 +89,12 @@
                 /*padding-top:15px;*/
                 border: 3px solid green; /*for testing puposes*/
             }
+            
+            /*Make burger icon normally invisible*/
+            #icon{
+                display:none;
+                border: 3px solid red;
+            }
 
             /*FOR SMALLER SCREENS*/
             @media screen and (max-width: 990px){
@@ -95,6 +105,8 @@
                     width:auto;
                 }
             }
+
+
             
             /*FOR EVEN SMALLER SCREENS*/
             @media screen and (max-width: 750px){
@@ -108,27 +120,49 @@
                     padding: 4px;   /*reduce padding between links */
                     text-align: left;
                 }
-                #navbar-right{
-                    float:none;
+                .anchor-links{
+                    
+                   /* float:none;
                     padding-left:10%; /*Add left padding, so links don't touch left edge of screen*/
-
+                    display:none; /*Make anchor links disappear when small screen mode */
+                    
                 }
                 #navbar #logo {
                     text-align: center;
-                    float: none;
+                    float: right;
                     padding-bottom: 25px; /* Add padding under logo, so not too close to links*/
                 }
                 #content {
                     margin-top:318px;
                 }
-            }
+                #icon{
+                    display:unset;
+                    float: left;
+                    font-size: 28px;
+
+                }
+                /*if burger button is clicked */
+                .anchor-links.responsive{
+                    display:inline;
+                    float:left;
+                    /*text-align: left;*/
+                    /*position:relative;*/
+                    width:100%;
+                    
+
+                  
+                }
             
+
+            }
+
+
 
         </style>
             
         <script>
             //When user scrolls down 80px from top -> resize navbar padding and logo font size
-            
+            /*
             window.onscroll = function() {scrollFunction()};
 
             function scrollFunction() {
@@ -141,23 +175,46 @@
                     document.getElementById("logo").style.fontSize = "35px"; //logo size when didn't scroll
                 }
             }
+            */
+
+
+            /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+            function myFunction() {
+
+                var x = document.getElementById("navbar-right");
+                
+                if (x.className === "anchor-links") {
+                    x.className += " responsive";
+                } 
+                else {
+                    x.className = "anchor-links";
+                }
+                
+            }
             
         </script>
     </head>
     
     
     <body>
+       
+
         <nav id="navbar">
             <div id = "navbar-content">
                 <a href="#default" id="logo">Portfolio</a>
-                    <div id = "navbar-right">
-                        <a href=#abo>ABOUT</a>
-                        <a href=#edu>EDUCATION</a>
-                        <a href=#exp>EXPERIENCE</a>
-                        <a href=#tec>SKILLS</a>
-                        <a href=#prj>PROJECTS</a>
-                        <a href=#con>CONTACT</a> 
-                    </div>
+                <div id = "navbar-right" class = "anchor-links">
+                    <a href=#abo>ABOUT</a>
+                    <a href=#edu>EDUCATION</a>
+                    <a href=#exp>EXPERIENCE</a>
+                    <a href=#tec>SKILLS</a>
+                    <a href=#prj>PROJECTS</a>
+                    <a href=#con>CONTACT</a> 
+                </div>
+                <div id = "icon" onclick="myFunction()">
+                    <a href="javascript:void(0);" class="icon">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>  
             </div>
         </nav>
         
