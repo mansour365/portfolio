@@ -10,14 +10,18 @@
 
         <link rel="stylesheet" href="">
         <style>
-            html{scroll-padding-top: 150px; /* height of sticky header when shrunk */} /*Experimental to fix anchor bookmarks */
+            html{
+                scroll-padding-top: 146px; /* height of sticky header when shrunk */
+                scroll-behavior: smooth;
+            } /*Experimental to fix anchor bookmarks */
+
             /*This experimental fix seems to work well when navbar does shrink*/
             /*Needs to be altered when switching to small screen mode*/
             p{font-family: helvetica;}
             h1{font-family: helvetica;}
             a{font-family: helvetica;}
             body{
-                background-color: rgb(248, 248, 247);
+                background-color: rgb(248, 248, 247); /*background color of content: slightly off-white */
                 margin: 0;  /*body has a default small margin around, set to zero so that navbar spans entire width */
             }
             
@@ -32,7 +36,7 @@
                 top: 0; /* 0 pixels away from the top */
                 z-index: 99; /* make sure its always on top of everything else: put a big value */
                 /*padding-bottom: 15px; /*without this the navbar eats part of the content*/
-                border: 3px solid orange;
+                border: 3px solid orange; /*for testing puposes*/
             }
 
 
@@ -93,7 +97,7 @@
             /*Make burger icon normally invisible*/
             #icon{
                 display:none;
-                border: 3px solid red;
+                border: 3px solid red;/*for testing puposes*/
             }
 
             /*FOR SMALLER SCREENS*/
@@ -110,6 +114,7 @@
             
             /*FOR EVEN SMALLER SCREENS*/
             @media screen and (max-width: 750px){
+                html{scroll-padding-top: 131px; /* height of sticky header when shrunk */} /*Experimental to fix anchor bookmarks */
                 #navbar{
                     /*Because we make it vertical, reduce top and bottom padding*/
                     padding: 20px 0px  !important; 
@@ -135,10 +140,10 @@
                     margin-top:113px; /*padding of the main content when screen is smaller */
                 }
                 #icon{
-                    display:unset;
+                    display:unset; /*Make burger icon visible when screen is small */
                     position:fixed;
                     float: left;
-                    font-size: 28px;
+                    font-size: 28px; /*Font size of burger icon*/
                 }
                 /*if burger button is clicked */
                 .anchor-links.responsive{
@@ -156,7 +161,7 @@
             
         <script>
             //When user scrolls down 80px from top -> resize navbar padding and logo font size
-            /*
+            
             window.onscroll = function() {scrollFunction()};
 
             function scrollFunction() {
@@ -169,7 +174,7 @@
                     document.getElementById("logo").style.fontSize = "35px"; //logo size when didn't scroll
                 }
             }
-            */
+            
 
 
             /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
@@ -202,7 +207,7 @@
 
         <nav id="navbar">
             <div id = "navbar-content">
-                <a href="#default" id="logo">Portfolio</a>
+                <a href="#top" id="logo">Portfolio</a> <!--Using #top, it scrolls to top of page-->
                 <div id = "navbar-right" class = "anchor-links"  onclick="hideVerticalMenu();">
                     <a href=#abo>ABOUT</a>
                     <a href=#edu>EDUCATION</a>
@@ -223,7 +228,7 @@
         <nav id="content">
             <!-- Maybe an AI generated image of an owl -->
             <section>
-                <h1 id="top">Mansour Maqsoudi</h1>
+                <h1 id="Intro">Mansour Maqsoudi</h1>
                 <br>
                 <br>
                 <br><p>Some Images</p>
@@ -333,6 +338,12 @@
                 </address>
             </section>
             
+            <br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br>
             <br><br><br><br><br><br><br><br><br><br>
             <br><br><br><br><br><br><br><br><br><br>
 
