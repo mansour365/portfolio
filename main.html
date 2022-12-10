@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Page Title</title>
+        <title>Portfolio</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
 
         <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
@@ -11,15 +11,16 @@
         <link rel="stylesheet" href="">
         <style>
             html{
-                scroll-padding-top: 146px; /* height of sticky header when shrunk */
+                scroll-padding-top: 146px; /* height of sticky header when shrunk (Experimental to fix anchor bookmarks)*/
                 scroll-behavior: smooth;
-            } /*Experimental to fix anchor bookmarks */
+            } 
 
-            /*This experimental fix seems to work well when navbar does shrink*/
-            /*Needs to be altered when switching to small screen mode*/
             p{font-family: helvetica;}
+
             h1{font-family: helvetica;}
+
             a{font-family: helvetica;}
+
             body{
                 background-color: rgb(248, 248, 247); /*background color of content: slightly off-white */
                 margin: 0;  /*body has a default small margin around, set to zero so that navbar spans entire width */
@@ -35,7 +36,6 @@
                 width: 100%; /*Make sure navbar take full span of screen*/
                 top: 0; /* 0 pixels away from the top */
                 z-index: 99; /* make sure its always on top of everything else: put a big value */
-                /*padding-bottom: 15px; /*without this the navbar eats part of the content*/
                 border: 3px solid orange; /*for testing puposes*/
             }
 
@@ -63,13 +63,15 @@
             #navbar-right {
                 float:right;
                 font-size: 13px;
-                border: 3px solid red; /*for testing puposes*/
+                border: 1px solid red; /*for testing puposes*/
             }
+
             /*behaviour of the nav links*/
             #navbar a:hover{
                 color: black;
                 background-color: transparent;
             }
+
             #navbar a:active{
                 color: black;
                 background-color: transparent;
@@ -84,8 +86,6 @@
             }
             
             /* Main content of website*/
-            /* Main content needs to be before the smaller screens, so that it will take effect
-            for both big and small screens*/
             #content{
                 width:990px; /*approximately the proper fixed wdith for content*/
                 margin: auto; /*this centers the container in the middle*/
@@ -95,7 +95,7 @@
             }
             
             /*Make burger icon normally invisible*/
-            #icon{
+            #burger-icon{
                 display:none;
                 border: 3px solid red;/*for testing puposes*/
             }
@@ -114,48 +114,66 @@
             
             /*FOR EVEN SMALLER SCREENS*/
             @media screen and (max-width: 750px){
-                html{scroll-padding-top: 131px; /* height of sticky header when shrunk */} /*Experimental to fix anchor bookmarks */
-                #navbar{
-                    /*Because we make it vertical, reduce top and bottom padding*/
-                    padding: 20px 0px  !important; 
+                /*height of sticky header when shrunk (Experimental to fix anchor bookmarks)*/
+                html{scroll-padding-top: 131px;} 
+
+                #navbar{ /*Entire navbar when screen small*/
+                    
+                    padding: 20px 0px  !important; /*Since menu vertical, reduce top and bottom padding*/
                 }
-                #navbar a{
+
+                #navbar a{ /*All links in navbar*/
                     float: none;    /*makes the nav links stacked vertically */
                     display: block; /*makes the nav links stacked vertically */
                     padding: 4px;   /*reduce padding between links */
                     text-align: left;
+                    transition: 0.3; /*is this even needed???????????????????*/
                 }
-                .anchor-links{
-                    
-                   /* float:none;
-                    padding-left:10%; /*Add left padding, so links don't touch left edge of screen*/
-                    display:none; /*Make anchor links disappear when small screen mode */
-                }
+
                 #navbar #logo {
                     text-align: center;
                     float: right;
                     padding-bottom: 25px; /* Add padding under logo, so not too close to links*/
+                    margin-right: 2%; /*Add a bit of space on right side of logo when screen small*/
                 }
+                
+                .anchor-links{ /*When burger menu is closed links have height of 0%*/
+                    width: 100%;
+                    height: 0%;
+                    overflow: hidden;
+                    transition: 0.5s;
+                    position: fixed;
+                    z-index: 100;
+                    background-color: rgba(255, 255, 255, 0.978);
+                    top: 110px; /*How far from the top the vertical menu appears*/
+                    left: 0;
+                }
+
+                .anchor-links a {  /*Change the size of the Anchor links in vertical menu*/
+                    font-size: 120%; 
+                    border-bottom: 1px solid rgb(173, 173, 173);
+                    margin: 5%; /*Add a bit of space around all the anchor links in vertical menu*/
+                    margin-right: 15%;  /*Make the clickable area of the link smaller from the right */
+                    padding: 200px; /*doesnt work*/
+                }
+
+                .anchor-links.responsive{ /*if burger menu is open */
+                    height:100%;
+                    padding: 5%;
+                }
+
                 #content {
                     margin-top:113px; /*padding of the main content when screen is smaller */
                 }
-                #icon{
+
+                #burger-icon{
                     display:unset; /*Make burger icon visible when screen is small */
                     position:fixed;
                     float: left;
                     font-size: 28px; /*Font size of burger icon*/
-                }
-                /*if burger button is clicked */
-                .anchor-links.responsive{
-                    display:inline;
-                    float:left;
-                    /*text-align: left;*/
-                    /*position:relative;*/
-                    width:100%;
+                    margin-left: 1%; /*Add a bit of spacing on left side of burger icon*/
                 }
             }
-
-
 
         </style>
             
@@ -191,12 +209,11 @@
                 
             }
 
+            /*Maybe use this when you exit small screen and go back to large screen idk*/
             function hideVerticalMenu() {
                 var x = document.getElementById("navbar-right");
                 x.className = "anchor-links";
-
             }
-
             
         </script>
     </head>
@@ -207,8 +224,10 @@
 
         <nav id="navbar">
             <div id = "navbar-content">
+                
                 <a href="#top" id="logo">Portfolio</a> <!--Using #top, it scrolls to top of page-->
-                <div id = "navbar-right" class = "anchor-links"  onclick="hideVerticalMenu();">
+
+                <div id = "navbar-right" class = "anchor-links"  onclick="toggleVerticalMenu();">
                     <a href=#abo>ABOUT</a>
                     <a href=#edu>EDUCATION</a>
                     <a href=#exp>EXPERIENCE</a>
@@ -216,11 +235,13 @@
                     <a href=#prj>PROJECTS</a>
                     <a href=#con>CONTACT</a> 
                 </div>
-                <div id = "icon" onclick="toggleVerticalMenu()">
+
+                <div id = "burger-icon" onclick="toggleVerticalMenu()">
                     <a href="javascript:void(0);" class="icon">
                         <i class="fa fa-bars"></i>
                     </a>
                 </div>  
+
             </div>
         </nav>
         
@@ -228,10 +249,11 @@
         <nav id="content">
             <!-- Maybe an AI generated image of an owl -->
             <section>
-                <h1 id="Intro">Mansour Maqsoudi</h1>
+                <h1 id="Intro">Top of Page (Remove label later)</h1>
                 <br>
                 <br>
-                <br><p>Some Images</p>
+                <br><p>Some b/w AI generated Image with yellow/orange eyes and a Title that fades in.</p>
+                <p>Ideas: Tiger, Owl, Bird...</p>
                 <br>
                 <br>
                 <br>
@@ -248,6 +270,14 @@
                     - Exceptional eye for detail gained through video game quality assurance testing.<br>
                     - Proactive team member due to patience and communication skills.<br>
                 </p>
+                <br>
+                <br>
+                <br><p>Maybe b/w panoramic Image of Me infront of some mirror place idk</p>
+                <p>or maybe ne panoramic, but later will add dark sides to span the width</p>
+                <br>
+                <br>
+                <br>
+                <br>
             </section>
 
 
@@ -268,6 +298,13 @@
                     -<b>Vanier College</b>, Montreal, Quebec, Canada <br>
                     -<b>Relevant Courses:</b> Quantitative Methods, Macroeconomics, Microeconomics, Research Methods <br>
                 </p>
+                <br>
+                <br>
+                <br><p>Maybe Image of School</p>
+                <br>
+                <br>
+                <br>
+                <br>
                 <!-- Maybe Image of vanier -->
             </section>
 
@@ -289,6 +326,13 @@
                 Hypertec Group, Montreal, Quebec, Canada<br>
                 Restaurant Da Franco, Montreal, Quebec, Canada<br>
                 </p>
+                <br>
+                <br>
+                <br><p>Maybe Image of Breifcase</p>
+                <br>
+                <br>
+                <br>
+                <br>
             </section>
 
 
@@ -304,6 +348,13 @@
                     <b>Other:</b>  GitHub version control • Data Structures and Algorithms • Data Analytics (OpenRefine and Jupyter Notebook) • Multicore programming (Intel TBB, OpenCL and CUDA) • Final Cut Pro<br>
 
                 </p>
+                <br>
+                <br>
+                <br><p>Animated Images flying in of tools and languages</p>
+                <br>
+                <br>
+                <br>
+                <br>
             </section>
 
             <br><br><br><br><br><br><br><br><br><br>
@@ -315,12 +366,26 @@
                 <p>
                     <a href="https://github.com/mansour365" target="_blank">GITHUB</a>
                     <br>
-                    <b>Counter Android Application</b> - Developed an Android app used for counting. Coded in Android Studio IDE, using Java and the Android SDK. Features vibration after a certain count interval, full-screen mode, vibration toggles and duration. These features can be adjusted in the settings page of the app. User interface takes advantage of the power saving features of an OLED display.<br>
+                    <p><b>Counter Android Application</b> - Developed an Android app used for counting. Coded in Android Studio IDE, using Java and the Android SDK. Features vibration after a certain count interval, full-screen mode, vibration toggles and duration. These features can be adjusted in the settings page of the app. User interface takes advantage of the power saving features of an OLED display.</p><br>
                     <!-- Maybe Image of the app inside a phone model -->
                     <br>
-                    <b>Snake game</b> - Developed a snake game with a graphical user interface using C++ and OpenGL. Coded in Microsoft Visual Studio IDE. Features collision detection and real time user keyboard input. User interface designed using OpenGL.<br>
                     <br>
-                    <b>Battleship game</b> - Developed a battleship game in Eclipse IDE using Java. Makes use of object-oriented programming concepts. Takes advantage of random number generation.<br>
+                    <br><p>Maybe Image of App inside phone</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <p><b>Snake game</b> - Developed a snake game with a graphical user interface using C++ and OpenGL. Coded in Microsoft Visual Studio IDE. Features collision detection and real time user keyboard input. User interface designed using OpenGL.</p><br>
+                    <br>
+                    <br>
+                    <br>
+                    <br><p>Maybe Image of the snake game (should make the colors better though)</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <p><b>Battleship game</b> - Developed a battleship game in Eclipse IDE using Java. Makes use of object-oriented programming concepts. Takes advantage of random number generation.</p><br>
                     <br>
 
                 </p>
@@ -336,6 +401,13 @@
                     Montreal, Quebec, Canada <br>
                     <a href="https://linkedin.com/in/mansour-maqsoudi/" target="_blank">LINKEDIN</a>
                 </address>
+                <br>
+                <br>
+                <br><p>Maybe Image of Writing on paper similar to reference</p>
+                <br>
+                <br>
+                <br>
+                <br>
             </section>
             
             <br><br><br><br><br><br><br><br><br><br>
