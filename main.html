@@ -10,18 +10,36 @@
 
         <link rel="stylesheet" href="">
         <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
             html{
                 scroll-padding-top: 146px; /* height of sticky header when shrunk (Experimental to fix anchor bookmarks)*/
                 scroll-behavior: smooth;
             } 
+            section {
+                display: grid;
+                place-items: center;
+                align-content: center;
+                min-height: 100vh;
+            }
 
-            p{font-family: helvetica;}
+            .hidden{
+                opacity: 0;
+                transition: all 2s;
+            }
 
-            h1{font-family: helvetica;}
+            .show{
+                opacity: 1;
 
-            a{font-family: helvetica;}
+            }
+
+            p{font-family: 'Poppins', sans-serif;}
+
+            h1{font-family: 'Poppins', sans-serif;}
+
+            a{font-family: 'Poppins', sans-serif;}
 
             body{
+                font-family: 'Poppins', sans-serif;
                 background-color: rgb(248, 248, 247); /*background color of content: slightly off-white */
                 margin: 0;  /*body has a default small margin around, set to zero so that navbar spans entire width */
             }
@@ -51,7 +69,7 @@
             
             /*Style the logo*/
             #navbar #logo {
-                font-family: helvetica; /*font familly of logo*/
+                font-family: 'Poppins', sans-serif; /*font familly of logo*/
                 font-size: 35px; /*font size of logo*/
                 font-weight: bold; /*logo in bold*/
                 transition: 0.4s; /*transition speed of the logo when navbar size changes */
@@ -177,7 +195,27 @@
 
         </style>
             
-        <script>
+        <script defer>
+
+            /*Code needed to animate on scroll */
+            /*
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    console.log(entry)
+                    if(entry.isIntersecting){
+                        entry.target.classList.add('show');
+                    }
+                    else{
+                        entry.target.classList.remove('show');
+                    }
+                });
+            });
+
+            const hiddenElements = document.querySelectorAll('.hidden');
+            hiddenElements.forEach((el) => observer.observe(el));
+            */
+
+
             //When user scrolls down 80px from top -> resize navbar padding and logo font size
             
             window.onscroll = function() {scrollFunction()};
@@ -214,6 +252,10 @@
                 var x = document.getElementById("navbar-right");
                 x.className = "anchor-links";
             }
+
+
+
+
             
         </script>
     </head>
@@ -263,7 +305,7 @@
             <br><br><br><br><br><br><br><br><br><br>
             <hr>
             
-            <section>
+            <section class ="hidden">
                 <h1 id="abo">About</h1>
                 <p>
                     - Adept at learning new programming languages and applying technical skills to develop innovative solutions.<br>
@@ -285,12 +327,15 @@
             <hr>
 
 
-            <section>
+            <section class ="hidden">
                 <h1 id="edu">Education</h1>
-                <p><b>Bachelor of Computer Science</b>   |   2021	<br>
-                    -<b>Concordia University</b>, Montreal, Quebec, Canada<br>
-                    -<b>Relevant Courses:</b> Data Structures and Algorithms, Data Analytics, Web Programming, Databases<br>
-                </p>
+                <h2>Bachelor of Computer Science</h2>
+                <p>   |   2021	</p>
+                <p>Concordia University</p>
+                <p>Montreal, Quebec, Canada</p>>
+                <p>Relevant Courses:</p>
+                <p> Data Structures and Algorithms, Data Analytics, Web Programming, Databases</p>>
+                
 
                 <!-- Maybe Image of concordia university -->
                 <p>
@@ -298,116 +343,99 @@
                     -<b>Vanier College</b>, Montreal, Quebec, Canada <br>
                     -<b>Relevant Courses:</b> Quantitative Methods, Macroeconomics, Microeconomics, Research Methods <br>
                 </p>
-                <br>
-                <br>
-                <br><p>Maybe Image of School</p>
-                <br>
-                <br>
-                <br>
-                <br>
-                <!-- Maybe Image of vanier -->
+
+                <p>Maybe Image of School</p>
+
             </section>
 
-            <br><br><br><br><br><br><br><br><br><br>
+
             <hr>
 
 
-            <section>
+            <section class ="hidden">
                 <h1 id="exp">Experience</h1>
-                <p><b>Remote Quality Assurance Tester</b>   |   2013 - Present	<br>
-                VMC Game Labs, Montreal, Quebec, Canada<br>
-                -	Bug reporting, Document logs, Handle confidential information <br>
-                <br>
-                <b>Volunteer</b>   |   2013 - 2014	<br>
-                Montreal General Hospital, Montreal, Quebec, Canada<br>
-                -	Staff and Patient Assistant <br>
-                <br>
-                <b>Other Non-Office Employment</b><br>
-                Hypertec Group, Montreal, Quebec, Canada<br>
-                Restaurant Da Franco, Montreal, Quebec, Canada<br>
+                <h2>Remote Quality Assurance Tester</h2> 
+                <p>  |   2013 - Present	</p>>
+                <p>VMC Game Labs, Montreal, Quebec, Canada</p>>
+                <p>Bug reporting, Document logs, Handle confidential information </p>>
+                
+                <h2>Volunteer</h2>   
+                <p>|   2013 - 2014	</p>
+                <p>Montreal General Hospital, Montreal, Quebec, Canada</p>>
+                <p>Staff and Patient Assistant </p>>
+                
+                <h2>Other Non-Office Employment</h2>
+                <p>Hypertec Group, Montreal, Quebec, Canada</p>
+                <p>Restaurant Da Franco, Montreal, Quebec, Canada</p>
                 </p>
-                <br>
-                <br>
+
                 <br><p>Maybe Image of Breifcase</p>
-                <br>
-                <br>
-                <br>
-                <br>
+
             </section>
 
 
-            <br><br><br><br><br><br><br><br><br><br>
+            
             <hr>
 
-            <section>
+            <section class ="hidden">
                 <h1 id="tec">Technical Skills</h1>
-                <p>
-                    <b>Operating Systems:</b> Windows • macOS<br><br>
-                    <b>Applications:</b>  Eclipse • Microsoft Visual Studio • NetBeans • Android Studio • Microsoft Office: Word • Excel • PowerPoint<br><br>
-                    <b>Programming:</b> Java • C++ • HTML • CSS • JavaScript • Document Object Model (DOM) • ReactJS • PHP • mySQL • Python • C • Ruby • C# • Prolog • Aspect-J • Lisp<br><br>
-                    <b>Other:</b>  GitHub version control • Data Structures and Algorithms • Data Analytics (OpenRefine and Jupyter Notebook) • Multicore programming (Intel TBB, OpenCL and CUDA) • Final Cut Pro<br>
 
-                </p>
-                <br>
-                <br>
-                <br><p>Animated Images flying in of tools and languages</p>
-                <br>
-                <br>
-                <br>
-                <br>
+                <h2>Operating Systems</h2> 
+                <p>Windows • macOS</p>>
+                <h2>Applications</h2> 
+                <p> Eclipse • Microsoft Visual Studio • NetBeans • Android Studio • Microsoft Office: Word • Excel • PowerPoint</p>
+                <h2>Programming</h2> 
+                <p>Java • C++ • HTML • CSS • JavaScript • Document Object Model (DOM) • ReactJS • PHP • mySQL • Python • C • Ruby • C# • Prolog • Aspect-J • Lisp</p>
+                <h2>Other</h2>  <p>GitHub version control • Data Structures and Algorithms • Data Analytics (OpenRefine and Jupyter Notebook) • Multicore programming (Intel TBB, OpenCL and CUDA) • Final Cut Pro</p>
+
+
+                <p>Animated Images flying in of tools and languages</p>
+
             </section>
 
             <br><br><br><br><br><br><br><br><br><br>
             <hr>
 
 
-            <section>
+            <section class ="hidden">
                 <h1 id="prj">Projects</h1>
                 <p>
                     <a href="https://github.com/mansour365" target="_blank">GITHUB</a>
                     <br>
-                    <p><b>Counter Android Application</b> - Developed an Android app used for counting. Coded in Android Studio IDE, using Java and the Android SDK. Features vibration after a certain count interval, full-screen mode, vibration toggles and duration. These features can be adjusted in the settings page of the app. User interface takes advantage of the power saving features of an OLED display.</p><br>
-                    <!-- Maybe Image of the app inside a phone model -->
-                    <br>
-                    <br>
+                    <h2>Counter Android Application</h2>
+                    <p> Developed an Android app used for counting. 
+                        Coded in Android Studio IDE, using Java and the Android SDK. 
+                        Features vibration after a certain count interval, full-screen mode, vibration toggles and duration. 
+                        These features can be adjusted in the settings page of the app. 
+                        User interface takes advantage of the power saving features of an OLED display.</p>
+
                     <br><p>Maybe Image of App inside phone</p>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <p><b>Snake game</b> - Developed a snake game with a graphical user interface using C++ and OpenGL. Coded in Microsoft Visual Studio IDE. Features collision detection and real time user keyboard input. User interface designed using OpenGL.</p><br>
-                    <br>
-                    <br>
-                    <br>
-                    <br><p>Maybe Image of the snake game (should make the colors better though)</p>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <p><b>Battleship game</b> - Developed a battleship game in Eclipse IDE using Java. Makes use of object-oriented programming concepts. Takes advantage of random number generation.</p><br>
+
+                    <h2>Snake game</h2>
+                    <p> Developed a snake game with a graphical user interface using C++ and OpenGL. Coded in Microsoft Visual Studio IDE. Features collision detection and real time user keyboard input. User interface designed using OpenGL.</p><br>
+
+                    <p>Maybe Image of the snake game (should make the colors better though)</p>
+
+                    <h2>Battleship game</h2>
+                    <p> Developed a battleship game in Eclipse IDE using Java. Makes use of object-oriented programming concepts. Takes advantage of random number generation.</p><br>
                     <br>
 
                 </p>
             </section>
 
-            <br><br><br><br><br><br><br><br><br><br>
+
             <hr>
 
-            <section>
+            <section class ="hidden">
                 <h1 id="con">Contact Me</h1>
                 <address>
                     <b>Email:</b> <a href="mailto:maqsoudi99@gmail.com">maqsoudi99@gmail.com</a><br>         <b>Phone:</b>   (514) 241-9264<br>
                     Montreal, Quebec, Canada <br>
                     <a href="https://linkedin.com/in/mansour-maqsoudi/" target="_blank">LINKEDIN</a>
                 </address>
-                <br>
-                <br>
-                <br><p>Maybe Image of Writing on paper similar to reference</p>
-                <br>
-                <br>
-                <br>
-                <br>
+                
+                <p>Maybe Image of Writing on paper similar to reference</p>
+
             </section>
             
             <br><br><br><br><br><br><br><br><br><br>
@@ -420,7 +448,25 @@
             <br><br><br><br><br><br><br><br><br><br>
 
         </nav>
+        <script defer>
 
+            /*Code needed to animate on scroll */
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    console.log(entry)
+                    if(entry.isIntersecting){
+                        entry.target.classList.add('show');
+                    }
+                    else{
+                        entry.target.classList.remove('show');
+                    }
+                });
+            });
+
+            const hiddenElements = document.querySelectorAll('.hidden');
+            hiddenElements.forEach((el) => observer.observe(el));
+        </script>
     </body>
     
     
