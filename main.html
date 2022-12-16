@@ -13,30 +13,44 @@
             @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
             html{
                 scroll-padding-top: 146px; /* height of sticky header when shrunk (Experimental to fix anchor bookmarks)*/
-                scroll-behavior: smooth;
+                scroll-behavior: smooth; /*Creates smooth transitions when doing auto anchor scroll*/
             } 
             section {
-                display: grid;
+                display: grid;  
                 place-items: center;
                 align-content: center;
-                min-height: 100vh;
+                min-height: 100vh; /*vh is relative to % of height of viewport (here 100%) */
             }
 
             .hidden{
-                opacity: 0;
-                transition: all 2s;
+                opacity: 0; /*Elements from hidden class will have opacity of 0, (invisible)*/
+                filter: blur(5px);
+                transform: translateX(-100%);
+                transition: all 1s; /*If opacity changes, time it takes to change (seconds)*/
             }
 
             .show{
-                opacity: 1;
-
+                opacity: 1; /*Elements from class show have opacity of 1 (completely visible)*/
+                filter:blur(0);
+                transform: translateX(0);
             }
 
-            p{font-family: 'Poppins', sans-serif;}
+            .row{
+                display:flex;
+                flex: wrap;
+                padding: 0 4px;
+            }
 
-            h1{font-family: 'Poppins', sans-serif;}
+            /* Create two equal columns that sits next to each other */
+            .column {
+                flex: 25%;
+                padding: 0 4px;
+            }
 
-            a{font-family: 'Poppins', sans-serif;}
+            .column img {
+                margin-top: 8px;
+                vertical-align: middle;
+            }
 
             body{
                 font-family: 'Poppins', sans-serif;
@@ -71,7 +85,6 @@
             #navbar #logo {
                 font-family: 'Poppins', sans-serif; /*font familly of logo*/
                 font-size: 35px; /*font size of logo*/
-                font-weight: bold; /*logo in bold*/
                 transition: 0.4s; /*transition speed of the logo when navbar size changes */
                 float: left; /*logo floats to left by default*/
                 border: 3px solid blue; /*for testing puposes*/
@@ -108,13 +121,12 @@
                 width:990px; /*approximately the proper fixed wdith for content*/
                 margin: auto; /*this centers the container in the middle*/
                 margin-top:175px;
-                /*padding-top:15px;*/
                 border: 3px solid green; /*for testing puposes*/
             }
             
             /*Make burger icon normally invisible*/
             #burger-icon{
-                display:none;
+                display:none; /*By default burger icon not visible*/
                 border: 3px solid red;/*for testing puposes*/
             }
 
@@ -136,7 +148,6 @@
                 html{scroll-padding-top: 131px;} 
 
                 #navbar{ /*Entire navbar when screen small*/
-                    
                     padding: 20px 0px  !important; /*Since menu vertical, reduce top and bottom padding*/
                 }
 
@@ -150,18 +161,18 @@
 
                 #navbar #logo {
                     text-align: center;
-                    float: right;
+                    float: right; /*When window is small, logo appears on right side*/
                     padding-bottom: 25px; /* Add padding under logo, so not too close to links*/
                     margin-right: 2%; /*Add a bit of space on right side of logo when screen small*/
                 }
                 
                 .anchor-links{ /*When burger menu is closed links have height of 0%*/
                     width: 100%;
-                    height: 0%;
+                    height: 0%; /*When burger menu closed, vertical menu has height of 0*/
                     overflow: hidden;
-                    transition: 0.5s;
+                    transition: 0.5s; /*Transition speed when opening and closing vertical menu*/
                     position: fixed;
-                    z-index: 100;
+                    z-index: 100; /*Make vertical menu appear above all other content*/
                     background-color: rgba(255, 255, 255, 0.978);
                     top: 110px; /*How far from the top the vertical menu appears*/
                     left: 0;
@@ -172,12 +183,11 @@
                     border-bottom: 1px solid rgb(173, 173, 173);
                     margin: 5%; /*Add a bit of space around all the anchor links in vertical menu*/
                     margin-right: 15%;  /*Make the clickable area of the link smaller from the right */
-                    padding: 200px; /*doesnt work*/
                 }
 
                 .anchor-links.responsive{ /*if burger menu is open */
-                    height:100%;
-                    padding: 5%;
+                    height:100%; /*Make vertical menu take full height of window */
+                    padding: 5%; /*5% padding around the collection of vertical menu links */
                 }
 
                 #content {
@@ -340,16 +350,85 @@
                 <h1 id="tec">Technical Skills</h1>
 
                 <h2>Operating Systems</h2> 
+                <div class="row">
+                    <div class="column">
+                      <img src="icons/Windows.png" width="200px">
+                    </div>
+                    <div class="column">
+                      <img src="icons/macOS.png" width="200px">
+                    </div>
+                </div>
+
                 <p>Windows • macOS</p>
 
                 <h2>Applications</h2> 
+                <div class="row">
+                    <div class="column">
+                      <img src="icons/eclipse.png" width="200px">
+                      <img src="icons/android studio ide.png" width="200px">
+                    </div>
+                    <div class="column">
+                      <img src="icons/visual studio ide.png" width="200px">
+                      <img src="icons/word.png" width="200px">
+                    </div>
+                    <div class="column">
+                      <img src="icons/visual studio code ide.png" width="200px">
+                      <img src="icons/excel.png" width="200px">
+                    </div>
+                    <div class="column">
+                      <img src="icons/netbeans ide.png" width="200px">
+                      <img src="icons/powerpoint.png" width="200px">
+                    </div>
+                </div>
                 <p> Eclipse IDE • Microsoft Visual Studio IDE • Microsoft Visual Studio Code IDE • NetBeans IDE • Android Studio IDE • Microsoft Office: Word • Excel • PowerPoint</p>
 
-                <h2>Programming</h2> 
+                <h2>Programming</h2>
+                <div class="row">
+                    <div class="column">
+                      <img src="icons/java.png" width="200px">
+                      <img src="icons/aspectj.jpg" width="200px">
+                      <img src="icons/C#.png" width="200px">
+                      <img src="icons/C++.png" width="200px">
+                    </div>
+                    <div class="column">
+                      <img src="icons/C.png" width="200px">
+                      <img src="icons/css.png" width="200px">
+                      <img src="icons/dom.png" width="200px">
+                      <img src="icons/html.png" width="200px">
+                    </div>
+                    <div class="column">
+                      <img src="icons/javascript.png" width="200px">
+                      <img src="icons/lisp.png" width="200px">
+                      <img src="icons/mysql.png" width="200px">
+                      <img src="icons/php.png" width="200px">
+                    </div>
+                    <div class="column">
+                      <img src="icons/prolog.png" width="200px">
+                      <img src="icons/python.png" width="200px">
+                      <img src="icons/reactjs.png" width="200px">
+                      <img src="icons/ruby.png" width="200px">
+                    </div>
+                  </div> 
                 <p>Java • C++ • HTML • CSS • JavaScript ES6 • Document Object Model (DOM) • ReactJS • PHP • mySQL • Python • C • Ruby • C# • Prolog • Aspect-J • Lisp</p>
 
-                <h2>Other</h2>  
+                <h2>Other Tools</h2> 
+                <div class="row">
+                    <div class="column">
+                      <img src="icons/github.png" width="200px">
+                      <img src="icons/opencl.png" width="200px">
+                    </div>
+                    <div class="column">
+                      <img src="icons/jupyter notebook.png" width="200px">
+                    </div>
+                    <div class="column">
+                      <img src="icons/final cut pro.png" width="200px">
+                    </div>
+                    <div class="column">
+                      <img src="icons/openrefine.png" width="200px">
+                    </div>
+                  </div>  
                 <p>GitHub Version Control • Data Structures and Algorithms • Data Analytics (OpenRefine and Jupyter Notebook) • Multicore programming (Intel TBB, OpenCL and CUDA) • Final Cut Pro</p>
+
 
                 <!-- Animated Logo of technology flying in as you scroll-->
             </section>
@@ -358,8 +437,9 @@
 
             <section class ="hidden">
                 <h1 id="prj">Projects</h1>
-                
-                <a href="https://github.com/mansour365" target="_blank">GITHUB</a>
+                <p>Check out my GitHub: 
+                    <a href="https://github.com/mansour365" target="_blank">GITHUB</a>
+                </p>
 
                 <h2>Counter Android Application</h2>
                 <p> Developed an Android app used for counting. 
@@ -409,7 +489,7 @@
             <br><br><br><br><br><br><br><br><br><br>
         </nav>
 
-        <script defer>
+        <script defer> /*Mark as "defer" so it starts executing after the html has loading in*/
 
             /*Code needed to animate on scroll */
 
@@ -427,6 +507,7 @@
 
             const hiddenElements = document.querySelectorAll('.hidden');
             hiddenElements.forEach((el) => observer.observe(el));
+
         </script>
 
     </body>
