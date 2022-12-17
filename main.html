@@ -15,47 +15,147 @@
                 scroll-padding-top: 146px; /* height of sticky header when shrunk (Experimental to fix anchor bookmarks)*/
                 scroll-behavior: smooth; /*Creates smooth transitions when doing auto anchor scroll*/
             } 
-            section {
-                display: grid;  
-                place-items: center;
-                align-content: center;
-                min-height: 100vh; /*vh is relative to % of height of viewport (here 100%) */
-            }
-
-            .hidden{
-                opacity: 0; /*Elements from hidden class will have opacity of 0, (invisible)*/
-                filter: blur(5px);
-                transform: translateX(-100%);
-                transition: all 1s; /*If opacity changes, time it takes to change (seconds)*/
-            }
-
-            .show{
-                opacity: 1; /*Elements from class show have opacity of 1 (completely visible)*/
-                filter:blur(0);
-                transform: translateX(0);
-            }
-
-            .row{
-                display:flex;
-                flex: wrap;
-                padding: 0 4px;
-            }
-
-            /* Create two equal columns that sits next to each other */
-            .column {
-                flex: 25%;
-                padding: 0 4px;
-            }
-
-            .column img {
-                margin-top: 8px;
-                vertical-align: middle;
-            }
-
+            
             body{
                 font-family: 'Poppins', sans-serif;
                 background-color: rgb(248, 248, 247); /*background color of content: slightly off-white */
                 margin: 0;  /*body has a default small margin around, set to zero so that navbar spans entire width */
+            }
+            section {
+                display: grid;  
+                place-items: center;
+                align-content: center;
+                /*min-height: 100vh; /*vh is relative to % of height of viewport (here 100%) */
+            }
+
+            .hidden{
+                /*opacity: 0; /*Elements from hidden class will have opacity of 0, (invisible)*/
+                /*filter: blur(5px);
+                /*transform: translateX(-100%);
+                /*transition: all 1s; /*If opacity changes, time it takes to change (seconds)*/
+            }
+
+            .show{
+                /*opacity: 1; /*Elements from class show have opacity of 1 (completely visible)*/
+                /*filter:blur(0);
+                /*transform: translateX(0);
+                */
+            }
+
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box; /*? whats this*/
+            }
+            .card-container {
+                    width: 90%;
+                    margin: 50px auto;
+                    /*border: 3px solid green;*/
+            }
+            
+            .heading {
+                    text-align: center;
+                    /*font-size: 30px;*/
+                    margin-bottom: 50px;
+            }
+
+            .row {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    flex-flow: wrap;
+                    /*border: 3px solid purple;*/
+            }
+
+            .card {
+                    width: 18%;
+                    background: #fff;
+                    margin-bottom: 50px;
+                    transition: 0.3s;
+            }
+
+            .card-image {
+                    text-align: center;
+                    padding: 30px 10px;
+                    background: grey;
+                    color: #fff;
+            }
+            .card-title {
+                    padding: 10px 10px;
+                    text-align: center;
+                    font-size: 18px;
+            }
+
+            .card:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+            }
+
+
+
+
+
+
+           
+            
+            /* Create two equal columns that sits next to each other */
+            /*.column {
+                float:left;
+                width:25%; /*was 22 before*/
+                /*padding: 0 10px; /*testing*/
+                /*flex: 1;
+                /*margin: 1px;*/
+                /*border: 1px solid;*/
+                /*display: table-cell;
+                /*background-color: rgb(187, 187, 187);
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                /*border-radius: 8%;*/
+                /*text-align: center;*/
+            /*}
+            /*
+            .row{
+                margin: 0 -5px ;
+                display: flex;
+                width: 100%;
+            }
+
+            .row:after{
+                content:"";
+                display:table;
+                clear: both;
+
+            }
+            */
+            /*
+            .card{
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);/*
+                /*background-color: rgb(187, 187, 187);*/
+                /*padding:16px; /*what does this even do?*/
+                /*text-align: center;*/
+                /*border-radius: 8%;*/
+                /*display: table-cell;
+                
+            }
+            */
+
+            /*
+            .column img {
+                margin-top: 8px;
+                vertical-align: middle;
+            }
+            */
+            /* Main content of website*/
+            #content{
+                width:990px; /*approximately the proper fixed wdith for content*/
+                margin: auto; /*this centers the container in the middle*/
+                margin-top:175px;
+                border: 3px solid green; /*for testing puposes*/
+            }
+
+            .logo {
+                float: left;
+                width: 25%;
+                padding: 0 10px;
             }
             
             /*Create a sticky/fixed navbar*/
@@ -116,13 +216,7 @@
                 border: 3px solid purple; /*for testing puposes*/
             }
             
-            /* Main content of website*/
-            #content{
-                width:990px; /*approximately the proper fixed wdith for content*/
-                margin: auto; /*this centers the container in the middle*/
-                margin-top:175px;
-                border: 3px solid green; /*for testing puposes*/
-            }
+
             
             /*Make burger icon normally invisible*/
             #burger-icon{
@@ -273,16 +367,14 @@
         </nav>
         
 
-        <nav id="content">
+        <div id="content">
             <!-- Maybe an AI generated image of an owl -->
             <section>
                 <h1 id="Intro">Top of Page (Remove label later)</h1>
                 <p>Some b/w AI generated Image with yellow/orange eyes and a Title that fades in.</p>
                 <p>Ideas: Tiger, Owl, Bird...</p>
             </section>
-            
             <hr>
-            
             <section class ="hidden">
                 <h1 id="abo">About</h1>
                 <p>Adept at learning new programming languages and applying technical skills to develop innovative solutions.</p>
@@ -294,9 +386,7 @@
                 or maybe ne panoramic, but later will add dark sides to span the width-->
 
             </section>
-
             <hr>
-
             <section class ="hidden">
                 <h1 id="edu">Education</h1>
                 <h2>Bachelor of Computer Science</h2>
@@ -318,9 +408,7 @@
                 <!-- Maybe Image of Vanier College -->
 
             </section>
-
             <hr>
-
             <section class ="hidden">
                 <h1 id="exp">Experience</h1>
 
@@ -343,95 +431,337 @@
                 
                 <!--Maybe Image of Breifcase-->
             </section>
-
             <hr>
-
+        </div>
             <section class ="hidden">
                 <h1 id="tec">Technical Skills</h1>
+            </section>
 
-                <h2>Operating Systems</h2> 
+            <div class="card-container">
+
+
+                <div class="heading">
+                    <h4>Operating Systems</h4>
+                </div>
+    
                 <div class="row">
-                    <div class="column">
-                      <img src="icons/Windows.png" width="200px">
+    
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="icons/Windows.png" alt="Lights" style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <h3>Windows</h3>
+                        </div>
                     </div>
-                    <div class="column">
-                      <img src="icons/macOS.png" width="200px">
+    
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="icons/macOS.png" alt="Lights" style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <h3>macOS</h3>
+                        </div>
                     </div>
+    
+                </div>
+            
+                <div class="heading">
+                    <h4>Applications</h4>
                 </div>
 
-                <p>Windows • macOS</p>
+                <div class="row">
 
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="icons/eclipse.png" alt="Lights" style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <h3>Eclipse</h3>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="icons/visual studio ide.png" alt="Lights" style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <h3>Visual Studio</h3>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="icons/visual studio code ide.png" alt="Lights" style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <h3>Visual Studio Code</h3>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="icons/netbeans.png" alt="Lights" style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <h3>NetBeans</h3>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="icons/android studio.png" alt="Lights" style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <h3>Android Studio</h3>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="icons/word.png" alt="Lights" style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <h3>Microsoft Word</h3>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="icons/excel.png" alt="Lights" style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <h3>Microsoft Excel</h3>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="icons/powerpoint.png" alt="Lights" style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <h3>Microsoft Powerpoint</h3>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        <div id="content">
                 <h2>Applications</h2> 
                 <div class="row">
                     <div class="column">
-                      <img src="icons/eclipse.png" width="200px">
-                      <img src="icons/android studio ide.png" width="200px">
+                        <div class="card">
+                            <img src="icons/eclipse.png" alt="Mountains" style="width:80%">
+                            <h3>Eclipse</h3>
+                        </div>
                     </div>
                     <div class="column">
-                      <img src="icons/visual studio ide.png" width="200px">
-                      <img src="icons/word.png" width="200px">
+                        <div class="card">
+                            <img src="icons/visual studio ide.png" alt="Lights" style="width:80%">
+                            <h3>Visual Studio</h3>
+                        </div>
                     </div>
                     <div class="column">
-                      <img src="icons/visual studio code ide.png" width="200px">
-                      <img src="icons/excel.png" width="200px">
+                        <div class="card">
+                            <img src="icons/visual studio code ide.png" alt="Nature" style="width:80%">
+                            <h3>Visual Studio Code</h3>
+                        </div>
                     </div>
                     <div class="column">
-                      <img src="icons/netbeans ide.png" width="200px">
-                      <img src="icons/powerpoint.png" width="200px">
+                        <div class="card">
+                            <img src="icons/netbeans.png" alt="Mountains" style="width:80%">
+                            <h3>NetBeans</h3>
+                        </div>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="column">
+                        <div class="card">
+                            <img src="icons/android studio.png" alt="Mountains" style="width:80%">
+                            <h3>Android Studio</h3>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <img src="icons/word.png" alt="Lights" style="width:80%">
+                            <h3>Microsoft Word</h3>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <img src="icons/excel.png" alt="Nature" style="width:80%">
+                            <h3>Microsoft Excel</h3>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <img src="icons/powerpoint.png" alt="Mountains" style="width:80%">
+                            <h3>Microsoft PowerPoint</h3>
+                        </div>
+                    </div>
+                </div>
+
+
                 <p> Eclipse IDE • Microsoft Visual Studio IDE • Microsoft Visual Studio Code IDE • NetBeans IDE • Android Studio IDE • Microsoft Office: Word • Excel • PowerPoint</p>
 
                 <h2>Programming</h2>
                 <div class="row">
                     <div class="column">
-                      <img src="icons/java.png" width="200px">
-                      <img src="icons/aspectj.jpg" width="200px">
-                      <img src="icons/C#.png" width="200px">
-                      <img src="icons/C++.png" width="200px">
+                        <div class="card">
+                            <img src="icons/java.png" alt="Mountains" style="width:80%">
+                            <h3>Java</h3>
+                        </div>
                     </div>
                     <div class="column">
-                      <img src="icons/C.png" width="200px">
-                      <img src="icons/css.png" width="200px">
-                      <img src="icons/dom.png" width="200px">
-                      <img src="icons/html.png" width="200px">
+                        <div class="card">
+                            <img src="icons/C++.png" alt="Lights" style="width:80%">
+                            <h3>C++</h3>
+                        </div>
                     </div>
                     <div class="column">
-                      <img src="icons/javascript.png" width="200px">
-                      <img src="icons/lisp.png" width="200px">
-                      <img src="icons/mysql.png" width="200px">
-                      <img src="icons/php.png" width="200px">
+                        <div class="card">
+                            <img src="icons/python.png" alt="Nature" style="width:80%">
+                            <h3>Python</h3>
+                        </div>
                     </div>
                     <div class="column">
-                      <img src="icons/prolog.png" width="200px">
-                      <img src="icons/python.png" width="200px">
-                      <img src="icons/reactjs.png" width="200px">
-                      <img src="icons/ruby.png" width="200px">
+                        <div class="card">
+                            <img src="icons/mysql.png" alt="Mountains" style="width:80%">
+                            <h3>mySQL</h3>
+                        </div>
                     </div>
-                  </div> 
+                </div>
+
+                <div class="row">
+                    <div class="column">
+                        <div class="card">
+                            <img src="icons/html.png" alt="Mountains" style="width:80%">
+                            <h3>HTML</h3>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <img src="icons/css.png" alt="Lights" style="width:80%">
+                            <h3>CSS</h3>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <img src="icons/javascript.png" alt="Nature" style="width:80%">
+                            <h3>JavaScript</h3>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <img src="icons/reactjs.png" alt="Mountains" style="width:80%">
+                            <h3>ReactJS</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="column">
+                        <div class="card">
+                            <img src="icons/dom.png" alt="Mountains" style="width:80%">
+                            <h3>DOM</h3>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <img src="icons/C.png" alt="Lights" style="width:80%">
+                            <h3>C</h3>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <img src="icons/ruby.png" alt="Nature" style="width:80%">
+                            <h3>Ruby</h3>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <img src="icons/csharp.png" alt="Mountains" style="width:80%">
+                            <h3>C#</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="column">
+                        <div class="card">
+                            <img src="icons/aspectj.jpg" alt="Mountains" style="width:80%">
+                            <h3>Aspect-J</h3>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <img src="icons/lisp.png" alt="Lights" style="width:80%">
+                            <h3>Lisp</h3>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <img src="icons/prolog.png" alt="Nature" style="width:80%">
+                            <h3>Prolog</h3>
+                        </div>
+                    </div>
+                </div>
+
+
+
                 <p>Java • C++ • HTML • CSS • JavaScript ES6 • Document Object Model (DOM) • ReactJS • PHP • mySQL • Python • C • Ruby • C# • Prolog • Aspect-J • Lisp</p>
 
                 <h2>Other Tools</h2> 
+
                 <div class="row">
                     <div class="column">
-                      <img src="icons/github.png" width="200px">
-                      <img src="icons/opencl.png" width="200px">
+                        <div class="card">
+                            <img src="icons/github.png" alt="Mountains" style="width:80%">
+                            <h3>GitHub</h3>
+                        </div>
                     </div>
                     <div class="column">
-                      <img src="icons/jupyter notebook.png" width="200px">
+                        <div class="card">
+                            <img src="icons/openrefine.png" alt="Lights" style="width:80%">
+                            <h3>OpenRefine</h3>
+                        </div>
                     </div>
                     <div class="column">
-                      <img src="icons/final cut pro.png" width="200px">
+                        <div class="card">
+                            <img src="icons/jupyter notebook.png" alt="Nature" style="width:80%">
+                            <h3>Jupyter Notebook</h3>
+                        </div>
                     </div>
                     <div class="column">
-                      <img src="icons/openrefine.png" width="200px">
+                        <div class="card">
+                            <img src="icons/opencl.png" alt="Mountains" style="width:80%">
+                            <h3>OpenCL</h3>
+                        </div>
                     </div>
-                  </div>  
+                </div>
+
+                <div class="row">
+                    <div class="column">
+                        <div class="card">
+                            <img src="icons/final cut pro.png" alt="Mountains" style="width:80%">
+                            <h3>Final Cut Pro</h3>
+                        </div>
+                    </div>
+                </div>
+
+                
                 <p>GitHub Version Control • Data Structures and Algorithms • Data Analytics (OpenRefine and Jupyter Notebook) • Multicore programming (Intel TBB, OpenCL and CUDA) • Final Cut Pro</p>
 
 
                 <!-- Animated Logo of technology flying in as you scroll-->
-            </section>
+            
 
             <hr>
 
@@ -487,7 +817,7 @@
             <br><br><br><br><br><br><br><br><br><br>
             <br><br><br><br><br><br><br><br><br><br>
             <br><br><br><br><br><br><br><br><br><br>
-        </nav>
+        </div>
 
         <script defer> /*Mark as "defer" so it starts executing after the html has loading in*/
 
