@@ -9,17 +9,35 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <link rel="stylesheet" href="">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+        
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+            /*@import url('https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff');*/
+            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200&display=swap');
             html{
                 scroll-padding-top: 146px; /* height of sticky header when shrunk (Experimental to fix anchor bookmarks)*/
                 scroll-behavior: smooth; /*Creates smooth transitions when doing auto anchor scroll*/
             } 
             
             body{
-                font-family: 'Poppins', sans-serif;
+                /*font-family: 'Poppins', sans-serif;*/
+                font-family: 'Roboto', sans-serif;
+                
+                /*font-family:Arial, Helvetica, sans-serif;*/
                 background-color: rgb(248, 248, 247); /*background color of content: slightly off-white */
                 margin: 0;  /*body has a default small margin around, set to zero so that navbar spans entire width */
+            }
+            /* Main content of website*/
+            #content{
+                width:990px; /*approximately the proper fixed wdith for content*/
+                margin: auto; /*this centers the container in the middle*/
+                margin-top:175px;
+                border: 3px solid green; /*for testing puposes*/
+                font-size:medium;
             }
             section {
                 display: grid;  
@@ -27,6 +45,7 @@
                 align-content: center;
                 /*min-height: 100vh; /*vh is relative to % of height of viewport (here 100%) */
             }
+
 
             .hidden{
                 /*opacity: 0; /*Elements from hidden class will have opacity of 0, (invisible)*/
@@ -96,61 +115,19 @@
 
 
 
-           
+
+
+
             
-            /* Create two equal columns that sits next to each other */
-            /*.column {
-                float:left;
-                width:25%; /*was 22 before*/
-                /*padding: 0 10px; /*testing*/
-                /*flex: 1;
-                /*margin: 1px;*/
-                /*border: 1px solid;*/
-                /*display: table-cell;
-                /*background-color: rgb(187, 187, 187);
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-                /*border-radius: 8%;*/
-                /*text-align: center;*/
-            /*}
-            /*
-            .row{
-                margin: 0 -5px ;
-                display: flex;
-                width: 100%;
-            }
-
-            .row:after{
-                content:"";
-                display:table;
-                clear: both;
-
-            }
-            */
-            /*
-            .card{
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);/*
-                /*background-color: rgb(187, 187, 187);*/
-                /*padding:16px; /*what does this even do?*/
-                /*text-align: center;*/
-                /*border-radius: 8%;*/
-                /*display: table-cell;
+            .about {
+                font-size: x-large;
                 
             }
-            */
 
-            /*
-            .column img {
-                margin-top: 8px;
-                vertical-align: middle;
+            p {
+                
             }
-            */
-            /* Main content of website*/
-            #content{
-                width:990px; /*approximately the proper fixed wdith for content*/
-                margin: auto; /*this centers the container in the middle*/
-                margin-top:175px;
-                border: 3px solid green; /*for testing puposes*/
-            }
+
 
             .logo {
                 float: left;
@@ -369,6 +346,19 @@
 
         <div id="content">
             <!-- Maybe an AI generated image of an owl -->
+            <h1>Safe and reliable repairs<h1><br>
+                <p>At Apple, every product we make is built to last. We design durable, easy-to-use devices with innovative features that customers depend on, all while protecting their privacy and data. Customers should have access to safe, reliable, and secure repairs with genuine Apple parts if they need them.
+                
+                <br>
+                <br>
+                Learn more about Apple’s approach to expanding access to safe and reliable repairs. View (PDF)</p>
+                
+                <br>
+                <h1>Beware of counterfeit parts</h1><br>
+                <p>Some counterfeit and third party power adapters and batteries may not be designed properly and could result in safety issues. To ensure you receive a genuine Apple battery during a battery replacement, we recommend visiting an Apple Store or Apple Authorized Service Provider. If you need a replacement adapter to charge your Apple device, we recommend getting an Apple power adapter.
+                <br><br>
+                Also non-genuine replacement displays may have compromised visual quality and may fail to work correctly. Apple-certified screen repairs are performed by trusted experts who use genuine Apple parts.</p><br><br><br><br><br><br>
+            </p>
             <section>
                 <h1 id="Intro">Top of Page (Remove label later)</h1>
                 <p>Some b/w AI generated Image with yellow/orange eyes and a Title that fades in.</p>
@@ -376,7 +366,7 @@
             </section>
             <hr>
             <section class ="hidden">
-                <h1 id="abo">About</h1>
+                <div class="about"><p id="abo">About</p></div>
                 <p>Adept at learning new programming languages and applying technical skills to develop innovative solutions.</p>
                 <p>Exceptional eye for detail gained through video game quality assurance testing.</p>
                 <p>Proactive team member due to patience and communication skills.</p>
