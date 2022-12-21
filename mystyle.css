@@ -1,0 +1,309 @@
+* {
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth; /*Creates smooth transitions when doing auto anchor scroll*/
+    scroll-padding-top: 47px; /* height of sticky header when shrunk (Experimental to fix anchor bookmarks)*/
+}
+body {
+    background: #fefefe;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    font-weight: 100;
+    line-height: 1.6em;
+    color: rgb(160, 160, 160);
+    background-color: rgb(24,26,27); 
+    /*background-color: white; /*For light mode*/
+    /*Important because first we need main-content to disaply as inline block
+    in order to avoid overlapping with other divs
+    But then inline block will nalway float to the right
+    So putting text-align: center; in the body css fixes this*/
+    text-align:center; 
+    margin:0; /*Make navbar, body and wide images all reach the very max of the window width */
+}
+p{
+    font-size: 1.08em;
+}
+h1{
+    font-weight: 100;
+    font-size: 2.4em;
+    color:rgb(187, 187, 187);
+    margin-top:1%; /*Make header start right a top of column , inline with image*/
+    line-height:1.1em;
+}
+.image-header{
+    color:rgb(232,230,227);
+    font-size: 2.9em;
+    line-height:1.1em;
+}
+h2{
+    font-weight:100;
+    line-height: 1.1em;
+    color:rgb(182, 182, 182);
+}
+h3{
+    font-weight:100;
+    line-height: 1.1em;
+    font-size: 1.3em;
+}
+.main-content p{
+    font-size: 1.3em;
+    line-height: 1.6em;
+}
+.small-content p{
+    font-size: 1.3em;
+    line-height: 1.6em;
+}
+.link{
+    color:rgb(20, 175, 240);
+}
+.quote{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(30px);
+    color: rgb(228, 226, 223);
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius:1%/8%;
+}
+/*
+.links-div{
+    font-size: 1.3em;
+    line-height: 1.6em;
+    border: 1px solid aqua;
+}
+*/
+
+
+.main-content{
+    /*Make the div not overlap with other div*/
+    /*But causes entire div to float left, fix with text-align center in body*/
+    display:inline-block; 
+    /*Needed to overcome the text-align center of the body*/
+    text-align:left; 
+    width:800px;
+    /*border: 1px solid blue;*/
+}
+.small-content{
+    text-align: center;
+    width:800px; 
+    margin: auto; /*for some reason needed to keep content in the middle*/
+    /*border: 1px solid green; */
+}
+
+.very-small-content{
+    text-align: center;
+    width:800px; 
+    margin: auto; /*for some reason needed to keep content in the middle*/
+    /*border: 1px solid green; */
+}
+
+
+.left-column{
+    float: left;
+    width:48%;
+    /*border: 1px solid red;*/
+}
+.right-column{
+    float: right;
+    width:50%;
+    /*border: 1px solid red;*/
+}
+
+.wide-image{
+    width:100%;
+}
+.medium-image{
+    width:398px;
+    border-radius:2%/4%;
+}
+
+/*Title on top of Wide Image*/
+.text-overlay{
+    position: relative;
+    text-align: center;
+}
+.centered{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+ /*Create a sticky/fixed navbar*/
+ #navbar{
+    background-color: rgb(0, 0, 0, 0.77); /*background color of navbar (default is white) */
+    backdrop-filter: blur(30px);
+    padding-top: 54px; /*give the navbar the desired thickness*/
+    padding-bottom: 54px; /*give the navbar the desired thickness*/
+    transition: 0.4s; /*transition effect length when padding is decreased */
+    position: fixed; /*this make it sticky/fixed nav bar*/
+    width: 100%; /*Make sure navbar take full span of screen*/
+    top: 0; /* 0 pixels away from the top */
+    z-index: 99; /* make sure its always on top of everything else: put a big value */
+    /*border: 1px solid orange; /*for testing puposes*/
+}
+
+/*Style the navbar links*/
+#navbar a {
+    text-decoration: none;
+    float: left; /*All of the navbar links float on same line (left)*/
+    /*Padding around each link*/
+    padding: 10px 12px; /*top and bottom: 8px, right and left: 12px */
+    /*padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 40px;
+    padding-right: 6px;*/
+    color: rgb(208, 208, 208); /*color of the links in the navbar*/
+    line-height: 25px; /*the height of the navbar link button */
+}
+
+/*Style the logo*/
+#navbar #logo {
+    font-family: Arial, Helvetica, sans-serif; /*font familly of logo*/
+    font-weight:100;
+    font-size: 35px; /*font size of logo*/
+    transition: 0.4s; /*transition speed of the logo when navbar size changes */
+    float: left; /*logo floats to left by default*/
+    /*border: 1px solid blue; /*for testing puposes*/
+    padding-left:0;
+    margin-bottom: 1px;
+}
+
+/*position of the links*/
+#navbar-right {
+    float:right;
+    font-size: 13px;
+    /*border: 1px solid red; /*for testing puposes*/
+}
+
+/*behaviour of the nav links*/
+#navbar a:hover{
+    color: white;
+    transition: 0.3s;
+}
+
+/*This is for both the logo and navbar links*/
+#navbar-content{
+    width:800px;
+    margin: auto;
+    /*border: 1px solid purple; /*for testing puposes*/
+}
+
+/*Make burger icon normally invisible*/
+#burger-icon{
+    display:none; /*By default burger icon not visible*/
+    /*border: 1px solid red;/*for testing puposes*/
+}
+
+/*FOR SMALLER SCREENS*/
+@media screen and (max-width: 890px){
+    #navbar-content{
+        width:auto;
+    }
+    .main-content{
+        width:auto;
+        text-align: center;
+        padding-left:5%;
+        padding-right:5%;
+    }
+    .small-content{
+        width:auto;
+        padding-left:5%;
+        padding-right:5%;
+    }
+    .left-column{
+        width: 100%;
+    }
+    .right-column{
+        width:100%;
+    }
+    .very-small-content{
+        width: 100%;
+        padding-left:5%;
+        padding-right:5%;
+    }
+    
+}
+
+
+/*FOR SMALLER SCREENS*/
+@media screen and (max-width: 700px){
+    .main-content{
+        width:auto;
+        text-align: center;
+    }
+    .small-content{
+        width:auto;
+    }
+    .left-column{
+        width: 100%;
+    }
+    .right-column{
+        width:100%;
+    }
+    .very-small-content{
+        width: 100%;
+    }
+
+    /****** Navbar Small Screen ******/
+    #navbar{ /*Entire navbar when screen small*/
+        padding: 0px 0px  !important; /*Since menu vertical, reduce top and bottom padding*/
+        backdrop-filter: none; /*when screen is small need to set blur to none, otherwise navbar will glitch and burger wont open properly*/
+    }
+    #navbar a{ /*All links in navbar*/
+        float: none;    /*makes the nav links stacked vertically */
+        display: block; /*makes the nav links stacked vertically */
+        padding: 3px;   /*reduce padding between links */
+        padding-top: 10px;
+        text-align: left;
+        transition: 0.3; /*is this even needed???????????????????*/
+        /*border: 1px solid purple;*/
+    }
+
+    #navbar #logo {
+        text-align: center;
+        float: right; /*When window is small, logo appears on right side*/
+        padding: 8 12px; /* Add padding under logo, so not too close to links*/
+        margin-right: 2%; /*Add a bit of space on right side of logo when screen small*/
+    }
+
+    .anchor-links{ /*When burger menu is closed links have height of 0%*/
+        width: 100%;
+        height: 0%; /*When burger menu closed, vertical menu has height of 0*/
+        overflow: hidden;
+        transition: 0.5s; /*Transition speed when opening and closing vertical menu*/
+        position: fixed;
+        z-index: 100; /*Make vertical menu appear above all other content*/
+        background-color: rgba(0, 0, 0, 0.7);
+        top: 45px; /*How far from the top the vertical menu appears*/
+        left: 0;
+    }
+
+    .anchor-links a {  /*Change the size of the Anchor links in vertical menu*/
+        font-size: 120%; 
+        border-bottom: 1px solid rgb(173, 173, 173);
+        text-align: center;
+        margin: 5%; /*Add a bit of space around all the anchor links in vertical menu*/
+    }
+
+    .anchor-links.responsive{ /*if burger menu is open */
+        height:100%; /*Make vertical menu take full height of window */
+        padding: 5%; /*5% padding around the collection of vertical menu links */
+        backdrop-filter: blur(30px);
+    }
+
+    #burger-icon{
+        display:unset; /*Make burger icon visible when screen is small */
+        /*position:fixed;*/
+        float: left;
+        font-size: 28px; /*Font size of burger icon*/
+        margin-left: 1%; /*Add a bit of spacing on left side of burger icon*/
+        margin-bottom: 7px;
+    }
+
+
+}
