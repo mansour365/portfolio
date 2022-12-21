@@ -5,10 +5,15 @@
         <title>Test</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
 
+
+        <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
         <link rel="stylesheet" href="">
         <style>
             * {
                 box-sizing: border-box;
+                
             }
             body {
                 background: #fefefe;
@@ -23,6 +28,7 @@
                 But then inline block will nalway float to the right
                 So putting text-align: center; in the body css fixes this*/
                 text-align:center; 
+                margin:0; /*Make navbar, body and wide images all reach the very max of the window width */
             }
             p{
                 font-size: 1.08em;
@@ -59,6 +65,16 @@
             }
             .link{
                 color:rgb(58, 180, 255);
+            }
+            .quote{
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+                background-color: rgba(0, 0, 0, 0.3);
+                color: rgb(228, 226, 223);
+                padding-left: 20px;
+                padding-right: 20px;
+                border-radius:1%/8%;
             }
             /*
             .links-div{
@@ -119,14 +135,109 @@
             }
             .centered{
                 position: absolute;
-                top: 30%;
+                top: 35%;
                 left: 50%;
                 transform: translate(-50%, -50%);
             }
 
 
+             /*Create a sticky/fixed navbar*/
+             #navbar{
+                background-color: rgb(0, 0, 0, 0.88); /*background color of navbar (default is white) */
+                padding-top: 54px; /*give the navbar the desired thickness*/
+                padding-bottom: 54px; /*give the navbar the desired thickness*/
+                transition: 0.4s; /*transition effect length when padding is decreased */
+                position: fixed; /*this make it sticky/fixed nav bar*/
+                width: 100%; /*Make sure navbar take full span of screen*/
+                top: 0; /* 0 pixels away from the top */
+                z-index: 99; /* make sure its always on top of everything else: put a big value */
+                /*border: 1px solid orange; /*for testing puposes*/
+            }
+
+            /*Style the navbar links*/
+            #navbar a {
+                text-decoration: none;
+                float: left; /*All of the navbar links float on same line (left)*/
+                /*Padding around each link*/
+                padding: 10px 12px; /*top and bottom: 8px, right and left: 12px */
+                /*padding-top: 8px;
+                padding-bottom: 8px;
+                padding-left: 40px;
+                padding-right: 6px;*/
+                color: rgb(173, 173, 173); /*color of the links in the navbar*/
+                line-height: 25px; /*the height of the navbar link button */
+            }
+
+            /*Style the logo*/
+            #navbar #logo {
+                font-family: Arial, Helvetica, sans-serif; /*font familly of logo*/
+                font-weight:100;
+                font-size: 35px; /*font size of logo*/
+                transition: 0.4s; /*transition speed of the logo when navbar size changes */
+                float: left; /*logo floats to left by default*/
+                /*border: 1px solid blue; /*for testing puposes*/
+                padding-left:0;
+                margin-bottom: 1px;
+            }
+
+            /*position of the links*/
+            #navbar-right {
+                float:right;
+                font-size: 13px;
+                /*border: 1px solid red; /*for testing puposes*/
+            }
+
+            /*behaviour of the nav links*/
+            #navbar a:hover{
+                color: white;
+            }
+
+            /*This is for both the logo and navbar links*/
+            #navbar-content{
+                width:800px;
+                margin: auto;
+                /*border: 1px solid purple; /*for testing puposes*/
+            }
+
+            /*Make burger icon normally invisible*/
+            #burger-icon{
+                display:none; /*By default burger icon not visible*/
+                /*border: 1px solid red;/*for testing puposes*/
+            }
+
             /*FOR SMALLER SCREENS*/
-            @media screen and (max-width: 800px){
+            @media screen and (max-width: 890px){
+                #navbar-content{
+                    width:auto;
+                }
+                .main-content{
+                    width:auto;
+                    text-align: center;
+                    padding-left:5%;
+                    padding-right:5%;
+                }
+                .small-content{
+                    width:auto;
+                    padding-left:5%;
+                    padding-right:5%;
+                }
+                .left-column{
+                    width: 100%;
+                }
+                .right-column{
+                    width:100%;
+                }
+                .very-small-content{
+                    width: 100%;
+                    padding-left:5%;
+                    padding-right:5%;
+                }
+                
+            }
+
+
+            /*FOR SMALLER SCREENS*/
+            @media screen and (max-width: 700px){
                 .main-content{
                     width:auto;
                     text-align: center;
@@ -143,67 +254,136 @@
                 .very-small-content{
                     width: 100%;
                 }
+
+                /****** Navbar Small Screen ******/
+                #navbar{ /*Entire navbar when screen small*/
+                    padding: 0px 0px  !important; /*Since menu vertical, reduce top and bottom padding*/
+                }
+                #navbar a{ /*All links in navbar*/
+                    float: none;    /*makes the nav links stacked vertically */
+                    display: block; /*makes the nav links stacked vertically */
+                    padding: 3px;   /*reduce padding between links */
+                    padding-top: 10px;
+                    text-align: left;
+                    transition: 0.3; /*is this even needed???????????????????*/
+                }
+
+                #navbar #logo {
+                    text-align: center;
+                    float: right; /*When window is small, logo appears on right side*/
+                    padding: 8 12px; /* Add padding under logo, so not too close to links*/
+                    margin-right: 2%; /*Add a bit of space on right side of logo when screen small*/
+                }
+
+                .anchor-links{ /*When burger menu is closed links have height of 0%*/
+                    width: 100%;
+                    height: 0%; /*When burger menu closed, vertical menu has height of 0*/
+                    overflow: hidden;
+                    transition: 0.5s; /*Transition speed when opening and closing vertical menu*/
+                    position: fixed;
+                    z-index: 100; /*Make vertical menu appear above all other content*/
+                    background-color: rgba(0, 0, 0, 0.978);
+                    top: 45px; /*How far from the top the vertical menu appears*/
+                    left: 0;
+                }
+
+                .anchor-links a {  /*Change the size of the Anchor links in vertical menu*/
+                    font-size: 120%; 
+                    border-bottom: 1px solid rgb(173, 173, 173);
+                    text-align: center;
+                    margin: 5%; /*Add a bit of space around all the anchor links in vertical menu*/
+                }
+
+                .anchor-links.responsive{ /*if burger menu is open */
+                    height:100%; /*Make vertical menu take full height of window */
+                    padding: 5%; /*5% padding around the collection of vertical menu links */
+                }
+
+                #burger-icon{
+                    display:unset; /*Make burger icon visible when screen is small */
+                    /*position:fixed;*/
+                    float: left;
+                    font-size: 28px; /*Font size of burger icon*/
+                    margin-left: 1%; /*Add a bit of spacing on left side of burger icon*/
+                    margin-bottom: 7px;
+                }
+
+
             }
-            hr{
-                color: rgb(116, 116, 116);
-            }
-                /*
-                .card-container {
-                    width: 90%;
-                    margin: 50px auto;
-                }
-                .heading {
-                    text-align: center;
-                    font-size: 30px;
-                    margin-bottom: 50px;
-                }
-
-                .row {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-around;
-                    flex-flow: wrap;
-                }
-
-                .card {
-                    width: 20%;
-                    background: #fff;
-                    border: 1px solid #ccc;
-                    margin-bottom: 50px;
-                    transition: 0.3s;
-                }
-
-                .card-image {
-                    text-align: center;
-                    padding: 50px 10px;
-                    background: linear-gradient(to right, #ff416c, #ff4b2b);
-                    color: #fff;
-                }
-
-                .card-title {
-                    padding: 30px 20px;
-                    text-align: center;
-                    font-size: 18px;
-                }
-
-                .card:hover {
-                transform: scale(1.05);
-                box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
-                }
-                */
 
         </style>
+        <script>
+            //When user scrolls down 80px from top -> resize navbar padding and logo font size
+            
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                    document.getElementById("navbar").style.padding = "1px 0px"; //padding when scroll
+                    document.getElementById("logo").style.fontSize = "25px"; //logo size when scroll
+                } 
+                else {
+                    document.getElementById("navbar").style.padding = "54px 0px"; //padding when didn't scroll
+                    document.getElementById("logo").style.fontSize = "35px"; //logo size when didn't scroll
+                }
+            }
+
+            /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+            function toggleVerticalMenu() {
+
+                var x = document.getElementById("navbar-right");
+
+                if (x.className === "anchor-links") {
+                    x.className += " responsive";
+                } 
+                else {
+                    x.className = "anchor-links";
+                }
+
+            }
+
+            /*Maybe use this when you exit small screen and go back to large screen idk*/
+            function hideVerticalMenu() {
+                var x = document.getElementById("navbar-right");
+                x.className = "anchor-links";
+            }
+        </script>
     </head>
     
     <body>
+        <nav id="navbar">
+            <div id = "navbar-content">
+                
+                <a href="#top" id="logo"><i>MM</i></a> <!--Using #top, it scrolls to top of page-->
+
+                <div id = "navbar-right" class = "anchor-links"  onclick="toggleVerticalMenu();">
+                    <a href=#abo>About</a>
+                    <a href=#edu>Education</a>
+                    <a href=#exp>Experience</a>
+                    <a href=#tec>Skills</a>
+                    <a href=#prj>Projects</a>
+                    <a href=#con>Contact</a> 
+                </div>
+
+                <div id = "burger-icon" onclick="toggleVerticalMenu()">
+                    <a href="javascript:void(0);" class="icon">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>  
+
+            </div>
+        </nav>
 
 
-        <br><p></p>
+        
 
         <!--Wide Image starts here  ----------------------------------->
         <div class = "text-overlay">
-            <img class = "wide-image" src="portfolio3.jpg" >
-            <div class="centered"><h1 class="image-header">My Portfolio</h1></div>
+            <img class = "wide-image" src="images/elephant.jpg" >
+            <div class="centered" style="top:40%;"><h1 class="image-header">My Portfolio</h1></div>
+            <div class="quote">
+                <p>"If there is no struggle, there is no progress." — Frederick Douglass</p>
+            </div>
         </div>
         <!--Wide Image ends here  ----------------------------------->
 
@@ -219,13 +399,14 @@
                     I work and play somewhere between the two.
                     <br><br>
                     I am passionate about my work and 
-                    have a keen interest in beautiful design.
-                    My hope is that my portfolio can inspire you.
+                    have a keen interest in beautiful design.<br>
+                    Enjoy my nature inspired website.<br>
+                    My hope is that it sparks rumination.
                 </p> 
             </div>
             
             <div class="right-column">
-                <img class="medium-image" src="mac.jpeg">
+                <img class="medium-image" src="images/mac.jpeg">
             </div>
         
             <br><br>
@@ -240,8 +421,13 @@
 
         <!--Wide Image starts here  ----------------------------------->
         <div class = "text-overlay">
-            <img class = "wide-image" src="wide-education.png" >
+            <img class = "wide-image" src="images/bird-wide.jpeg" >
             <div class="centered"><h1 class="image-header">Education</h1></div>
+            <div class="quote">
+                <p>"Everybody is a genius. But if you judge a fish by its ability 
+                    to climb a tree, it will live its whole life believing that 
+                    it is stupid." — Albert Einstein</p>
+            </div>
         </div>
         <!--Wide Image ends here  ----------------------------------->
 
@@ -263,7 +449,7 @@
             </div>
             
             <div class="right-column">
-                <img class="medium-image" src="concordia.jpeg">
+                <img class="medium-image" src="images/concordia.jpeg">
             </div>
         
             <br><br>
@@ -275,7 +461,7 @@
         <div class="main-content">
             <br>
             <div class="left-column">
-                <img class="medium-image" src="vanier.jpeg" style="width:380px;">
+                <img class="medium-image" src="images/vanier.jpeg" style="width:380px;">
             </div>
             
             <div class="right-column">
@@ -294,12 +480,17 @@
         
             <br><br>
         </div>
+        <p></p>
         
 
         <!--Wide Image starts here  ----------------------------------->
         <div class = "text-overlay">
-            <img class = "wide-image" src="wide-experience.jpg" >
+            <img class = "wide-image" src="images/sea-wide.jpg" >
             <div class="centered"><h1 class="image-header">Experience</h1></div>
+            <div class="quote">
+                <p>"What you do makes a difference, and you have to decide what 
+                    kind of difference you want to make." — Jane Goodall</p>
+            </div>
         </div>
         <!--Wide Image ends here  ----------------------------------->
 
@@ -351,7 +542,7 @@
             </div>
             
             <div class="right-column">
-                <img class="medium-image" src="hospital.webp">
+                <img class="medium-image" src="images/hospital.webp">
             </div>
         
             <br><br>
@@ -377,8 +568,12 @@
 
         <!--Wide Image starts here  ----------------------------------->
         <div class = "text-overlay">
-            <img class = "wide-image" src="skills.png" >
+            <img class = "wide-image" src="images/forest-wide.jpg" >
             <div class="centered"><h1 class="image-header">Technical Skills</h1></div>
+            <div class="quote">
+                <p>"Life is really simple, but we insist on making it 
+                    complicated." — Confucius</p>
+            </div>
         </div>
         <!--Wide Image ends here  ----------------------------------->
 
@@ -455,8 +650,12 @@
         
         <!--Wide Image starts here  ----------------------------------->
         <div class = "text-overlay">
-            <img class = "wide-image" src="projects.jpg" >
+            <img class = "wide-image" src="images/tiger-wide.jpg" >
             <div class="centered"><h1 class="image-header">Projects</h1></div>
+            <div class="quote">
+                <p>"A life spent making mistakes is not only more honourable, 
+                    but more useful than a life spent doing nothing." — George Bernhard Shaw</p>
+            </div>
         </div>
         <!--Wide Image ends here  ----------------------------------->
 
@@ -480,7 +679,7 @@
             </div>
             
             <div class="right-column">
-                <img class="medium-image" src="phone.jpeg">
+                <img class="medium-image" src="images/phone.jpeg">
             </div>
         
             <br><br>
@@ -492,7 +691,7 @@
         <div class="main-content">
             <br>
             <div class="left-column">
-                <img class="medium-image" src="snake.png" style="width:380px;">
+                <img class="medium-image" src="images/snake.png" style="width:380px;">
             </div>
             
             <div class="right-column">
@@ -532,7 +731,7 @@
             </div>
             
             <div class="right-column">
-                <img class="medium-image" src="battleship.png">
+                <img class="medium-image" src="images/battleship.png">
             </div>
         
             <br><br>
@@ -545,8 +744,9 @@
         <div class="very-small-content">
             <h2>About this Website</h2>
             <p>This website was created from scratch using HTML, CSS, and JavaScript.<br>
+                All of the wide images were AI generated.<br>
                 I hope you enjoyed scrolling and hopefully this site managed to 
-                spark inspiration within you.
+                spark inspiration within you. 
             </p>
 
             <p>
