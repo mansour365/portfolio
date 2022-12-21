@@ -5,6 +5,7 @@
         <title>Test</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
 
+        
 
         <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -13,7 +14,10 @@
         <style>
             * {
                 box-sizing: border-box;
-                
+            }
+            html{
+                scroll-behavior: smooth; /*Creates smooth transitions when doing auto anchor scroll*/
+                scroll-padding-top: 47px; /* height of sticky header when shrunk (Experimental to fix anchor bookmarks)*/
             }
             body {
                 background: #fefefe;
@@ -23,6 +27,7 @@
                 line-height: 1.6em;
                 color: rgb(160, 160, 160);
                 background-color: rgb(24,26,27); 
+                /*background-color: white; /*For light mode*/
                 /*Important because first we need main-content to disaply as inline block
                 in order to avoid overlapping with other divs
                 But then inline block will nalway float to the right
@@ -35,7 +40,7 @@
             }
             h1{
                 font-weight: 100;
-                font-size: 2.5em;
+                font-size: 2.4em;
                 color:rgb(187, 187, 187);
                 margin-top:1%; /*Make header start right a top of column , inline with image*/
                 line-height:1.1em;
@@ -64,13 +69,14 @@
                 line-height: 1.6em;
             }
             .link{
-                color:rgb(58, 180, 255);
+                color:rgb(20, 175, 240);
             }
             .quote{
                 position: absolute;
                 bottom: 20px;
                 left: 20px;
                 background-color: rgba(0, 0, 0, 0.3);
+                backdrop-filter: blur(30px);
                 color: rgb(228, 226, 223);
                 padding-left: 20px;
                 padding-right: 20px;
@@ -143,7 +149,8 @@
 
              /*Create a sticky/fixed navbar*/
              #navbar{
-                background-color: rgb(0, 0, 0, 0.88); /*background color of navbar (default is white) */
+                background-color: rgb(0, 0, 0, 0.77); /*background color of navbar (default is white) */
+                backdrop-filter: blur(30px);
                 padding-top: 54px; /*give the navbar the desired thickness*/
                 padding-bottom: 54px; /*give the navbar the desired thickness*/
                 transition: 0.4s; /*transition effect length when padding is decreased */
@@ -164,7 +171,7 @@
                 padding-bottom: 8px;
                 padding-left: 40px;
                 padding-right: 6px;*/
-                color: rgb(173, 173, 173); /*color of the links in the navbar*/
+                color: rgb(208, 208, 208); /*color of the links in the navbar*/
                 line-height: 25px; /*the height of the navbar link button */
             }
 
@@ -190,6 +197,7 @@
             /*behaviour of the nav links*/
             #navbar a:hover{
                 color: white;
+                transition: 0.3s;
             }
 
             /*This is for both the logo and navbar links*/
@@ -258,6 +266,7 @@
                 /****** Navbar Small Screen ******/
                 #navbar{ /*Entire navbar when screen small*/
                     padding: 0px 0px  !important; /*Since menu vertical, reduce top and bottom padding*/
+                    backdrop-filter: none; /*when screen is small need to set blur to none, otherwise navbar will glitch and burger wont open properly*/
                 }
                 #navbar a{ /*All links in navbar*/
                     float: none;    /*makes the nav links stacked vertically */
@@ -266,6 +275,7 @@
                     padding-top: 10px;
                     text-align: left;
                     transition: 0.3; /*is this even needed???????????????????*/
+                    /*border: 1px solid purple;*/
                 }
 
                 #navbar #logo {
@@ -282,7 +292,7 @@
                     transition: 0.5s; /*Transition speed when opening and closing vertical menu*/
                     position: fixed;
                     z-index: 100; /*Make vertical menu appear above all other content*/
-                    background-color: rgba(0, 0, 0, 0.978);
+                    background-color: rgba(0, 0, 0, 0.7);
                     top: 45px; /*How far from the top the vertical menu appears*/
                     left: 0;
                 }
@@ -297,6 +307,7 @@
                 .anchor-links.responsive{ /*if burger menu is open */
                     height:100%; /*Make vertical menu take full height of window */
                     padding: 5%; /*5% padding around the collection of vertical menu links */
+                    backdrop-filter: blur(30px);
                 }
 
                 #burger-icon{
@@ -362,7 +373,7 @@
                     <a href=#exp>Experience</a>
                     <a href=#tec>Skills</a>
                     <a href=#prj>Projects</a>
-                    <a href=#con>Contact</a> 
+                    <a href="contact.html">Contact</a> 
                 </div>
 
                 <div id = "burger-icon" onclick="toggleVerticalMenu()">
@@ -387,7 +398,7 @@
         </div>
         <!--Wide Image ends here  ----------------------------------->
 
-            <p></p>
+            <p id="abo"><a name="edu"></a><!--Needed when we're in contact page--></p>
             
         <div class="main-content">
             <br>
@@ -399,7 +410,8 @@
                     I work and play somewhere between the two.
                     <br><br>
                     I am passionate about my work and 
-                    have a keen interest in beautiful design.<br>
+                    have a keen interest in software development 
+                    and beautiful design.<br>
                     Enjoy my nature inspired website.<br>
                     My hope is that it sparks rumination.
                 </p> 
@@ -421,7 +433,8 @@
 
         <!--Wide Image starts here  ----------------------------------->
         <div class = "text-overlay">
-            <img class = "wide-image" src="images/bird-wide.jpeg" >
+            <a name="edu"></a><!--Needed when we're in contact page-->
+            <img class = "wide-image" id="edu" src="images/bird-wide.jpeg" >
             <div class="centered"><h1 class="image-header">Education</h1></div>
             <div class="quote">
                 <p>"Everybody is a genius. But if you judge a fish by its ability 
@@ -485,7 +498,8 @@
 
         <!--Wide Image starts here  ----------------------------------->
         <div class = "text-overlay">
-            <img class = "wide-image" src="images/sea-wide.jpg" >
+            <a name="exp"></a><!--Needed when we're in contact page-->
+            <img class = "wide-image" id="exp" src="images/sea-wide.jpg" >
             <div class="centered"><h1 class="image-header">Experience</h1></div>
             <div class="quote">
                 <p>"What you do makes a difference, and you have to decide what 
@@ -568,7 +582,8 @@
 
         <!--Wide Image starts here  ----------------------------------->
         <div class = "text-overlay">
-            <img class = "wide-image" src="images/forest-wide.jpg" >
+            <a name="tec"></a><!--Needed when we're in contact page-->
+            <img class = "wide-image" id="tec" src="images/forest-wide.jpg" >
             <div class="centered"><h1 class="image-header">Technical Skills</h1></div>
             <div class="quote">
                 <p>"Life is really simple, but we insist on making it 
@@ -650,7 +665,8 @@
         
         <!--Wide Image starts here  ----------------------------------->
         <div class = "text-overlay">
-            <img class = "wide-image" src="images/tiger-wide.jpg" >
+            <a name="prj"></a><!--Needed when we're in contact page-->
+            <img class = "wide-image" id="prj" src="images/tiger-wide.jpg" >
             <div class="centered"><h1 class="image-header">Projects</h1></div>
             <div class="quote">
                 <p>"A life spent making mistakes is not only more honourable, 
@@ -744,7 +760,6 @@
         <div class="very-small-content">
             <h2>About this Website</h2>
             <p>This website was created from scratch using HTML, CSS, and JavaScript.<br>
-                All of the wide images were AI generated.<br>
                 I hope you enjoyed scrolling and hopefully this site managed to 
                 spark inspiration within you. 
             </p>
