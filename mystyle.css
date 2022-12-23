@@ -7,7 +7,9 @@ html{
 }
 body {
     background: #fefefe;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:  Arial, Helvetica, sans-serif;
+    /*A recommended font stack i found online */
+    /*font-family: Helvetica Neue, Helvetica, Arial, sans-serif;*/
     
     font-weight: 100;
     line-height: 1.6em;
@@ -243,10 +245,10 @@ h3{
 }
 
 
-/*FOR SMALLER SCREENS*/
+/*FOR EVEN SMALLER SCREENS*/
 @media screen and (max-width: 700px){
     .main-content{
-        width:auto;
+        width:100%;
         text-align: center;
     }
     .small-content{
@@ -260,6 +262,10 @@ h3{
     }
     .very-small-content{
         width: 100%;
+    }
+
+    .medium-image{
+        width:100%;
     }
 
     /****** Navbar Small Screen ******/
