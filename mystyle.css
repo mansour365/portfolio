@@ -138,8 +138,12 @@ hr{
 .wide-image{
     width:100%;
 }
-.medium-image{
+.medium-image-right{
     width:398px;
+    border-radius:2%/4%;
+}
+.medium-image-left{
+    width: 380px;
     border-radius:2%/4%;
 }
 
@@ -272,7 +276,10 @@ hr{
         width: 100%;
     }
 
-    .medium-image{
+    .medium-image-right{
+        width:100%;
+    }
+    .medium-image-left{
         width:100%;
     }
 
