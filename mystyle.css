@@ -54,7 +54,6 @@ hr{
     border:0;
     border-top: 1px solid rgb(222,222,222); /*For light mode*/
     border-top: 1px solid rgb(56, 62, 64); /*For dark mode*/
-    /*------------------------------------------------------------*/
 }
 .main-content p{
     font-size: 1.3em;
@@ -340,4 +339,11 @@ hr{
     }
 
 
+}
+
+/*Tiny screens*/
+@media screen and (max-width: 550px){
+    .quote{
+        visibility: hidden;
+    }
 }
