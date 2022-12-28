@@ -185,6 +185,7 @@ hr{
     padding-right: 6px;*/
     color: rgb(208, 208, 208); /*color of the links in the navbar*/
     line-height: 25px; /*the height of the navbar link button */
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /*Style the logo*/
