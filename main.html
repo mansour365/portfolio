@@ -60,7 +60,7 @@
             
 
             .card-container {
-                    width: 90%;
+                    width: 100%;
                     margin: 50px auto;
                     border: 3px solid green;
             }
@@ -71,31 +71,43 @@
                     margin-bottom: 50px;
             }
 
-            .row {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-around;
-                    flex-flow: wrap;
-                    border: 3px solid purple;
+            .cards5{
+                display: grid;
+                grid-template-columns: repeat(5, 1fr); /*4 columns*/
+                grid-auto-rows: auto; /*how tall is one row*/
+                /*grid-gap: 1rem;*/
             }
 
-            .card {
-                    width: 18%;
-                    background: #fff;
-                    margin-bottom: 50px;
-                    transition: 0.3s;
-                    
+            .cards4{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr); /*4 columns*/
+                grid-auto-rows: auto; /*how tall is one row*/
+                /*grid-gap: 1rem;*/
             }
-
+            
+            .card{
+                border: 2px solid #e7e7e7;
+                border-radius: 4px;
+                padding: .5rem; /*padding betwwen backcolor and border*/
+                margin: 10px;
+                text-align: center;
+            }
+            
             .card-image {
                     text-align: center;
                     padding: 30px 10px;
-                    background: grey;
-                    color: #fff;
+                    max-width: 200px;
+                    max-height:200px;
+                    min-height:20%;
+                    
+                    /*height:auto;*/
+                    background: rgb(236, 236, 236);
+                    color: rgb(18, 18, 18);/*??????*/
                     border-radius: 5%;
             }
+            
             .card-title {
-                    padding: 10px 10px;
+                    /*padding: 10px 10px;*/
                     text-align: center;
                     font-size: 18px;
             }
@@ -104,6 +116,25 @@
                 transform: scale(1.05);
                 box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
             }
+
+                        /*
+            .row {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    flex-flow: wrap;
+                    border: 3px solid purple;
+            }
+            */
+            /*
+            .card {
+                    width: 18%;
+                    background: #fff;
+                    margin-bottom: 50px;
+                    transition: 0.3s;
+                    
+            }
+            */
             
 
             .about {
@@ -390,13 +421,13 @@
             </section>
 
             <div class="card-container">
-
+                <br><br>
 
                 <div class="heading">
                     <h4>Operating Systems</h4>
                 </div>
     
-                <div class="row">
+                <div class="cards4">
     
                     <div class="card">
                         <div class="card-image">
@@ -417,12 +448,14 @@
                     </div>
     
                 </div>
-            
+
+                <br><br>
+
                 <div class="heading">
                     <h4>Applications</h4>
                 </div>
 
-                <div class="row">
+                <div class="cards4">
 
                     <div class="card">
                         <div class="card-image">
@@ -462,7 +495,7 @@
 
                 </div>
 
-                <div class="row">
+                <div class="cards4">
 
                     <div class="card">
                         <div class="card-image">
@@ -504,250 +537,248 @@
 
 
             </div>
-        <div id="content">
-                <h2>Applications</h2> 
-                <div class="row">
-                    <div class="column">
-                        <div class="card">
-                            <img src="icons/eclipse.png" alt="Mountains" style="width:80%">
-                            <h3>Eclipse</h3>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="card">
-                            <img src="icons/visual studio ide.png" alt="Lights" style="width:80%">
-                            <h3>Visual Studio</h3>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="card">
-                            <img src="icons/visual studio code ide.png" alt="Nature" style="width:80%">
-                            <h3>Visual Studio Code</h3>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="card">
-                            <img src="icons/netbeans.png" alt="Mountains" style="width:80%">
-                            <h3>NetBeans</h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="column">
-                        <div class="card">
-                            <img src="icons/android studio.png" alt="Mountains" style="width:80%">
-                            <h3>Android Studio</h3>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="card">
-                            <img src="icons/word.png" alt="Lights" style="width:80%">
-                            <h3>Microsoft Word</h3>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="card">
-                            <img src="icons/excel.png" alt="Nature" style="width:80%">
-                            <h3>Microsoft Excel</h3>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="card">
-                            <img src="icons/powerpoint.png" alt="Mountains" style="width:80%">
-                            <h3>Microsoft PowerPoint</h3>
-                        </div>
-                    </div>
-                </div>
+        
 
 
                 <p> Eclipse IDE • Microsoft Visual Studio IDE • Microsoft Visual Studio Code IDE • NetBeans IDE • Android Studio IDE • Microsoft Office: Word • Excel • PowerPoint</p>
+                <br><br>
+                <div class="heading">
+                    <h4>Programming</h4>
+                </div>
 
-                <h2>Programming</h2>
-                <div class="row">
-                    <div class="column">
-                        <div class="card">
-                            <img src="icons/java.png" alt="Mountains" style="width:80%">
+                <div class="cards5">
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="icons/java.png" alt="Lights" style="width:80%">
+                        </div>
+                        <div class="card-title">
                             <h3>Java</h3>
                         </div>
                     </div>
-                    <div class="column">
-                        <div class="card">
+
+                    <div class="card">
+                        <div class="card-image">
                             <img src="icons/C++.png" alt="Lights" style="width:80%">
+                        </div>
+                        <div class="card-title">
                             <h3>C++</h3>
                         </div>
                     </div>
-                    <div class="column">
-                        <div class="card">
-                            <img src="icons/python.png" alt="Nature" style="width:80%">
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="icons/python.png" alt="Lights" style="width:80%">
+                        </div>
+                        <div class="card-title">
                             <h3>Python</h3>
                         </div>
                     </div>
-                    <div class="column">
-                        <div class="card">
-                            <img src="icons/mysql.png" alt="Mountains" style="width:80%">
-                            <h3>mySQL</h3>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="icons/mysql.png" alt="Lights" style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <h3>MySQL</h3>
                         </div>
                     </div>
-                </div>
 
-                <div class="row">
-                    <div class="column">
-                        <div class="card">
-                            <img src="icons/html.png" alt="Mountains" style="width:80%">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="icons/html.png" alt="Lights" style="width:80%">
+                        </div>
+                        <div class="card-title">
                             <h3>HTML</h3>
                         </div>
                     </div>
-                    <div class="column">
-                        <div class="card">
+
+                </div>
+
+                <div class="cards5">
+
+                    <div class="card">
+                        <div class="card-image">
                             <img src="icons/css.png" alt="Lights" style="width:80%">
+                        </div>
+                        <div class="card-title">
                             <h3>CSS</h3>
                         </div>
                     </div>
-                    <div class="column">
-                        <div class="card">
-                            <img src="icons/javascript.png" alt="Nature" style="width:80%">
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="icons/javascript.png" alt="Lights" style="width:80%">
+                        </div>
+                        <div class="card-title">
                             <h3>JavaScript</h3>
                         </div>
                     </div>
-                    <div class="column">
-                        <div class="card">
-                            <img src="icons/reactjs.png" alt="Mountains" style="width:80%">
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="icons/reactjs.png" alt="Lights" style="width:80%">
+                        </div>
+                        <div class="card-title">
                             <h3>ReactJS</h3>
                         </div>
                     </div>
-                </div>
 
-                <div class="row">
-                    <div class="column">
-                        <div class="card">
-                            <img src="icons/dom.png" alt="Mountains" style="width:80%">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="icons/dom.png" alt="Lights" style="width:80%">
+                        </div>
+                        <div class="card-title">
                             <h3>DOM</h3>
                         </div>
                     </div>
-                    <div class="column">
-                        <div class="card">
+
+                    <div class="card">
+                        <div class="card-image">
                             <img src="icons/C.png" alt="Lights" style="width:80%">
+                        </div>
+                        <div class="card-title">
                             <h3>C</h3>
                         </div>
                     </div>
-                    <div class="column">
-                        <div class="card">
-                            <img src="icons/ruby.png" alt="Nature" style="width:80%">
+
+                </div>
+
+                <div class="cards5">
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="icons/ruby.png" alt="Lights" style="width:80%">
+                        </div>
+                        <div class="card-title">
                             <h3>Ruby</h3>
                         </div>
                     </div>
-                    <div class="column">
-                        <div class="card">
-                            <img src="icons/csharp.png" alt="Mountains" style="width:80%">
-                            <h3>C#</h3>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="row">
-                    <div class="column">
-                        <div class="card">
-                            <img src="icons/aspectj.jpg" alt="Mountains" style="width:80%">
-                            <h3>Aspect-J</h3>
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="icons/csharp.png" alt="Lights" style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <h3>CSharp</h3>
                         </div>
                     </div>
-                    <div class="column">
-                        <div class="card">
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="icons/aspectj.jpg" alt="Lights" style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <h3>AspectJ</h3>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
                             <img src="icons/lisp.png" alt="Lights" style="width:80%">
+                        </div>
+                        <div class="card-title">
                             <h3>Lisp</h3>
                         </div>
                     </div>
-                    <div class="column">
-                        <div class="card">
-                            <img src="icons/prolog.png" alt="Nature" style="width:80%">
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="icons/prolog.png" alt="Lights" style="width:80%">
+                        </div>
+                        <div class="card-title">
                             <h3>Prolog</h3>
                         </div>
                     </div>
+
                 </div>
+
+                
+
+
+
+
+
+
+               
 
 
 
                 <p>Java • C++ • HTML • CSS • JavaScript ES6 • Document Object Model (DOM) • ReactJS • PHP • mySQL • Python • C • Ruby • C# • Prolog • Aspect-J • Lisp</p>
+                <br><br>
+                <div class="heading">
+                    <h4>Other Tools</h4>
+                </div> 
 
-                <h2>Other Tools</h2> 
 
-                <div class="row">
-                    <div class="column">
-                        <div class="card">
-                            <img src="icons/github.png" alt="Mountains" style="width:80%">
+                <div class="cards5">
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="icons/github.png" alt="Lights" style="width:80%">
+                        </div>
+                        <div class="card-title">
                             <h3>GitHub</h3>
                         </div>
                     </div>
-                    <div class="column">
-                        <div class="card">
+
+                    <div class="card">
+                        <div class="card-image">
                             <img src="icons/openrefine.png" alt="Lights" style="width:80%">
+                        </div>
+                        <div class="card-title">
                             <h3>OpenRefine</h3>
                         </div>
                     </div>
-                    <div class="column">
-                        <div class="card">
-                            <img src="icons/jupyter notebook.png" alt="Nature" style="width:80%">
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="icons/jupyter notebook.png" alt="Lights" style="width:80%">
+                        </div>
+                        <div class="card-title">
                             <h3>Jupyter Notebook</h3>
                         </div>
                     </div>
-                    <div class="column">
-                        <div class="card">
-                            <img src="icons/opencl.png" alt="Mountains" style="width:80%">
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="icons/opencl.png" alt="Lights" style="width:80%">
+                        </div>
+                        <div class="card-title">
                             <h3>OpenCL</h3>
                         </div>
                     </div>
-                </div>
 
-                <div class="row">
-                    <div class="column">
-                        <div class="card">
-                            <img src="icons/final cut pro.png" alt="Mountains" style="width:80%">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="icons/final cut pro.png" alt="Lights" style="width:80%">
+                        </div>
+                        <div class="card-title">
                             <h3>Final Cut Pro</h3>
                         </div>
                     </div>
+
                 </div>
 
                 
-                <p>GitHub Version Control • Data Structures and Algorithms • Data Analytics (OpenRefine and Jupyter Notebook) • Multicore programming (Intel TBB, OpenCL and CUDA) • Final Cut Pro</p>
 
+                
+                <p>GitHub Version Control • Data Structures and Algorithms • Data Analytics (OpenRefine and Jupyter Notebook) • Multicore programming (Intel TBB, OpenCL and CUDA) • Final Cut Pro</p>
+                <br><br>
 
                 <!-- Animated Logo of technology flying in as you scroll-->
             
 
             <hr>
 
-            <section class ="hidden">
-                <h1 id="prj">Projects</h1>
-                <p>Check out my GitHub: 
-                    <a href="https://github.com/mansour365" target="_blank">GITHUB</a>
-                </p>
-
-                <h2>Counter Android Application</h2>
-                <p> Developed an Android app used for counting. 
-                    Coded in Android Studio IDE, using Java and the Android SDK. 
-                    Features vibration after a certain count interval, full-screen mode, vibration toggles and duration. 
-                    These features can be adjusted in the settings page of the app. 
-                    User interface takes advantage of the power saving features of an OLED display.</p>
-
-                <!--Maybe Image of App inside phone-->
-
-                <h2>Snake game</h2>
-                <p> Developed a snake game with a graphical user interface using C++ and OpenGL. 
-                    Coded in Microsoft Visual Studio IDE. 
-                    Features collision detection and real time user keyboard input. 
-                    User interface designed using OpenGL.</p>
-
-                <!--Maybe Image of the snake game (should make the colors better though)-->
-
-                <h2>Battleship game</h2>
-                <p> Developed a battleship game in Eclipse IDE using Java. Makes use of object-oriented programming concepts. Takes advantage of random number generation.</p>
-            </section>
-
-            <hr>
+            
+            <hr><br><br>
 
             <section class ="hidden">
-                <h1 id="con">Contact Me</h1>
+
+                <div class="heading">
+                    <h4>Contact Me</h4>
+                </div> 
 
                 <address>
                     <b>Email: </b><a href="mailto:maqsoudi99@gmail.com">maqsoudi99@gmail.com</a>
