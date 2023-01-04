@@ -66,7 +66,7 @@
                     margin-bottom: 50px;
             }
 
-            .container2{
+            .container-two-column-cards{
                 width:70%;
                 border: 1px solid red;
                 margin: 50px auto;
@@ -90,56 +90,61 @@
             }
             
             .card{
-                /*border: 2px solid #e7e7e7;*/
-                /*border-radius: 4px;*/
-                /*padding: .5rem; /*padding betwwen backcolor and border*/
-                /*margin: 10px;*/
+                border: 1px solid #000000;/*border around card*/
                 text-align: center;
-                overflow:visible;
+                padding: 10px 10px; /*padding inside card*/
+
+                max-width: 200px; /*max width of card*/
+                min-width: 200px;/*min width of card*/
+                max-height: 200px; /*max height of card*/
+                min-height: 200px;/*min height of card*/
+
+                /*make image centered inside block*/
+                margin-left: auto;
+                margin-right:auto;
+                margin-bottom: 10%;
+
+                background: rgb(65, 65, 65); /*Color of card*/
+                color: rgb(255, 255, 255);/*Text color*/
+                border-radius: 5%;
+                box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
+                
             }
             
             .card-image {
-                    text-align: center;
-                    padding: 30px 10px;
-                    max-width: 200px;
-                    min-width: 200px;/*interseting, it maintains the same width but make screen small will push it out of view*/
-
-                    /*Fix issue where some backgrounds were larger/smaller than others*/
-                    max-height:200px;
-                    min-height:200px;/*Make smaller images to have same background height of larger images*/
-
-                    /*make image centered inside block*/
-                    margin-left: auto;
-                    margin-right:auto;
-
-                    /*height:auto;*/
-                    background: rgb(167, 167, 167);
-                    color: rgb(18, 18, 18);/*??????*/
-                    border-radius: 5%;
+                text-align: center;
+                border: 1px solid green;
+                max-width:150px; /*max width of image*/
+                min-width:150px; /*min width of image*/
+                
+                margin-top: 0%;
+                margin-left: auto;
+                margin-right: auto;
+                height:70%; /*image takes 70% of card*/
             }
             
             .card-title {
-                    padding: 10px 10px;
+                    border: 1px solid rgb(200, 0, 0);
+                    padding: 5px 5px;
                     text-align: center;
                     font-size: 18px;
+                    height:30%; /*text takes 30% of card*/
             }
 
-            .card-image:hover {
+            .card:hover {
                 transform: scale(1.05);
-                box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.499);
+                box-shadow: 0 0 40px -10px rgba(0, 0, 0, 1);
             }
+
             @media screen and (max-width: 990px){
                 .four-column-cards{
-                    grid-template-columns: repeat(2, 1fr); /*2 columns*/
-                }
-                .five-column-cards{
                     grid-template-columns: repeat(2, 1fr); /*2 columns*/
                 }
             }
 
             /*FOR EVEN SMALLER SCREENS*/
             @media screen and (max-width: 750px){
-                .container2{
+                .container-two-column-cards{
                     width:100%;
                 }
             }
@@ -457,27 +462,26 @@
                 <p>I am familliar with both MacOS and Windows operating systems.</p>
 
     
-                <div class = container2>
+                <div class = container-two-column-cards>
                     <div class="two-column-cards">
-        
+
                         <div class="card">
                             <div class="card-image">
-                                <img src="icons/windows2.png" alt="Lights" style="width:80%">
+                                <img src="icons/windows.png"  style="width:80%">
                             </div>
                             <div class="card-title">
-                                <h3>Windows</h3>
+                                <p>Windows</p>
                             </div>
                         </div>
         
                         <div class="card">
                             <div class="card-image">
-                                <img src="icons/macOS.png" alt="Lights" style="width:80%">
+                                <img src="icons/macOS.png"  style="width:80%">
                             </div>
                             
                             <div class="card-title">
-                                <h3>macOS</h3>
+                                <p>macOS</p>
                             </div>
-                            
                         </div>
         
                     </div>
@@ -503,37 +507,37 @@
 
                     <div class="card">
                         <div class="card-image">
-                            <img src="icons/eclipse.png" alt="Lights" style="width:80%">
+                            <img src="icons/eclipse.png"  style="width:80%">
                         </div>
                         <div class="card-title">
-                            <h3>Eclipse</h3>
+                            <p>Eclipse</p>
                         </div>
                     </div>
 
                     <div class="card">
                         <div class="card-image">
-                            <img src="icons/visual studio ide.png" alt="Lights" style="width:80%">
+                            <img src="icons/visual studio ide.png"  style="width:80%">
                         </div>
                         <div class="card-title">
-                            <h3>Visual Studio</h3>
+                            <p>Visual Studio</p>
                         </div>
                     </div>
 
                     <div class="card">
                         <div class="card-image">
-                            <img src="icons/visual studio code ide.png" alt="Lights" style="width:80%">
+                            <img src="icons/visual studio code ide.png"  style="width:80%">
                         </div>
                         <div class="card-title">
-                            <h3>Visual Studio Code</h3>
+                            <p>VS Code</p>
                         </div>
                     </div>
 
                     <div class="card">
                         <div class="card-image">
-                            <img src="icons/netbeans.png" alt="Lights" style="width:80%">
+                            <img src="icons/netbeans.png"  style="width:80%">
                         </div>
                         <div class="card-title">
-                            <h3>NetBeans</h3>
+                            <p>NetBeans</p>
                         </div>
                     </div>
 
@@ -543,37 +547,37 @@
 
                     <div class="card">
                         <div class="card-image">
-                            <img src="icons/android studio.png" alt="Lights" style="width:80%">
+                            <img src="icons/android studio.png"  style="width:80%">
                         </div>
                         <div class="card-title">
-                            <h3>Android Studio</h3>
+                            <p>Android Studio</p>
                         </div>
                     </div>
 
                     <div class="card">
                         <div class="card-image">
-                            <img src="icons/word.png" alt="Lights" style="width:80%">
+                            <img src="icons/word.png"  style="width:100%">
                         </div>
                         <div class="card-title">
-                            <h3>Microsoft Word</h3>
+                            <p>Microsoft Word</p>
                         </div>
                     </div>
 
                     <div class="card">
                         <div class="card-image">
-                            <img src="icons/excel.png" alt="Lights" style="width:80%">
+                            <img src="icons/excel.png"  style="width:100%">
                         </div>
                         <div class="card-title">
-                            <h3>Microsoft Excel</h3>
+                            <p>Microsoft Excel</p>
                         </div>
                     </div>
 
                     <div class="card">
                         <div class="card-image">
-                            <img src="icons/powerpoint.png" alt="Lights" style="width:80%">
+                            <img src="icons/powerpoint.png"  style="width:100%">
                         </div>
                         <div class="card-title">
-                            <h3>Microsoft Powerpoint</h3>
+                            <p>Microsoft Powerpoint</p>
                         </div>
                     </div>
 
@@ -602,43 +606,39 @@
 
                     <div class="card">
                         <div class="card-image">
-                            <img src="icons/java.png" alt="Lights" style="width:80%">
+                            <img src="icons/java.png"  style="width:80%">
                         </div>
                         <div class="card-title">
-                            <h3>Java</h3>
+                            <p>Java</p>
                         </div>
                     </div>
 
                     <div class="card">
                         <div class="card-image">
-                            <img src="icons/C++.png" alt="Lights" style="width:80%">
+                            <img src="icons/C++.png"  style="width:80%">
                         </div>
                         <div class="card-title">
-                            <h3>C++</h3>
+                            <p>C++</p>
                         </div>
                     </div>
 
                     <div class="card">
                         <div class="card-image">
-                            <img src="icons/python.png" alt="Lights" style="width:80%">
+                            <img src="icons/python.png"  style="width:80%">
                         </div>
                         <div class="card-title">
-                            <h3>Python</h3>
+                            <p>Python</p>
                         </div>
                     </div>
 
                     <div class="card">
                         <div class="card-image">
-                            <img src="icons/mysql.png" alt="Lights" style="width:80%">
+                            <img src="icons/mysql.png"  style="width:80%; padding-top: 20px;">
                         </div>
                         <div class="card-title">
-                            <h3>MySQL</h3>
+                            <p>MySQL</p>
                         </div>
                     </div>
-
-                   
-
-                    
 
                 </div>
 
@@ -646,45 +646,39 @@
 
                     <div class="card">
                         <div class="card-image">
-                            <img src="icons/html.png" alt="Lights" style="width:80%">
+                            <img src="icons/html.png"  style="width:70%; padding-top: 6px;">
                         </div>
                         <div class="card-title">
-                            <h3>HTML</h3>
+                            <p>HTML</p>
                         </div>
                     </div>
 
                     <div class="card">
                         <div class="card-image">
-                            <img src="icons/css.png" alt="Lights" style="width:80%">
+                            <img src="icons/css.png"  style="width:80%">
                         </div>
                         <div class="card-title">
-                            <h3>CSS</h3>
+                            <p>CSS</p>
                         </div>
                     </div>
 
                     <div class="card">
                         <div class="card-image">
-                            <img src="icons/javascript.png" alt="Lights" style="width:80%">
+                            <img src="icons/javascript.png"  style="width:80%">
                         </div>
                         <div class="card-title">
-                            <h3>JavaScript</h3>
+                            <p>JavaScript</p>
                         </div>
                     </div>
 
                     <div class="card">
                         <div class="card-image">
-                            <img src="icons/reactjs.png" alt="Lights" style="width:80%">
+                            <img src="icons/reactjs.png"  style="width:80%">
                         </div>
                         <div class="card-title">
-                            <h3>ReactJS</h3>
+                            <p>ReactJS</p>
                         </div>
                     </div>
-
-                    
-
-                    
-
-                    
 
                 </div>
 
@@ -692,80 +686,68 @@
 
                     <div class="card">
                         <div class="card-image">
-                            <img src="icons/dom.png" alt="Lights" style="width:80%">
+                            <img src="icons/dom.png"  style="width:80%; padding-top: 20px;">
                         </div>
                         <div class="card-title">
-                            <h3>DOM</h3>
+                            <p>DOM</p>
                         </div>
                     </div>
 
                     <div class="card">
                         <div class="card-image">
-                            <img src="icons/ruby.png" alt="Lights" style="width:80%">
+                            <img src="icons/ruby.png"  style="width:70%; padding-top: 10px;">
                         </div>
                         <div class="card-title">
-                            <h3>Ruby</h3>
+                            <p>Ruby</p>
                         </div>
                     </div>
 
                     <div class="card">
                         <div class="card-image">
-                            <img src="icons/C.png" alt="Lights" style="width:80%">
+                            <img src="icons/C.png"  style="width:70%">
                         </div>
                         <div class="card-title">
-                            <h3>C</h3>
+                            <p>C</p>
                         </div>
                     </div>
 
                     <div class="card">
                         <div class="card-image">
-                            <img src="icons/csharp.png" alt="Lights" style="width:80%">
+                            <img src="icons/csharp.png"  style="width:80%">
                         </div>
                         <div class="card-title">
-                            <h3>CSharp</h3>
-                        </div>
-                    </div>
-
-                    
-
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="icons/aspectj.jpg" alt="Lights" style="width:80%">
-                        </div>
-                        <div class="card-title">
-                            <h3>AspectJ</h3>
+                            <p>CSharp</p>
                         </div>
                     </div>
 
                     <div class="card">
                         <div class="card-image">
-                            <img src="icons/lisp.png" alt="Lights" style="width:80%">
+                            <img src="icons/aspectj.jpg"  style="width:80%">
                         </div>
                         <div class="card-title">
-                            <h3>Lisp</h3>
+                            <p>AspectJ</p>
                         </div>
                     </div>
 
                     <div class="card">
                         <div class="card-image">
-                            <img src="icons/prolog.png" alt="Lights" style="width:80%">
+                            <img src="icons/lisp.png"  style="width:80%">
                         </div>
                         <div class="card-title">
-                            <h3>Prolog</h3>
+                            <p>Lisp</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="icons/prolog.png"  style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <p>Prolog</p>
                         </div>
                     </div>
 
                 </div>
-
-                
-
-
-
-
-
-
-               
-
 
 
                 <br><br>
@@ -790,46 +772,46 @@
 
                     <div class="card">
                         <div class="card-image">
-                            <img src="icons/github.png" alt="Lights" style="width:80%">
+                            <img src="icons/github.png"  style="width:80%">
                         </div>
                         <div class="card-title">
-                            <h3>GitHub</h3>
+                            <p>GitHub</p>
                         </div>
                     </div>
 
                     <div class="card">
                         <div class="card-image">
-                            <img src="icons/openrefine.png" alt="Lights" style="width:80%">
+                            <img src="icons/openrefine.png"  style="width:80%">
                         </div>
                         <div class="card-title">
-                            <h3>OpenRefine</h3>
+                            <p>OpenRefine</p>
                         </div>
                     </div>
 
                     <div class="card">
                         <div class="card-image">
-                            <img src="icons/jupyter notebook.png" alt="Lights" style="width:80%">
+                            <img src="icons/jupyter notebook.png"  style="width:70%">
                         </div>
                         <div class="card-title">
-                            <h3>Jupyter Notebook</h3>
+                            <p>Jupyter Notebook</p>
                         </div>
                     </div>
 
                     <div class="card">
                         <div class="card-image">
-                            <img src="icons/opencl.png" alt="Lights" style="width:80%">
+                            <img src="icons/opencl.png"  style="width:80%; padding-top: 30px;">
                         </div>
                         <div class="card-title">
-                            <h3>OpenCL</h3>
+                            <p>OpenCL</p>
                         </div>
                     </div>
 
                     <div class="card">
                         <div class="card-image">
-                            <img src="icons/final cut pro.png" alt="Lights" style="width:80%">
+                            <img src="icons/final cut pro.png"  style="width:80%; padding-top: 5px;">
                         </div>
                         <div class="card-title">
-                            <h3>Final Cut Pro</h3>
+                            <p>Final Cut Pro</p>
                         </div>
                     </div>
 
