@@ -19,6 +19,8 @@
             body{
                 font-family:Arial, Helvetica, sans-serif;
                 font-weight: 100;
+                line-height: 1.6em;
+                text-align:center; 
                 background-color: rgb(248, 248, 247); /*background color of content: slightly off-white */
                 margin: 0;  /*body has a default small margin around, set to zero so that navbar spans entire width */
             }
@@ -57,7 +59,13 @@
                 margin: 0; /*Makes every go all the way to the edge of screen*/ 
                 box-sizing: border-box; /*? whats this*/
             }
-            
+
+            .heading {
+                    text-align: center;
+                    font-size: 30px;
+                    margin-bottom: 50px;
+            }
+
             .container2{
                 width:70%;
                 border: 1px solid red;
@@ -67,42 +75,25 @@
                     width: 100%;
                     margin: 50px auto;
                     border: 3px solid green;
-                    
             }
             
-            .heading {
-                    text-align: center;
-                    font-size: 30px;
-                    margin-bottom: 50px;
-            }
-
             .two-column-cards{
                 display: grid;
                 grid-template-columns: repeat(2, 1fr); /*4 columns*/
                 grid-auto-rows: auto; /*how tall is one row*/
-                /*grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));*/
-                /*grid-gap: 1rem;*/
-            }
-
-            .five-column-cards{
-                display: grid;
-                grid-template-columns: repeat(5, 1fr); /*4 columns*/
-                grid-auto-rows: auto; /*how tall is one row*/
-                /*grid-gap: 1rem;*/
             }
 
             .four-column-cards{
                 display: grid;
                 grid-template-columns: repeat(4, 1fr); /*4 columns*/
                 grid-auto-rows: auto; /*how tall is one row*/
-                /*grid-gap: 1rem;*/
             }
             
             .card{
-                border: 2px solid #e7e7e7;
-                border-radius: 4px;
-                padding: .5rem; /*padding betwwen backcolor and border*/
-                margin: 10px;
+                /*border: 2px solid #e7e7e7;*/
+                /*border-radius: 4px;*/
+                /*padding: .5rem; /*padding betwwen backcolor and border*/
+                /*margin: 10px;*/
                 text-align: center;
                 overflow:visible;
             }
@@ -128,14 +119,14 @@
             }
             
             .card-title {
-                    /*padding: 10px 10px;*/
+                    padding: 10px 10px;
                     text-align: center;
                     font-size: 18px;
             }
 
-            .card:hover {
+            .card-image:hover {
                 transform: scale(1.05);
-                box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+                box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.499);
             }
             @media screen and (max-width: 990px){
                 .four-column-cards{
@@ -456,19 +447,22 @@
                 <h1 id="tec">Technical Skills</h1>
             </section>
 
-            <div class="card-container">
+           
                 <br><br>
 
                 <div class="heading">
                     <h4>Operating Systems</h4>
                 </div>
+
+                <p>I am familliar with both MacOS and Windows operating systems.</p>
+
     
                 <div class = container2>
                     <div class="two-column-cards">
         
                         <div class="card">
                             <div class="card-image">
-                                <img src="icons/Windows.png" alt="Lights" style="width:80%">
+                                <img src="icons/windows2.png" alt="Lights" style="width:80%">
                             </div>
                             <div class="card-title">
                                 <h3>Windows</h3>
@@ -479,19 +473,31 @@
                             <div class="card-image">
                                 <img src="icons/macOS.png" alt="Lights" style="width:80%">
                             </div>
+                            
                             <div class="card-title">
                                 <h3>macOS</h3>
                             </div>
+                            
                         </div>
         
                     </div>
                 </div>
 
                 <br><br>
+                <div class="card-container">
 
                 <div class="heading">
                     <h4>Applications</h4>
                 </div>
+
+                <p>
+                    I have experience working with a wide variety of applications to get
+                    work done. These include IDEs like Eclipse, Microsoft Visual Studio, 
+                    Visual Studio Code, NetBeans, Android Studio, and more.
+                    <br><br>
+                    I am also quite familiar with the Microsoft Office Suite, which includes 
+                    Word, Excel, PowerPoint, and more.
+                </p>
 
                 <div class="four-column-cards">
 
@@ -575,16 +581,24 @@
 
 
             </div>
-        
+            
 
 
-                <p> Eclipse IDE • Microsoft Visual Studio IDE • Microsoft Visual Studio Code IDE • NetBeans IDE • Android Studio IDE • Microsoft Office: Word • Excel • PowerPoint</p>
                 <br><br>
                 <div class="heading">
                     <h4>Programming</h4>
                 </div>
 
-                <div class="five-column-cards">
+                <p>
+                    I also have experience working with a wide variety of programming 
+                    languages and frameworks. These include but are not limited to Java, 
+                    C++, HTML, CSS, JavaScript, Document Object Model (DOM), ReactJS, PHP, 
+                    MySQL, Python, C, Ruby, C#, Prolog, Aspect-J, and Lisp.
+                    <br><br>
+                    <!--Images of programming languages-->
+                </p>
+
+                <div class="four-column-cards">
 
                     <div class="card">
                         <div class="card-image">
@@ -622,20 +636,13 @@
                         </div>
                     </div>
 
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="icons/C.png" alt="Lights" style="width:80%">
-                        </div>
-                        <div class="card-title">
-                            <h3>C</h3>
-                        </div>
-                    </div>
+                   
 
                     
 
                 </div>
 
-                <div class="five-column-cards">
+                <div class="four-column-cards">
 
                     <div class="card">
                         <div class="card-image">
@@ -673,6 +680,16 @@
                         </div>
                     </div>
 
+                    
+
+                    
+
+                    
+
+                </div>
+
+                <div class="four-column-cards">
+
                     <div class="card">
                         <div class="card-image">
                             <img src="icons/dom.png" alt="Lights" style="width:80%">
@@ -681,14 +698,6 @@
                             <h3>DOM</h3>
                         </div>
                     </div>
-
-                    
-
-                    
-
-                </div>
-
-                <div class="five-column-cards">
 
                     <div class="card">
                         <div class="card-image">
@@ -701,12 +710,23 @@
 
                     <div class="card">
                         <div class="card-image">
+                            <img src="icons/C.png" alt="Lights" style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <h3>C</h3>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
                             <img src="icons/csharp.png" alt="Lights" style="width:80%">
                         </div>
                         <div class="card-title">
                             <h3>CSharp</h3>
                         </div>
                     </div>
+
+                    
 
                     <div class="card">
                         <div class="card-image">
@@ -748,14 +768,25 @@
 
 
 
-                <p>Java • C++ • HTML • CSS • JavaScript ES6 • Document Object Model (DOM) • ReactJS • PHP • mySQL • Python • C • Ruby • C# • Prolog • Aspect-J • Lisp</p>
                 <br><br>
                 <div class="heading">
                     <h4>Other Tools</h4>
                 </div> 
 
+                <p>
+                    Some of the other tools I have worked with include the version
+                    control tool GitHub. Knowledge of Data Structures and Algorithms, 
+                    Knowledge of Data Analytics using programs like OpenRefine and 
+                    Jupyter Notebook. An understanding of multicore programming using 
+                    tools like Intel TBB, OpenCL, etc. An understanding of organizational 
+                    diagrams such as UML Diagrams. As well as video editing tools such 
+                    as Final Cut Pro and DaVinci Resolve.
+                    <br><br>
+                    <!--Images of other tools-->
+                </p>
 
-                <div class="cards5">
+
+                <div class="four-column-cards">
 
                     <div class="card">
                         <div class="card-image">
@@ -807,7 +838,6 @@
                 
 
                 
-                <p>GitHub Version Control • Data Structures and Algorithms • Data Analytics (OpenRefine and Jupyter Notebook) • Multicore programming (Intel TBB, OpenCL and CUDA) • Final Cut Pro</p>
                 <br><br>
 
                 <!-- Animated Logo of technology flying in as you scroll-->
