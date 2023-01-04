@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Portfolio</title>
-        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="viewport" content="width=device-width,initial-scale=1>
 
         <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -58,11 +58,16 @@
                 box-sizing: border-box; /*? whats this*/
             }
             
-
+            .container2{
+                width:70%;
+                border: 1px solid red;
+                margin: 50px auto;
+            }
             .card-container {
                     width: 100%;
                     margin: 50px auto;
                     border: 3px solid green;
+                    
             }
             
             .heading {
@@ -71,14 +76,22 @@
                     margin-bottom: 50px;
             }
 
-            .cards5{
+            .two-column-cards{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr); /*4 columns*/
+                grid-auto-rows: auto; /*how tall is one row*/
+                /*grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));*/
+                /*grid-gap: 1rem;*/
+            }
+
+            .five-column-cards{
                 display: grid;
                 grid-template-columns: repeat(5, 1fr); /*4 columns*/
                 grid-auto-rows: auto; /*how tall is one row*/
                 /*grid-gap: 1rem;*/
             }
 
-            .cards4{
+            .four-column-cards{
                 display: grid;
                 grid-template-columns: repeat(4, 1fr); /*4 columns*/
                 grid-auto-rows: auto; /*how tall is one row*/
@@ -91,17 +104,25 @@
                 padding: .5rem; /*padding betwwen backcolor and border*/
                 margin: 10px;
                 text-align: center;
+                overflow:visible;
             }
             
             .card-image {
                     text-align: center;
                     padding: 30px 10px;
                     max-width: 200px;
+                    min-width: 200px;/*interseting, it maintains the same width but make screen small will push it out of view*/
+
+                    /*Fix issue where some backgrounds were larger/smaller than others*/
                     max-height:200px;
-                    min-height:20%;
-                    
+                    min-height:200px;/*Make smaller images to have same background height of larger images*/
+
+                    /*make image centered inside block*/
+                    margin-left: auto;
+                    margin-right:auto;
+
                     /*height:auto;*/
-                    background: rgb(236, 236, 236);
+                    background: rgb(167, 167, 167);
                     color: rgb(18, 18, 18);/*??????*/
                     border-radius: 5%;
             }
@@ -115,6 +136,21 @@
             .card:hover {
                 transform: scale(1.05);
                 box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+            }
+            @media screen and (max-width: 990px){
+                .four-column-cards{
+                    grid-template-columns: repeat(2, 1fr); /*2 columns*/
+                }
+                .five-column-cards{
+                    grid-template-columns: repeat(2, 1fr); /*2 columns*/
+                }
+            }
+
+            /*FOR EVEN SMALLER SCREENS*/
+            @media screen and (max-width: 750px){
+                .container2{
+                    width:100%;
+                }
             }
 
                         /*
@@ -427,26 +463,28 @@
                     <h4>Operating Systems</h4>
                 </div>
     
-                <div class="cards4">
-    
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="icons/Windows.png" alt="Lights" style="width:80%">
+                <div class = container2>
+                    <div class="two-column-cards">
+        
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="icons/Windows.png" alt="Lights" style="width:80%">
+                            </div>
+                            <div class="card-title">
+                                <h3>Windows</h3>
+                            </div>
                         </div>
-                        <div class="card-title">
-                            <h3>Windows</h3>
+        
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="icons/macOS.png" alt="Lights" style="width:80%">
+                            </div>
+                            <div class="card-title">
+                                <h3>macOS</h3>
+                            </div>
                         </div>
+        
                     </div>
-    
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="icons/macOS.png" alt="Lights" style="width:80%">
-                        </div>
-                        <div class="card-title">
-                            <h3>macOS</h3>
-                        </div>
-                    </div>
-    
                 </div>
 
                 <br><br>
@@ -455,7 +493,7 @@
                     <h4>Applications</h4>
                 </div>
 
-                <div class="cards4">
+                <div class="four-column-cards">
 
                     <div class="card">
                         <div class="card-image">
@@ -495,7 +533,7 @@
 
                 </div>
 
-                <div class="cards4">
+                <div class="four-column-cards">
 
                     <div class="card">
                         <div class="card-image">
@@ -546,7 +584,7 @@
                     <h4>Programming</h4>
                 </div>
 
-                <div class="cards5">
+                <div class="five-column-cards">
 
                     <div class="card">
                         <div class="card-image">
@@ -586,16 +624,27 @@
 
                     <div class="card">
                         <div class="card-image">
+                            <img src="icons/C.png" alt="Lights" style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <h3>C</h3>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+
+                <div class="five-column-cards">
+
+                    <div class="card">
+                        <div class="card-image">
                             <img src="icons/html.png" alt="Lights" style="width:80%">
                         </div>
                         <div class="card-title">
                             <h3>HTML</h3>
                         </div>
                     </div>
-
-                </div>
-
-                <div class="cards5">
 
                     <div class="card">
                         <div class="card-image">
@@ -633,18 +682,13 @@
                         </div>
                     </div>
 
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="icons/C.png" alt="Lights" style="width:80%">
-                        </div>
-                        <div class="card-title">
-                            <h3>C</h3>
-                        </div>
-                    </div>
+                    
+
+                    
 
                 </div>
 
-                <div class="cards5">
+                <div class="five-column-cards">
 
                     <div class="card">
                         <div class="card-image">
