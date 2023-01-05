@@ -90,6 +90,7 @@ hr{
 .link a:hover{
     text-decoration:underline;
 }
+
 /*
 .links-div{
     font-size: 1.3em;
@@ -226,9 +227,13 @@ hr{
     /*border: 1px solid red;/*for testing puposes*/
 }
 
+
+
+
+
 /*CSS related to the staggering icons*/
 .container-two-column-cards{
-    width:70%;
+    width:60%;
     /*border: 1px solid red;*/
     margin: 50px auto;
 }
@@ -244,14 +249,20 @@ hr{
     grid-auto-rows: auto; /*how tall is one row*/
 }
 
-.four-column-cards{
+.three-column-cards{
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /*4 columns*/
+    grid-template-columns: repeat(3, 1fr); /*4 columns*/
+    grid-auto-rows: auto; /*how tall is one row*/
+}
+
+.five-column-cards{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /*4 columns*/
     grid-auto-rows: auto; /*how tall is one row*/
 }
 
 .card{
-    border: 1px solid #000000;/*border around card*/
+    /*border: 1px solid #000000;/*border around card*/
     text-align: center;
     padding: 10px 10px; /*padding inside card*/
     margin-bottom: 10%; /*margin outside card*/
@@ -267,8 +278,12 @@ hr{
 
     background: rgb(39, 39, 39); /*Color of card*/
     color: rgb(255, 255, 255);/*Text color*/
+    text-decoration: none; /*removes underline from text, since underline appears when make card a link*/
     border-radius: 5%;
-    box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
+    /*box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);*/
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3), 
+                0 3px 2px rgba(0, 0, 0, 0.2), 
+                0 7px 7px rgba(0, 0, 0, 0.15);
 }
 
 .card-image {
@@ -295,19 +310,34 @@ hr{
 
 .card:hover {
     transform: scale(1.05);
+    transition: 0.2s;
     box-shadow: 0 0 40px -10px rgba(0, 0, 0, 1);
 }
 
-@media screen and (max-width: 990px){
-    .four-column-cards{
-        grid-template-columns: repeat(2, 1fr); /*2 columns*/
+@media screen and (max-width: 1090px){
+    .five-column-cards{
+        grid-template-columns: repeat(4, 1fr); /*2 columns*/
+    }
+    #spacer{
+        display:none;
     }
 }
 
-@media screen and (max-width: 750px){
+@media screen and (max-width: 900px){
     .container-two-column-cards{
         width:100%;
     }
+    .five-column-cards{
+        grid-template-columns: repeat(3, 1fr); /*2 columns*/
+    }
+}
+
+@media screen and (max-width: 680px){
+    .five-column-cards{
+        grid-template-columns: repeat(2, 1fr); /*2 columns*/
+    }
+    
+
 }
 
 /*End of stagerred icons section*/
