@@ -280,10 +280,10 @@ hr{
     color: rgb(255, 255, 255);/*Text color*/
     text-decoration: none; /*removes underline from text, since underline appears when make card a link*/
     border-radius: 5%;
-    /*box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);*/
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3), 
                 0 3px 2px rgba(0, 0, 0, 0.2), 
-                0 7px 7px rgba(0, 0, 0, 0.15);
+                0 7px 7px rgba(0, 0, 0, 0.15),
+                0 0.5px 0px 0 rgba(255, 255, 255, 0.3) inset; /*inset creates shadow inside the box, needed to add the light shine on top of box*/
 }
 
 .card-image {
@@ -311,8 +311,27 @@ hr{
 .card:hover {
     transform: scale(1.05);
     transition: 0.2s;
-    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 1);
+    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 1),
+                0 0.5px 0px 0 rgba(255, 255, 255, 0.3) inset; /*inset creates shadow inside the box, needed to add the light shine on top of box*/
+    transition-delay: 0ms;     
 }
+
+.hidden{
+    opacity:0;
+   /* filter: blur(5px);*/
+    transform: translateX(-5%);
+    transition: all 0.5s;
+}
+
+.show{
+    opacity:1;
+    /*filter:blur(0);*/
+    transform: translateX(0);
+    transition-delay: var(--delay);
+}
+
+
+
 
 @media screen and (max-width: 1090px){
     .five-column-cards{
