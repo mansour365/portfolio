@@ -334,7 +334,7 @@ hr{
 .reveal{
     /*transform: translateY(150px);*/
     opacity: 0;
-    transition: 2s all ease;
+    transition: 2.5s all ease;
 }
 .reveal.active{
     /*transform: translateY(0);*/
