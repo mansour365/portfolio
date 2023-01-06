@@ -33,23 +33,53 @@ function hideVerticalMenu() {
     x.className = "anchor-links";
 }
 
+
+
+
+
 /*For stagered icons*/
 
 /*Create intersection observer*/
-const observer = new IntersectionObserver((entries)=>{
-    entries.forEach((entry) => {
+const observer = new IntersectionObserver((entries)=>{     //class that takes callback function in constructor
+    entries.forEach((entry) => {                            // function runs everytime visibility of observed elements changes
         console.log(entry)
-        if (entry.isIntersecting){
+        if (entry.isIntersecting){              //check if that element is interscting the view port
             entry.target.classList.add('show');
         }
         else{
             entry.target.classList.remove('show');
         }
     });
-
 });
 
 
  const hiddenElements = document.querySelectorAll('.hidden');
+ hiddenElements.forEach((el) => observer.observe(el));  //loop over all hidden elements, tell observer to observe each one of them
 
- hiddenElements.forEach((el) => observer.observe(el));
+
+
+
+
+
+
+/*Different method used for quote animations*/
+ function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 75; /*how many pixels under the element under it appears*/
+
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } 
+      else {
+        reveals[i].classList.remove("active");
+      }
+    }
+  }
+
+window.addEventListener("scroll", reveal);
+
+reveal(); // To check the scroll position on page load
