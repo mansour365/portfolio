@@ -106,19 +106,19 @@ hr{
     display:inline-block; 
     /*Needed to overcome the text-align center of the body*/
     text-align:left; 
-    width:800px;
+    width:1000px;
     /*border: 1px solid blue;*/
 }
 .small-content{
     text-align: center;
-    width:800px; 
+    width:1000px; 
     margin: auto; /*for some reason needed to keep content in the middle*/
     /*border: 1px solid green; */
 }
 
 .very-small-content{
     text-align: center;
-    width:800px; 
+    width:1000px; 
     margin: auto; /*for some reason needed to keep content in the middle*/
     /*border: 1px solid green; */
 }
@@ -132,15 +132,17 @@ hr{
 .right-column{
     float: right;
     width:50%;
-    /*border: 1px solid red;*/
+    /*border: 1px solid blue;*/
 }
 
 .wide-image{
     width:100%;
 }
 .medium-image-right{
-    width:398px;
+    /*width:398px;*/ /*old value*/
+    width:450px;
     border-radius:2%/4%;
+    float:right;
 }
 .medium-image-left{
     width: 380px;
@@ -238,9 +240,9 @@ hr{
     margin: 50px auto;
 }
 .card-container {   /*Currently not used*/
-        width: 100%;
-        margin: 50px auto;
-        border: 3px solid green;
+    width: 100%;
+    margin: 50px auto;
+    border: 3px solid green;
 }
 
 .two-column-cards{
@@ -372,7 +374,7 @@ hr{
 /*End of stagerred icons section*/
 
 /*FOR SMALLER SCREENS*/
-@media screen and (max-width: 890px){
+@media screen and (max-width: 1015px){
     #navbar-content{
         width:auto;
     }
@@ -397,6 +399,13 @@ hr{
         width: 100%;
         padding-left:5%;
         padding-right:5%;
+    }
+    .medium-image-right{
+        float:none;
+        width:49%;
+    }
+    .medium-image-left{
+        width:49%;
     }
     
 }
