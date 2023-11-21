@@ -144,6 +144,10 @@ hr{
     border-radius:2%/4%;
     float:right;
 }
+
+#weather-phone{
+    width:250px;
+}
 .medium-image-left{
     width: 380px;
     border-radius:2%/4%;
