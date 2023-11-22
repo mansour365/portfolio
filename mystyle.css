@@ -47,10 +47,22 @@ body {
     background-image: url('./layer3.svg');
 }
 
+.layer4{
+    background-image: url('./layer4.svg');
+}
+
+.layer5{
+    background-image: url('./layer5.svg');
+}
+
 .flip{
     transform: rotate(180deg);
 }
 
+#portfolio-section{
+    min-height: 260px;
+
+}
 
 /*Title on top of Wide Image*/
 section{
@@ -78,6 +90,14 @@ section{
     background: #560090;
 }
 
+.pink{
+    background: #C62368;
+}
+
+.darkgreen{
+    background: #038373;
+}
+
 
 
 
@@ -94,10 +114,19 @@ h1{
     margin-top:1%; /*Make header start right a top of column , inline with image*/
     line-height:1.1em;
 }
+
+.title{
+    color:rgb(232,230,227);
+    font-size: 2.9em;
+    line-height:1.1em;
+}
+
 .image-header{
     color:rgb(232,230,227);
     font-size: 2.9em;
     line-height:1.1em;
+    width: 1380px;
+    
 }
 h2{
     font-weight:100;
@@ -130,7 +159,7 @@ hr{
 .quote{
     position: absolute;
     bottom: 20px;
-    left: 20%;
+    left: 0%;
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(30px);
     color: rgb(228, 226, 223);
@@ -169,7 +198,7 @@ hr{
     /*Needed to overcome the text-align center of the body*/
     text-align:left; 
     width:1340px;
-    /*border: 1px solid blue;*/
+    border: 1px solid blue;
 }
 .small-content{
     text-align: center;
