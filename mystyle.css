@@ -106,19 +106,19 @@ hr{
     display:inline-block; 
     /*Needed to overcome the text-align center of the body*/
     text-align:left; 
-    width:1000px;
+    width:1340px;
     /*border: 1px solid blue;*/
 }
 .small-content{
     text-align: center;
-    width:1000px; 
+    width:1340px; 
     margin: auto; /*for some reason needed to keep content in the middle*/
     /*border: 1px solid green; */
 }
 
 .very-small-content{
     text-align: center;
-    width:1000px; 
+    width:1340px; 
     margin: auto; /*for some reason needed to keep content in the middle*/
     /*border: 1px solid green; */
 }
@@ -222,7 +222,7 @@ hr{
 
 /*This is for both the logo and navbar links*/
 #navbar-content{
-    width:1000px;
+    width:1340px;
     margin: auto;
     /*border: 1px solid purple; /*for testing puposes*/
 }
@@ -349,7 +349,7 @@ hr{
 
 
 
-@media screen and (max-width: 1090px){
+@media screen and (max-width: 1340px){
     .five-column-cards{
         grid-template-columns: repeat(4, 1fr); /*2 columns*/
     }
@@ -378,7 +378,7 @@ hr{
 /*End of stagerred icons section*/
 
 /*FOR SMALLER SCREENS*/
-@media screen and (max-width: 1015px){
+@media screen and (max-width: 1340px){
     #navbar-content{
         width:auto;
     }
