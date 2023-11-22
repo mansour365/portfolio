@@ -14,7 +14,8 @@ body {
     font-weight: 100;
     line-height: 1.6em;
     color: rgb(160, 160, 160);
-    background-color: rgb(24,26,27); 
+    /*background-color: rgb(24,26,27); */ /*Old dark background*/
+    background-color: #202731; /*new dark background*/
     /*background-color: white; /*For light mode*/
     /*Important because first we need main-content to disaply as inline block
     in order to avoid overlapping with other divs
@@ -22,7 +23,67 @@ body {
     So putting text-align: center; in the body css fixes this*/
     text-align:center; 
     margin:0; /*Make navbar, body and wide images all reach the very max of the window width */
+    overflow-x: hidden;
 }
+
+.spacer{
+    aspect-ratio: 960/100;
+    width:100%;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size:cover;
+    
+}
+
+.layer1{
+    background-image: url('./layer1.svg');
+}
+
+.layer2{
+    background-image: url('./layer2.svg');
+}
+
+.layer3{
+    background-image: url('./layer3.svg');
+}
+
+.flip{
+    transform: rotate(180deg);
+}
+
+
+/*Title on top of Wide Image*/
+section{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 80px;
+    height: 80px;
+    padding:100px 20vw;   /*messes up the wide image*/
+   
+    text-align: center;  /*From me*/
+}
+
+
+.red{
+    background: #dd3f31;
+}
+
+.green{
+    background: #009473;
+}
+
+.purple{
+    background: #560090;
+}
+
+
+
+
+
+
+
 p{
     font-size: 1.08em;
 }
@@ -69,13 +130,14 @@ hr{
 .quote{
     position: absolute;
     bottom: 20px;
-    left: 20px;
+    left: 20%;
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(30px);
     color: rgb(228, 226, 223);
-    padding-left: 20px;
+    
     padding-right: 20px;
     border-radius:1%/8%;
+    border: 1px solid aqua;
 }
 /*How the blue links will behave*/
 .link a:link{
@@ -153,17 +215,19 @@ hr{
     border-radius:2%/4%;
 }
 
-/*Title on top of Wide Image*/
-.text-overlay{
-    position: relative;
-    text-align: center;
-}
+
+
+
+
+
 .centered{
     position: absolute;
     top: 35%;
-    left: 50%;
+    left: 20%;
     transform: translate(-50%, -50%);
+    /*border: 1px solid orange;*/
 }
+
 
 
  /*Create a sticky/fixed navbar*/
