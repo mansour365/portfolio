@@ -140,7 +140,7 @@ hr{
 }
 .medium-image-right{
     /*width:398px;*/ /*old value*/
-    width:450px;
+    width:80%;
     border-radius:2%/4%;
     float:right;
 }
@@ -149,7 +149,7 @@ hr{
     width:250px;
 }
 .medium-image-left{
-    width: 380px;
+    width: 80%;
     border-radius:2%/4%;
 }
 
