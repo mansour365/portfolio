@@ -228,6 +228,10 @@ hr{
 .wide-image{
     width:100%;
 }
+
+.main-content .large-image{
+    width:100%;
+}
 .medium-image-right{
     /*width:398px;*/ /*old value*/
     width:80%;
@@ -329,6 +333,23 @@ hr{
 }
 
 
+.categories{
+    /*border: 2px solid green;*/
+    display:flex;
+    justify-content:space-between;
+    
+}
+.catcard{
+    height: 460px;
+    width:22%;
+    border-radius: 4%;
+    background-color: lightblue;
+    /*border: 1px solid green;*/
+}
+
+.background-weather{
+    background-color: rgb(251, 198, 159);
+}
 
 
 
