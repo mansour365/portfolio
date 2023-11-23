@@ -105,15 +105,18 @@ p{
 }
 h1{
     font-weight: 100;
-    font-size: 2.0em;
+    font-size: 2.2em;
     color:rgb(0, 0, 0);
     line-height:1.1em;
 }
 
 .title{
     color:rgb(0, 0, 0);
-    font-size: 2.5em;
+    font-size: 2.2em;
     line-height:1.1em;
+    text-align: center;
+    padding-bottom: 9px;
+    padding-top: 5px;
 }
 
 .image-header{
@@ -145,7 +148,7 @@ hr{
     line-height: 1.6em;
 }
 .small-content p{
-    font-size: 1.3em;
+    font-size: 1.0em;
     line-height: 1.6em;
 }
 .link{
@@ -154,13 +157,13 @@ hr{
 .quote{
     position: relative;
     bottom: 20px;
-    font-size: 13px;
+    font-size: 12px;
+    color: rgb(95, 99, 104);
+    text-align: center;
+    /*padding-right: 20px;*/
     /*left: 0%;*/
     /*background-color: rgba(0, 0, 0, 0.3);*/
     /*backdrop-filter: blur(30px);*/
-    color: rgb(0, 0, 0);
-    
-    padding-right: 20px;
     /*border-radius:1%/8%;*/
     /*border: 1px solid aqua;*/
 }
@@ -302,7 +305,7 @@ hr{
 /*position of the links*/
 #navbar-right {
     float:right;
-    font-size: 13px;
+    font-size: 14px;
     /*border: 1px solid red; /*for testing puposes*/
 }
 
@@ -314,7 +317,7 @@ hr{
 
 /*This is for both the logo and navbar links*/
 #navbar-content{
-    width:1200px;
+    width:95%;
     margin: auto;
     /*border: 1px solid purple; /*for testing puposes*/
 }
@@ -472,7 +475,7 @@ hr{
 /*FOR SMALLER SCREENS*/
 @media screen and (max-width: 1340px){
     #navbar-content{
-        width:auto;
+        width:95%;
     }
     .main-content{
         width:auto;
