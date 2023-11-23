@@ -7,7 +7,8 @@ html{
 }
 body {
     background: #fefefe;
-    font-family:  Arial, Helvetica, sans-serif;
+    /*font-family:  Arial, Helvetica, sans-serif;*/
+    font-family: Roboto,Helvetica,Arial,sans-serif;
     /*A recommended font stack i found online */
     /*font-family: Helvetica Neue, Helvetica, Arial, sans-serif;*/
     
@@ -67,14 +68,15 @@ body {
 /*Title on top of Wide Image*/
 section{
     position: relative;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 80px;
-    height: 80px;
-    padding:100px 20vw;   /*messes up the wide image*/
+    /*display:flex;*/
+    /*flex-direction: column;*/
+    /*align-items: center;*/
+    min-height: 200px;
+    height: 200px;
+    /*padding:100px 20vw;   /*messes up the wide image*/
    
-    text-align: center;  /*From me*/
+    /*text-align: center;  /*From me*/
+    border: 1px solid orange;
 }
 
 
@@ -109,15 +111,14 @@ p{
 }
 h1{
     font-weight: 100;
-    font-size: 2.4em;
+    font-size: 2.0em;
     color:rgb(187, 187, 187);
-    margin-top:1%; /*Make header start right a top of column , inline with image*/
     line-height:1.1em;
 }
 
 .title{
     color:rgb(232,230,227);
-    font-size: 2.9em;
+    font-size: 2.5em;
     line-height:1.1em;
 }
 
@@ -157,16 +158,17 @@ hr{
     color:rgb(20, 175, 240); /*Needed for the ">" sign after a link*/
 }
 .quote{
-    position: absolute;
+    position: relative;
     bottom: 20px;
-    left: 0%;
-    background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(30px);
+    font-size: 13px;
+    /*left: 0%;*/
+    /*background-color: rgba(0, 0, 0, 0.3);*/
+    /*backdrop-filter: blur(30px);*/
     color: rgb(228, 226, 223);
     
     padding-right: 20px;
-    border-radius:1%/8%;
-    border: 1px solid aqua;
+    /*border-radius:1%/8%;*/
+    /*border: 1px solid aqua;*/
 }
 /*How the blue links will behave*/
 .link a:link{
@@ -198,7 +200,7 @@ hr{
     /*Needed to overcome the text-align center of the body*/
     text-align:left; 
     width:1340px;
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
 }
 .small-content{
     text-align: center;
