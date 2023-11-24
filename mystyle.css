@@ -148,11 +148,18 @@ p{
     /*border: 1px solid blue;*/
     border-radius: 2%/6%;
     min-height: 400px;
+   
+    width:100%;
+}
+#portfolio-background{
     background-image: url(images/google1.jpg);
     background-position: center;
     background-size:cover;
-    width:100%;
-
+}
+#project-background{
+    background-image: url(images/wide.jpg);
+    background-position: center;
+    background-size:cover;
 }
 .small-content{
     text-align: center;
@@ -277,10 +284,12 @@ p{
     height: 460px;
     width:270px;
     border-radius: 4%/2%;
-    background-color: lightblue;
+    z-index: -1;
     filter: brightness(75%);
     /*border: 1px solid green;*/
 }
+
+
 #cat1{
     background-image: url(images/cat1.webp);
 }
@@ -298,6 +307,11 @@ p{
     background-image: url(images/cat4.jpg);
     background-position: center;
     background-size: cover;
+}
+.cat-title{
+    font-size: 22px;
+    color:white;
+    margin-top:65%;
 }
 
 .background-weather{
