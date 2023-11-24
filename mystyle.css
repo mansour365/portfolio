@@ -33,6 +33,21 @@ hr{
     border-top: 1px solid rgb(222,222,222); /*For light mode*/
     border-top: 1px solid rgb(56, 62, 64); /*For dark mode*/
 }
+p{
+    font-family: 'Manrope', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    line-height: 40px;
+}
+.text{
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(104, 96, 95);
+    line-height: 40px;
+}
+
 
 
 .link-area{
@@ -76,11 +91,7 @@ hr{
 }
 
 
-p{
-    font-size: 1.08em;
-}
-
-.portfolio-title{
+.big-title{
     font-family: 'Manrope', sans-serif;
     font-weight: 700;
     font-size: 500%;
@@ -103,10 +114,7 @@ p{
     padding-top: 5px;
 }
 
-.main-content p{
-    font-size: 1.3em;
-    line-height: 1.6em;
-}
+
 .small-content p{
     font-size: 1.0em;
     line-height: 1.6em;
@@ -131,7 +139,7 @@ p{
     /*But causes entire div to float left, fix with text-align center in body*/
     display:inline-block; 
     /*Needed to overcome the text-align center of the body*/
-    text-align:left; 
+    text-align: center; 
     width:1200px;
     /*border: 1px solid blue;*/
 }
@@ -143,6 +151,7 @@ p{
     background-image: url(images/google1.jpg);
     background-position: center;
     background-size:cover;
+    width:100%;
 
 }
 .small-content{
@@ -260,19 +269,40 @@ p{
 .categories{
     /*border: 2px solid green;*/
     display:flex;
+    flex-wrap: wrap;
     justify-content:space-between;
     
 }
 .catcard{
     height: 460px;
-    width:22%;
-    border-radius: 4%;
+    width:270px;
+    border-radius: 4%/2%;
     background-color: lightblue;
+    filter: brightness(75%);
     /*border: 1px solid green;*/
+}
+#cat1{
+    background-image: url(images/cat1.webp);
+}
+#cat2{
+    background-image: url(images/cat2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#cat3{
+    background-image: url(images/cat3.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#cat4{
+    background-image: url(images/cat4.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
 .background-weather{
     background-color: rgb(251, 198, 159);
+    
 }
 
 
@@ -423,8 +453,7 @@ p{
         width:95%;
     }
     .main-content{
-        width:auto;
-        text-align: center;
+        width:100%;
         padding-left:5%;
         padding-right:5%;
     }
