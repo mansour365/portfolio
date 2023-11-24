@@ -277,16 +277,35 @@ p{
     /*border: 2px solid green;*/
     display:flex;
     flex-wrap: wrap;
-    justify-content:space-between;
+    justify-content:center;
+    gap: 14px;
     
 }
 .catcard{
     height: 460px;
-    width:270px;
+    width:289px;
     border-radius: 4%/2%;
-    z-index: -1;
     filter: brightness(75%);
     /*border: 1px solid green;*/
+    
+}
+
+
+
+.cat-title{
+    font-size: 22px;
+    color:white;
+    margin-top:65%;
+    margin-bottom:60%;
+}
+.fake-button{
+    font-size: 13px;
+    font-weight:500;
+    color: white;
+    display:inline;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 9px 23px;
+    
 }
 
 
@@ -308,13 +327,8 @@ p{
     background-position: center;
     background-size: cover;
 }
-.cat-title{
-    font-size: 22px;
-    color:white;
-    margin-top:65%;
-}
 
-.background-weather{
+.wide-background-color{
     background-color: rgb(251, 198, 159);
     
 }
