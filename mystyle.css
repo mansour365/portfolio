@@ -8,7 +8,7 @@ html{
 body {
     background: #fefefe;
     /*font-family:  Arial, Helvetica, sans-serif;*/
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Manrope', sans-serif;
     /*A recommended font stack i found online */
     /*font-family: Helvetica Neue, Helvetica, Arial, sans-serif;*/
     
@@ -26,116 +26,6 @@ body {
     margin:0; /*Make navbar, body and wide images all reach the very max of the window width */
     overflow-x: hidden;
 }
-
-.spacer{
-    aspect-ratio: 960/100;
-    width:100%;
-    background-repeat: no-repeat;
-    background-position:center;
-    background-size:cover;
-    
-}
-
-.layer1{
-    background-image: url('./layer1.svg');
-}
-
-.layer2{
-    background-image: url('./layer2.svg');
-}
-
-.layer3{
-    background-image: url('./layer3.svg');
-}
-
-.layer4{
-    background-image: url('./layer4.svg');
-}
-
-.layer5{
-    background-image: url('./layer5.svg');
-}
-
-.flip{
-    transform: rotate(180deg);
-}
-
-#portfolio-section{
-    min-height: 260px;
-
-}
-
-/*Title on top of Wide Image*/
-section{
-    position: relative;
-    /*display:flex;*/
-    /*flex-direction: column;*/
-    /*align-items: center;*/
-    min-height: 200px;
-    height: 200px;
-    /*padding:100px 20vw;   /*messes up the wide image*/
-   
-    /*text-align: center;  /*From me*/
-    /*border: 1px solid orange;*/
-}
-.red{
-    background: #dd3f31;
-}
-.green{
-    background: #009473;
-}
-.purple{
-    background: #560090;
-}
-.pink{
-    background: #C62368;
-}
-.darkgreen{
-    background: #038373;
-}
-
-
-
-
-
-
-
-p{
-    font-size: 1.08em;
-}
-h1{
-    font-weight: 100;
-    font-size: 2.2em;
-    color:rgb(0, 0, 0);
-    line-height:1.1em;
-}
-
-.title{
-    color:rgb(0, 0, 0);
-    font-size: 2.2em;
-    line-height:1.1em;
-    text-align: center;
-    padding-bottom: 9px;
-    padding-top: 5px;
-}
-
-.image-header{
-    color:rgb(232,230,227);
-    font-size: 2.9em;
-    line-height:1.1em;
-    width: 1380px;
-    
-}
-h2{
-    font-weight:100;
-    line-height: 1.1em;
-    color:rgb(182, 182, 182);
-}
-h3{
-    font-weight:100;
-    line-height: 1.1em;
-    font-size: 1.3em;
-}
 hr{
     height: 1px;
     /*Setting border to 0 and border-top to 1px, get a true 1px hr*/
@@ -143,6 +33,65 @@ hr{
     border-top: 1px solid rgb(222,222,222); /*For light mode*/
     border-top: 1px solid rgb(56, 62, 64); /*For dark mode*/
 }
+
+
+.link-area{
+    color:#1f1f1f; /*Needed for the ">" sign after a link*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:20px;
+    /*border: 1px solid rgb(128, 0, 0);*/
+}
+.button{
+    position:relative;
+    border: 1px solid rgb(34, 104, 206); /*required*/
+    border-radius: 25px;
+    font-size: 14px;
+    padding: 6px 25px;
+}
+.button:hover{
+    background-color: rgb(237, 245, 253);
+    cursor: pointer;
+}
+/*How the blue links will behave*/
+.link-area a:link{
+    color:rgb(34, 104, 206); /*Make sure links are blue by default*/
+    text-decoration:none; /*If we dont have this, the link will be underlined by default*/
+}
+.link-area a:visited{
+    color:rgb(34, 104, 206); /*Make sure visited links still stay blue*/
+}
+
+
+
+/*For the icons from google*/
+.material-symbols-outlined {
+  width: 10px;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+}
+
+
+p{
+    font-size: 1.08em;
+}
+
+.title{
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 500%;
+    color:rgb(0, 0, 0);
+    
+    line-height:1.1em;
+    text-align: center;
+    padding-bottom: 9px;
+    padding-top: 5px;
+}
+
 .main-content p{
     font-size: 1.3em;
     line-height: 1.6em;
@@ -151,43 +100,19 @@ hr{
     font-size: 1.0em;
     line-height: 1.6em;
 }
-.link{
-    color:rgb(20, 175, 240); /*Needed for the ">" sign after a link*/
-}
+
 .quote{
     position: relative;
     bottom: 20px;
     font-size: 12px;
     color: rgb(95, 99, 104);
     text-align: center;
-    /*padding-right: 20px;*/
-    /*left: 0%;*/
-    /*background-color: rgba(0, 0, 0, 0.3);*/
-    /*backdrop-filter: blur(30px);*/
-    /*border-radius:1%/8%;*/
     /*border: 1px solid aqua;*/
 }
-/*How the blue links will behave*/
-.link a:link{
-    color:rgb(20, 175, 240); /*Make sure links are blue by default*/
-    text-decoration:none; /*If we dont have this, the link will be underlined by default*/
-}
 
-.link a:visited{
-    color:rgb(20, 175, 240); /*Make sure visited links still stay blue*/
-}
 
-.link a:hover{
-    text-decoration:underline;
-}
 
-/*
-.links-div{
-    font-size: 1.3em;
-    line-height: 1.6em;
-    border: 1px solid aqua;
-}
-*/
+
 
 
 .main-content{
@@ -251,17 +176,6 @@ hr{
 
 
 
-
-.centered{
-    position: absolute;
-    top: 35%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    /*border: 1px solid orange;*/
-}
-
-
-
  /*Create a sticky/fixed navbar*/
  #navbar{
     background-color: rgba(255, 255, 255, 0.77); /*background color of navbar (default is white) */
@@ -276,27 +190,20 @@ hr{
     box-shadow: none;
     /*border: 1px solid orange; /*for testing puposes*/
 }
-
 /*Style the navbar links*/
 #navbar a {
     text-decoration: none;
     float: left; /*All of the navbar links float on same line (left)*/
     /*Padding around each link*/
-    padding: 10px 12px; /*top and bottom: 8px, right and left: 12px */
-    /*padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 40px;
-    padding-right: 6px;*/
+    padding: 10px 12px; /*top and bottom: 10px, right and left: 12px */
     color: #5f6368; /*color of the links in the navbar*/
     line-height: 25px; /*the height of the navbar link button */
-    /*font-family: Arial, Helvetica, sans-serif;/*This line might be useless*/
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Manrope', sans-serif;
     font-weight: 600;
 }
-
 /*Style the logo*/
 #navbar #logo {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Manrope', sans-serif;
     font-weight: 400;
     font-size: 35px; /*font size of logo*/
     transition: 0.4s; /*transition speed of the logo when navbar size changes */
@@ -305,27 +212,23 @@ hr{
     padding-left:0;
     margin-bottom: 1px;
 }
-
 /*position of the links*/
 #navbar-right {
     float:right;
     font-size: 14px;
     /*border: 1px solid red; /*for testing puposes*/
 }
-
 /*behaviour of the nav links*/
 #navbar a:hover{
     color: black;
     transition: 0.3s;
 }
-
 /*This is for both the logo and navbar links*/
 #navbar-content{
     width:95%;
     margin: auto;
     /*border: 1px solid purple; /*for testing puposes*/
 }
-
 /*Make burger icon normally invisible*/
 #burger-icon{
     display:none; /*By default burger icon not visible*/
@@ -621,4 +524,9 @@ hr{
     .quote{
         visibility: hidden;
     }
+    .link-area{
+        flex:50%;
+        max-width:100%;
+    }
 }
+
