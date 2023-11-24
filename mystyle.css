@@ -80,12 +80,23 @@ p{
     font-size: 1.08em;
 }
 
-.title{
+.portfolio-title{
     font-family: 'Manrope', sans-serif;
     font-weight: 700;
     font-size: 500%;
     color:rgb(0, 0, 0);
-    
+    line-height:1.1em;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    /*border: 1px solid aqua;*/
+}
+
+.title{
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 300%;
+    color:rgb(0, 0, 0);
     line-height:1.1em;
     text-align: center;
     padding-bottom: 9px;
@@ -123,6 +134,16 @@ p{
     text-align:left; 
     width:1200px;
     /*border: 1px solid blue;*/
+}
+.background-card{
+    position:relative;
+    /*border: 1px solid blue;*/
+    border-radius: 2%/6%;
+    min-height: 400px;
+    background-image: url(images/google1.jpg);
+    background-position: center;
+    background-size:cover;
+
 }
 .small-content{
     text-align: center;
