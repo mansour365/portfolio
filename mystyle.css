@@ -145,9 +145,7 @@ p{
     bottom: 20px;
     /*border: 1px solid aqua;*/
 }
-.quoate p{
-    color: rgb(255, 255, 255);
-}
+
 
 
 
@@ -179,7 +177,7 @@ p{
     background-size:cover;
 }
 #project-background{
-    background-image: url(images/wide.jpg);
+    background-image: url(images/google2.jpg);
     background-position: center;
     background-size:cover;
 }
@@ -264,7 +262,7 @@ p{
 #navbar #logo {
     font-family: 'Manrope', sans-serif;
     font-weight: 400;
-    font-size: 35px; /*font size of logo*/
+    font-size: 25px; /*font size of logo*/
     transition: 0.4s; /*transition speed of the logo when navbar size changes */
     float: left; /*logo floats to left by default*/
     /*border: 1px solid blue; /*for testing puposes*/
