@@ -1,3 +1,11 @@
+
+/*
+Color palette from pixel phone
+
+Dark color: 96, 79, 70
+Medium color: 205, 162, 140
+Light color: 226, 192, 174
+*/
 * {
     box-sizing: border-box;
 }
@@ -235,11 +243,12 @@ p{
 
  /*Create a sticky/fixed navbar*/
  #navbar{
-    background-color: rgba(255, 255, 255, 0.77); /*background color of navbar (default is white) */
-    backdrop-filter: blur(30px);
+    /*background-color: rgba(255, 255, 255, 0.77); /*background color of navbar (default is white) */
+    background-color:white;
+    /*backdrop-filter: blur(30px);*/
     padding-top: 6px; /*give the navbar the desired thickness*/
     padding-bottom: 6px; /*give the navbar the desired thickness*/
-    transition: 0.4s; /*transition effect length when padding is decreased */
+    /*transition: 0.4s; /*transition effect length when padding is decreased */
     position: fixed; /*this make it sticky/fixed nav bar*/
     width: 100%; /*Make sure navbar take full span of screen*/
     top: 0; /* 0 pixels away from the top */
@@ -262,12 +271,12 @@ p{
 #navbar #logo {
     font-family: 'Manrope', sans-serif;
     font-weight: 400;
-    font-size: 25px; /*font size of logo*/
-    transition: 0.4s; /*transition speed of the logo when navbar size changes */
+    font-size: 18px; /*font size of logo*/
+    /*transition: 0.4s; /*transition speed of the logo when navbar size changes */
     float: left; /*logo floats to left by default*/
-    /*border: 1px solid blue; /*for testing puposes*/
     padding-left:0;
     margin-bottom: 1px;
+    /*border: 1px solid blue; /*for testing puposes*/
 }
 /*position of the links*/
 #navbar-right {
@@ -279,6 +288,7 @@ p{
 #navbar a:hover{
     color: black;
     transition: 0.3s;
+    border-bottom: 3px solid black;
 }
 /*This is for both the logo and navbar links*/
 #navbar-content{
@@ -326,7 +336,6 @@ p{
     display:inline;
     border: 2px solid rgb(255, 255, 255);
     padding: 9px 23px;
-    
 }
 
 
