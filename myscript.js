@@ -3,20 +3,15 @@
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    if (document.body.scrollTop >1 || document.documentElement.scrollTop > 1) {
         //document.getElementById("navbar").style.padding = "6px 0px"; //padding when scroll
         //document.getElementById("logo").style.fontSize = "25px"; //logo size when scroll
-        document.getElementById("navbar").style.boxShadow = "0 0 6px 3px rgba(0, 0, 0, 0.3)";
-        //Add shadow
-
+        document.getElementById("navbar").style.boxShadow = "0 0 6px 3px rgba(0, 0, 0, 0.3)";//Add shadow
     } 
     else {
         //document.getElementById("navbar").style.padding = "6px 0px"; //padding when didn't scroll
         //document.getElementById("logo").style.fontSize = "25px"; //logo size when didn't scroll
-        document.getElementById("navbar").style.boxShadow = "none";
-        //Remove shadow
-
-
+        document.getElementById("navbar").style.boxShadow = "none";//Remove shadow
     }
 }
 
