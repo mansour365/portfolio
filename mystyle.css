@@ -24,7 +24,7 @@ body {
     line-height: 1.6em;
     color: rgb(0, 0, 0);
     /*background-color: rgb(24,26,27); */ /*Old dark background*/
-    background-color: #ffffff; /*new white background*/
+    background-color: rgb(248, 239, 236); /*Material you background color*/
     /*background-color: white; /*For light mode*/
     /*Important because first we need main-content to disaply as inline block
     in order to avoid overlapping with other divs
@@ -41,6 +41,7 @@ hr{
     border-top: 1px solid rgb(222,222,222); /*For light mode*/
     border-top: 1px solid rgb(56, 62, 64); /*For dark mode*/
 }
+
 /*
 p{
     font-family: 'Manrope', sans-serif;
@@ -71,22 +72,34 @@ p{
 .button{
     position:relative;
     display:flex;
-    border: 1px solid rgb(34, 104, 206); /*required*/
+    border: 1px solid rgb(96, 79, 70); /*required*/
     border-radius: 25px;
     font-size: 14px;
     padding: 6px 25px;
+    background-color: rgb(226, 192, 174);
 }
 .button:hover{
-    background-color: rgb(237, 245, 253);
+    background-color: rgb(205, 162, 140);
     cursor: pointer;
 }
+.button:hover .link-text{
+    color:white;
+}
+.button:hover .material-symbols-outlined{
+    color:white;
+}
+.button:hover img{
+    filter: invert(1);
+}
+
+
 /*How the blue links will behave*/
 .link-area a:link{
-    color:rgb(34, 104, 206); /*Make sure links are blue by default*/
+    color:black; /*Make sure links are blue by default*/
     text-decoration:none; /*If we dont have this, the link will be underlined by default*/
 }
 .link-area a:visited{
-    color:rgb(34, 104, 206); /*Make sure visited links still stay blue*/
+    color:black; /*Make sure visited links still stay blue*/
 }
 
 
@@ -109,6 +122,7 @@ p{
   /*border: 1px solid red;*/
 }
 .link-text{
+    color: rgb(0, 0, 0);
     /*border: 1px solid aqua;*/
 }
 
@@ -157,6 +171,13 @@ p{
 
 
 
+.text-section{
+    position:relative;
+    background-color: rgb(255, 248, 245);
+    width: 100%;
+    border-radius: 2%/8%;
+    /*border: 1px solid rgb(128, 0, 0);*/
+}
 
 
 
@@ -288,7 +309,10 @@ p{
 #navbar a:hover{
     color: black;
     transition: 0.3s;
-    border-bottom: 3px solid black;
+    /*border-bottom: 3px solid black;*/
+}
+#navbar a.active{
+    border-bottom: 3px solid rgb(96, 79, 70);
 }
 /*This is for both the logo and navbar links*/
 #navbar-content{
