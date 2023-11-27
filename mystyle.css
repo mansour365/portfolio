@@ -389,7 +389,7 @@ p{
 
 
 /*CSS related to the staggering icons*/
-.container-two-column-cards{
+.container-three-column-cards{
     width:60%;
     /*border: 1px solid red;*/
     margin: 50px auto;
@@ -433,11 +433,11 @@ p{
     margin-left: auto;
     margin-right: auto;
 
-    background: rgb(39, 39, 39); /*Color of card*/
-    color: rgb(255, 255, 255);/*Text color*/
+    background: rgb(238, 231, 227); /*Color of card*/
+    color: rgb(104, 96, 95);/*Text color*/
     text-decoration: none; /*removes underline from text, since underline appears when make card a link*/
-    border-radius: 5%;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3), 
+    border-radius: 9%;
+    /*box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3), 
                 0 3px 2px rgba(0, 0, 0, 0.2), 
                 0 7px 7px rgba(0, 0, 0, 0.15),
                 0 0.5px 0px 0 rgba(255, 255, 255, 0.3) inset; /*inset creates shadow inside the box, needed to add the light shine on top of box*/
@@ -445,24 +445,21 @@ p{
 
 .card-image {
     text-align: center;
-    /*border: 1px solid green;*/
-    max-width:115px; /*max width of image*/
-    min-width:115px; /*min width of image*/
-
+    width:115px; /*width of image*/
     padding-top: 25px;
-    
     margin-top: 0%;
     margin-left: auto;
     margin-right: auto;
     height:70%; /*image takes 70% of card*/
+    /*border: 1px solid green;*/
 }
 
 .card-title {
-    /*border: 1px solid rgb(200, 0, 0);*/
     padding: 5px 5px;
     text-align: center;
     /*font-size: 18px;*/
     height:30%; /*text takes 30% of card*/
+    /*border: 1px solid rgb(200, 0, 0);*/
 }
 
 .card:hover {
