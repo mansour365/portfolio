@@ -20,6 +20,7 @@ body {
     line-height: 1.6em;
     color: rgb(0, 0, 0);
     background-color: rgb(248, 239, 236); /*Material you background color*/
+    /*background-color: rgb(250, 243, 237); /*Another option*/
     /*Important because first we need main-content to disaply as inline block
     in order to avoid overlapping with other divs
     But then inline block will nalway float to the right
@@ -71,6 +72,7 @@ p{
     font-size: 14px;
     padding: 6px 25px;
     background-color: rgb(226, 192, 174);
+    background-color: rgb(241, 177, 127); /*Another option*/
 }
 .button:hover{
     background-color: rgb(96, 79, 70);
