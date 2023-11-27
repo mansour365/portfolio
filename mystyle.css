@@ -332,6 +332,7 @@ p{
     height: 460px;
     width:289px;
     border-radius: 4%/2%;
+    overflow:hidden;/*needed so that image zoom doesnt spill out of div*/
     /*border: 1px solid green;*/
 }
 
@@ -340,7 +341,8 @@ p{
     cursor: pointer;
 
     > .cat-image{
-        filter:brightness(40%);
+        filter:brightness(35%);
+        transform:scale(1.1);
     }
 }
 
@@ -350,6 +352,7 @@ p{
     object-fit: cover;
     height:460px;
     width:289px;
+    transition: 0.4s; 
 }
 
 .cat-title{
@@ -367,7 +370,7 @@ p{
     font-weight:500;
     color: white;
     border: 2px solid rgb(255, 255, 255);
-    padding: 9px 23px;
+    padding: 5px 24px;
     display:inline;
     top:85%;
     left:35%;
