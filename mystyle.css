@@ -163,8 +163,6 @@ p{
 }
 
 
-
-
 .text-section{
     position:relative;
     background-color: rgb(255, 248, 245);
@@ -186,13 +184,12 @@ p{
     width:1200px;
     /*border: 1px solid blue;*/
 }
-.background-card{
+.section-card{
     position:relative;
-    /*border: 1px solid blue;*/
     border-radius: 2%/6%;
     min-height: 400px;
-   
     width:100%;
+    /*border: 1px solid blue;*/
 }
 #portfolio-background{
     background-image: url(images/beige.jpg);
@@ -328,7 +325,6 @@ p{
     flex-wrap: wrap;
     justify-content:center;
     gap: 14px;
-    
 }
 .catcard{
     position:relative;
@@ -339,19 +335,14 @@ p{
     /*border: 1px solid green;*/
 }
 
-.cat-image:hover{
-    cursor:pointer;
-    filter:brightness(40%);
-}
-/*
-.cat-title{
-    font-size: 22px;
-    color:white;
-    margin-top:65%;
-    margin-bottom:60%;
-}
-*/
+/*Use CSS Nesting, so when we hover over the cat card, then we also activate attributes of another css element cat-image*/
+.catcard:hover{
+    cursor: pointer;
 
+    > .cat-image{
+        filter:brightness(40%);
+    }
+}
 
 .cat-image{
     border-radius: 4%/2%;
@@ -360,6 +351,7 @@ p{
     height:460px;
     width:289px;
 }
+
 .cat-title{
     position: absolute;
     top:50%;
