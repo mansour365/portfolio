@@ -333,6 +333,7 @@ p{
     width:289px;
     border-radius: 4%/2%;
     overflow:hidden;/*needed so that image zoom doesnt spill out of div*/
+    flex-shrink:1;
     /*border: 1px solid green;*/
 }
 
@@ -354,7 +355,6 @@ p{
     width:289px;
     transition: 0.4s; 
 }
-
 .cat-title{
     position: absolute;
     top:50%;
@@ -370,25 +370,12 @@ p{
     font-weight:500;
     color: white;
     border: 2px solid rgb(255, 255, 255);
-    padding: 5px 24px;
+    padding: 4px 25px;
     display:inline;
     top:85%;
-    left:35%;
+    left:33%;
 }
 /*
-#cat1{
-    /*background-image: url(images/cat1.webp);
-}
-#cat2{
-    background-image: url(images/cat2.jpg);
-    background-position: center;
-    background-size: cover;
-}
-#cat3{
-    background-image: url(images/cat3.jpg);
-    background-position: center;
-    background-size: cover;
-}
 #cat4{
     background-image: url(images/cat4.jpg);
     background-position: center;
