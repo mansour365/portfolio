@@ -238,6 +238,7 @@ p{
 
 .wide-image{
     width:100%;
+    border-radius: 2%/3%;
 }
 
 .main-content .large-image{
@@ -382,11 +383,7 @@ p{
     background-size: cover;
 }
 
-.wide-background-color{
-    /*background-color: rgb(251, 198, 159);*/
-    background-image: linear-gradient(180deg, rgb(251, 198, 159), white);
-    
-}
+
 
 
 
