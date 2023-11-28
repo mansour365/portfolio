@@ -37,15 +37,7 @@ hr{
     border-top: 1px solid rgb(56, 62, 64); /*For dark mode*/
 }
 
-/*
-p{
-    font-family: 'Manrope', sans-serif;
-    font-size: 17px;
-    font-weight: 600;
-    color: rgb(0, 0, 0);
-    line-height: 40px;
-}
-*/
+
 .text{
     font-family: 'Manrope', sans-serif;
     font-size: 18px;
@@ -165,7 +157,7 @@ p{
 }
 
 
-.text-section{
+.white-section{
     position:relative;
     background-color: rgb(255, 248, 245);
     width: 100%;
@@ -175,16 +167,14 @@ p{
 
 
 
-
-
-
-
 .main-content{
     /*Make the div not overlap with other div*/
     /*But causes entire div to float left, fix with text-align center in body*/
     display:inline-block; 
+
     /*Needed to overcome the text-align center of the body*/
     text-align: center; 
+
     width:1200px;
     /*border: 1px solid blue;*/
 }
@@ -324,21 +314,22 @@ p{
 
 
 .categories{
-    /*border: 2px solid green;*/
     display:flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content:center;
     gap: 14px;
+    border: 1px solid green;
 }
 .catcard{
     position:relative;
     text-align: center;
-    height: 460px;
+    /*height: 460px;*/
+    height:auto;
     width:289px;
+    width:24%;
     border-radius: 4%/2%;
     overflow:hidden;/*needed so that image zoom doesnt spill out of div*/
-    flex-shrink:1;
-    /*border: 1px solid green;*/
+    border: 1px solid pink;
 }
 
 /*Use CSS Nesting, so when we hover over the cat card, then we also activate attributes of another css element cat-image*/
@@ -354,9 +345,10 @@ p{
 .cat-image{
     border-radius: 4%/2%;
     filter:brightness(60%);
-    object-fit: cover;
-    height:460px;
-    width:289px;
+    object-fit: cover; /*image shoudld cover the entire container*/
+    /*height:460px;*/
+    height:100%;
+    width:100%;
     transition: 0.4s; 
 }
 .cat-title{
@@ -499,9 +491,9 @@ p{
 
 
 
-@media screen and (max-width: 1340px){
+@media screen and (max-width: 1217px){
     .five-column-cards{
-        grid-template-columns: repeat(4, 1fr); /*2 columns*/
+        grid-template-columns: repeat(4, 1fr); /*4 columns*/
     }
     #spacer{
         display:none;
@@ -513,7 +505,7 @@ p{
         width:100%;
     }
     .five-column-cards{
-        grid-template-columns: repeat(3, 1fr); /*2 columns*/
+        grid-template-columns: repeat(3, 1fr); /*3 columns*/
     }
 }
 
@@ -528,7 +520,7 @@ p{
 /*End of stagerred icons section*/
 
 /*FOR SMALLER SCREENS*/
-@media screen and (max-width: 1340px){
+@media screen and (max-width: 1217px){
     #navbar-content{
         width:95%;
     }
@@ -566,6 +558,12 @@ p{
 
 /*FOR EVEN SMALLER SCREENS*/
 @media screen and (max-width: 700px){
+    .categories{
+        flex-wrap: wrap;
+    }
+    .catcard{
+        width:146px;
+    }
     .main-content{
         width:100%;
         text-align: center;
