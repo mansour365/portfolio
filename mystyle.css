@@ -1,6 +1,5 @@
 /*
-Color palette from pixel phone
-
+Color THEME from pixel phone
 Dark color: 96, 79, 70
 Medium color: 205, 162, 140
 Light color: 226, 192, 174
@@ -25,6 +24,51 @@ body {
     margin:0; /*Make navbar, body and wide images all reach the very max of the window width */
     overflow-x: hidden;
 }
+
+#navbar{  /*Create a sticky/fixed navbar*/
+    position: fixed; /*this make it sticky/fixed nav bar*/
+    top: 0; /* 0 pixels away from the top (might not be necessary)*/
+    width: 100%; /*Make sure navbar take full span of screen*/
+    padding: 6px 0px; /* top/bottom padding:6px, left/right:0px;  (give navbar desired thickness)*/ 
+    z-index: 99; /* make sure its always on top of everything else: put a big value */
+    background-color:white;
+    font-family: 'Manrope', sans-serif;
+    box-shadow: none; /*May not be necessary*/
+    /*border: 1px solid orange; /*for testing puposes*/
+}
+#navbar a {  /*Style the navbar links*/
+    float: left; /*All of the navbar links float on same line (left)*/
+    color: #5f6368; /*color of the links in the navbar*/
+    text-decoration: none; /*We don't want the default link underline*/
+    padding: 10px 12px; /*top and bottom: 10px, right and left: 12px */ /*Padding around each link*/
+    line-height: 25px; /*the height of the navbar link button */
+}
+#navbar #logo {  /*Style the logo*/
+    font-size: 18px; /*font size of logo*/
+}
+#navbar-right {  /*position of the links*/
+    float:right;
+    font-size: 14px;
+}
+#navbar a:hover{  /*behaviour of the nav links*/
+    color: black;
+    transition: 0.3s;
+}
+/*Active links under construction*/
+#navbar a.active{
+    border-bottom: 3px solid rgb(96, 79, 70);
+}
+#navbar-content{  /*This is for both the logo and navbar links*/
+    width:95%;
+    margin: auto;
+    /*border: 1px solid purple; /*for testing puposes*/
+}
+#burger-icon{  /*Make burger icon normally invisible*/
+    display:none; /*By default burger icon not visible*/
+}
+
+
+
 .main-content{
     /*Make the div not overlap with other div*/
     /*But causes entire div to float left, fix with text-align center in body*/
@@ -239,64 +283,7 @@ hr{
 
 
 
- /*Create a sticky/fixed navbar*/
- #navbar{
-    background-color:white;
-    padding-top: 6px; /*give the navbar the desired thickness*/
-    padding-bottom: 6px; /*give the navbar the desired thickness*/
-    position: fixed; /*this make it sticky/fixed nav bar*/
-    width: 100%; /*Make sure navbar take full span of screen*/
-    top: 0; /* 0 pixels away from the top */
-    z-index: 99; /* make sure its always on top of everything else: put a big value */
-    box-shadow: none;
-    /*border: 1px solid orange; /*for testing puposes*/
-}
-/*Style the navbar links*/
-#navbar a {
-    text-decoration: none;
-    float: left; /*All of the navbar links float on same line (left)*/
-    padding: 10px 12px; /*top and bottom: 10px, right and left: 12px */ /*Padding around each link*/
-    color: #5f6368; /*color of the links in the navbar*/
-    line-height: 25px; /*the height of the navbar link button */
-    font-family: 'Manrope', sans-serif;
-    font-weight: 600;
-}
-/*Style the logo*/
-#navbar #logo {
-    font-family: 'Manrope', sans-serif;
-    font-weight: 400;
-    font-size: 18px; /*font size of logo*/
-    float: left; /*logo floats to left by default*/
-    padding-left:0;
-    margin-bottom: 1px;
-    /*border: 1px solid blue; /*for testing puposes*/
-}
-/*position of the links*/
-#navbar-right {
-    float:right;
-    font-size: 14px;
-    /*border: 1px solid red; /*for testing puposes*/
-}
-/*behaviour of the nav links*/
-#navbar a:hover{
-    color: black;
-    transition: 0.3s;
-    /*border-bottom: 3px solid black;*/
-}
-#navbar a.active{
-    border-bottom: 3px solid rgb(96, 79, 70);
-}
-/*This is for both the logo and navbar links*/
-#navbar-content{
-    width:95%;
-    margin: auto;
-    /*border: 1px solid purple; /*for testing puposes*/
-}
-/*Make burger icon normally invisible*/
-#burger-icon{
-    display:none; /*By default burger icon not visible*/
-    /*border: 1px solid red;/*for testing puposes*/
-}
+ 
 
 
 .categories{
