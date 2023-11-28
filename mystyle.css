@@ -114,6 +114,10 @@ hr{
     /*border: 1px solid aqua;*/
 }
 
+#menu-icon{
+    font-size:25px;
+}
+
 
 .big-title{
     font-family: 'Manrope', sans-serif;
