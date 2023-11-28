@@ -1,4 +1,3 @@
-
 /*
 Color palette from pixel phone
 
@@ -19,15 +18,27 @@ body {
     font-weight: 400;
     line-height: 1.6em;
     color: rgb(0, 0, 0);
-    background-color: rgb(248, 239, 236); /*Material you background color*/
-    /*background-color: rgb(250, 243, 237); /*Another option*/
-    /*Important because first we need main-content to disaply as inline block
-    in order to avoid overlapping with other divs
-    But then inline block will nalway float to the right
-    So putting text-align: center; in the body css fixes this*/
+    background-color: rgb(248, 239, 236); /*Material you background color*/  /*Another option rgb(250, 243, 237);*/
+    /*Important because first we need main-content to display as inline block in order to avoid overlapping 
+    with other divs. But then inline block will always float to the right. Put text-align: center; in body fixes this*/
     text-align:center; 
     margin:0; /*Make navbar, body and wide images all reach the very max of the window width */
     overflow-x: hidden;
+}
+.main-content{
+    /*Make the div not overlap with other div*/
+    /*But causes entire div to float left, fix with text-align center in body*/
+    display:inline-block; 
+    text-align: center;  /*Needed to overcome the text-align center of the body*/
+    width:1200px;
+    /*border: 1px solid blue;*/
+}
+.section-card{
+    position:relative;
+    border-radius: 2%/6%;
+    min-height: 400px;
+    width:100%;
+    /*border: 1px solid blue;*/
 }
 hr{
     height: 1px;
@@ -59,7 +70,6 @@ hr{
 .button{
     position:relative;
     display:flex;
-    /*border: 1px solid rgb(96, 79, 70); /*required*/
     border-radius: 25px;
     font-size: 14px;
     padding: 6px 25px;
@@ -109,14 +119,15 @@ hr{
   'opsz' 24;
   /*border: 1px solid red;*/
 }
+#menu-icon{
+    font-size:25px;
+}
+
 .link-text{
     color: rgb(0, 0, 0);
     /*border: 1px solid aqua;*/
 }
 
-#menu-icon{
-    font-size:25px;
-}
 
 
 .big-title{
@@ -130,7 +141,6 @@ hr{
     padding-bottom: 80px;
     /*border: 1px solid aqua;*/
 }
-
 .title{
     font-family: 'Manrope', sans-serif;
     font-weight: 600;
@@ -141,12 +151,6 @@ hr{
     padding-bottom: 9px;
     padding-top: 5px;
 }
-
-/*
-.small-content p{
-    font-size: 1.0em;
-    line-height: 1.6em;
-}*/
 
 .quote{
     position: relative;
@@ -171,24 +175,8 @@ hr{
 
 
 
-.main-content{
-    /*Make the div not overlap with other div*/
-    /*But causes entire div to float left, fix with text-align center in body*/
-    display:inline-block; 
 
-    /*Needed to overcome the text-align center of the body*/
-    text-align: center; 
 
-    width:1200px;
-    /*border: 1px solid blue;*/
-}
-.section-card{
-    position:relative;
-    border-radius: 2%/6%;
-    min-height: 400px;
-    width:100%;
-    /*border: 1px solid blue;*/
-}
 #portfolio-background{
     background-image: url(images/beige.jpg);
     background-position: center;
@@ -234,8 +222,7 @@ hr{
     width:100%;
 }
 .medium-image-right{
-    /*width:398px;*/ /*old value*/
-    width:80%;
+    width:80%; /*previous width:398px;*/ 
     border-radius:2%/4%;
     float:right;
 }
@@ -254,12 +241,9 @@ hr{
 
  /*Create a sticky/fixed navbar*/
  #navbar{
-    /*background-color: rgba(255, 255, 255, 0.77); /*background color of navbar (default is white) */
     background-color:white;
-    /*backdrop-filter: blur(30px);*/
     padding-top: 6px; /*give the navbar the desired thickness*/
     padding-bottom: 6px; /*give the navbar the desired thickness*/
-    /*transition: 0.4s; /*transition effect length when padding is decreased */
     position: fixed; /*this make it sticky/fixed nav bar*/
     width: 100%; /*Make sure navbar take full span of screen*/
     top: 0; /* 0 pixels away from the top */
@@ -271,8 +255,7 @@ hr{
 #navbar a {
     text-decoration: none;
     float: left; /*All of the navbar links float on same line (left)*/
-    /*Padding around each link*/
-    padding: 10px 12px; /*top and bottom: 10px, right and left: 12px */
+    padding: 10px 12px; /*top and bottom: 10px, right and left: 12px */ /*Padding around each link*/
     color: #5f6368; /*color of the links in the navbar*/
     line-height: 25px; /*the height of the navbar link button */
     font-family: 'Manrope', sans-serif;
@@ -283,7 +266,6 @@ hr{
     font-family: 'Manrope', sans-serif;
     font-weight: 400;
     font-size: 18px; /*font size of logo*/
-    /*transition: 0.4s; /*transition speed of the logo when navbar size changes */
     float: left; /*logo floats to left by default*/
     padding-left:0;
     margin-bottom: 1px;
@@ -327,10 +309,8 @@ hr{
 .catcard{
     position:relative;
     text-align: center;
-    /*height: 460px;*/
-    height:auto;
-    width:289px;
-    width:24%;
+    height:auto;   /*previous height: 460px;*/
+    width:24%;   /*previous width:289px;*/
     border-radius: 4%/2%;
     overflow:hidden;/*needed so that image zoom doesnt spill out of div*/
     border: 1px solid pink;
@@ -350,8 +330,7 @@ hr{
     border-radius: 4%/2%;
     filter:brightness(60%);
     object-fit: cover; /*image shoudld cover the entire container*/
-    /*height:460px;*/
-    height:100%;
+    height:100%; 
     width:100%;
     transition: 0.4s; 
 }
@@ -375,22 +354,14 @@ hr{
     top:85%;
     left:33%;
 }
-/*
-#cat4{
-    background-image: url(images/cat4.jpg);
-    background-position: center;
-    background-size: cover;
-}
-*/
-
 
 
 
 /*CSS related to the staggering icons*/
 .container-three-column-cards{
     width:60%;
-    /*border: 1px solid red;*/
     margin: 50px auto;
+    /*border: 1px solid red;*/
 }
 .card-container {   /*Currently not used*/
     width: 100%;
@@ -417,28 +388,18 @@ hr{
 }
 
 .card{
-    /*border: 1px solid #000000;/*border around card*/
     text-align: center;
     padding: 10px 10px; /*padding inside card*/
     margin-bottom: 10%; /*margin outside card*/
-
-    max-width: 200px; /*max width of card*/
-    min-width: 200px;/*min width of card*/
-    max-height: 200px; /*max height of card*/
-    min-height: 200px;/*min height of card*/
-
-    /*make image centered inside block*/
-    margin-left: auto;
-    margin-right: auto;
-
+    width: 200px; /*max width of card*/
+    height: 200px; /*max height of card*/
+    margin-left: auto;/*make image centered inside block*/
+    margin-right: auto;/*make image centered inside block*/
     background: rgb(238, 231, 227); /*Color of card*/
     color: rgb(104, 96, 95);/*Text color*/
     text-decoration: none; /*removes underline from text, since underline appears when make card a link*/
     border-radius: 9%;
-    /*box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3), 
-                0 3px 2px rgba(0, 0, 0, 0.2), 
-                0 7px 7px rgba(0, 0, 0, 0.15),
-                0 0.5px 0px 0 rgba(255, 255, 255, 0.3) inset; /*inset creates shadow inside the box, needed to add the light shine on top of box*/
+    /*border: 1px solid #000000;/*border around card*/
 }
 
 .card-image {
@@ -455,7 +416,7 @@ hr{
 .card-title {
     padding: 5px 5px;
     text-align: center;
-    /*font-size: 18px;*/
+    font-size: 16px;
     height:30%; /*text takes 30% of card*/
     /*border: 1px solid rgb(200, 0, 0);*/
 }
@@ -465,7 +426,7 @@ hr{
     transition: 0.2s;
     box-shadow: 0 0 40px -10px rgba(0, 0, 0, 1),
                 0 0.5px 0px 0 rgba(255, 255, 255, 0.3) inset; /*inset creates shadow inside the box, needed to add the light shine on top of box*/
-    transition-delay: 0ms;     
+    transition-delay: 0ms; 
 }
 
 .hidden{  /*for the staggering icons*/
@@ -505,8 +466,8 @@ hr{
 }
 
 @media screen and (max-width: 900px){
-    .container-two-column-cards{
-        width:100%;
+    .three-column-cards{
+        grid-template-columns: repeat(2, 1fr);
     }
     .five-column-cards{
         grid-template-columns: repeat(3, 1fr); /*3 columns*/
@@ -517,8 +478,6 @@ hr{
     .five-column-cards{
         grid-template-columns: repeat(2, 1fr); /*2 columns*/
     }
-    
-
 }
 
 /*End of stagerred icons section*/
@@ -562,6 +521,12 @@ hr{
 
 /*FOR EVEN SMALLER SCREENS*/
 @media screen and (max-width: 700px){
+    .section-card{
+        border-radius: none;
+    }
+    .big-title{
+        font-size: 300%;
+    }
     .categories{
         flex-wrap: wrap;
     }
@@ -621,7 +586,7 @@ hr{
         transition: 0.5s; /*Transition speed when opening and closing vertical menu*/
         position: fixed;
         z-index: 100; /*Make vertical menu appear above all other content*/
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(226, 192, 174, 0.7); /*226, 192, 174*/
         top: 45px; /*How far from the top the vertical menu appears*/
         left: 0;
     }
@@ -629,6 +594,7 @@ hr{
     .anchor-links a {  /*Change the size of the Anchor links in vertical menu*/
         font-size: 120%; 
         border-bottom: 1px solid rgb(173, 173, 173);
+        border-bottom: hidden;
         text-align: center;
         margin: 5%; /*Add a bit of space around all the anchor links in vertical menu*/
     }
@@ -641,18 +607,18 @@ hr{
 
     #burger-icon{
         display:unset; /*Make burger icon visible when screen is small */
-        /*position:fixed;*/
         float: left;
         font-size: 28px; /*Font size of burger icon*/
         margin-left: 1%; /*Add a bit of spacing on left side of burger icon*/
         margin-bottom: 7px;
     }
-
-
 }
 
 /*Tiny screens*/
 @media screen and (max-width: 550px){
+    .big-title{
+        font-size: 200%;
+    }
     .quote{
         visibility: hidden;
     }
@@ -662,3 +628,19 @@ hr{
     }
 }
 
+@media screen and (max-width: 500px){
+    /*Need to start shrinking the logo cards*/
+    .three-column-cards{
+        border: solid 2px pink;
+    }
+    .card{  /*all new logo card values are 75% or original size*/
+        width:150px;
+        height:150px;
+    }
+    .card-image{
+        width:86px;
+    }
+    .card-title {
+        font-size: 12px;
+    }
+}
