@@ -32,15 +32,18 @@ body {
     padding: 6px 0px; /* top/bottom padding:6px, left/right:0px;  (give navbar desired thickness)*/ 
     z-index: 99; /* make sure its always on top of everything else: put a big value */
     background-color:white;
-    font-family: 'Manrope', sans-serif;
     box-shadow: none; /*May not be necessary*/
     /*border: 1px solid orange; /*for testing puposes*/
 }
 #navbar a {  /*Style the navbar links*/
+    /*font-family: 'Manrope', sans-serif;*/
+    font-family: 'Roboto', sans-serif;
+    font-weight:500;
+    letter-spacing: 0.01em;
     float: left; /*All of the navbar links float on same line (left)*/
     color: #5f6368; /*color of the links in the navbar*/
     text-decoration: none; /*We don't want the default link underline*/
-    padding: 10px 12px; /*top and bottom: 10px, right and left: 12px */ /*Padding around each link*/
+    padding: 10px 17px; /*top and bottom: 10px, right and left: 12px */ /*Padding around each link*/
     line-height: 25px; /*the height of the navbar link button */
 }
 #navbar #logo {  /*Style the logo*/
@@ -49,6 +52,7 @@ body {
 #navbar-right {  /*position of the links*/
     float:right;
     font-size: 14px;
+    
 }
 #navbar a:hover{  /*behaviour of the nav links*/
     color: black;
@@ -96,7 +100,7 @@ hr{
 
 .text{
     /*font-family: 'Manrope', sans-serif;*/
-    font-family: 'Roboto', sans-serif;;
+    font-family: 'Roboto', sans-serif;
     font-size: 19px;
     font-weight: 500;
     /*color: rgb(104, 96, 95);*/
@@ -108,7 +112,7 @@ hr{
 
 
 .link-area{
-    color:#1f1f1f; /*Needed for the ">" sign after a link*/
+    color:#1f1f1f; 
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -116,6 +120,8 @@ hr{
     /*border: 1px solid rgb(128, 0, 0);*/
 }
 .button{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
     position:relative;
     display:flex;
     border-radius: 25px;
@@ -203,14 +209,22 @@ hr{
     /*border: 1px solid aqua;*/
 }
 .title{
-    font-family: 'Manrope', sans-serif;
-    font-weight: 600;
-    font-size: 300%;
-    color:rgb(0, 0, 0);
-    line-height:1.1em;
-    text-align: center;
-    padding-bottom: 9px;
-    padding-top: 5px;
+    /*font-family: 'Manrope', sans-serif;*/
+    font-family: 'Roboto', sans-serif;
+    /*font-weight: 600;*/
+    font-weight: 700;
+    /*line-height:1.1em;*/
+    line-height: 1.04;
+    /*font-size: 300%*/
+    font-size: 80px;
+
+    /*color:rgb(0, 0, 0);*/
+    
+    /*text-align: center;*/
+    text-align:left;
+    padding-top: 20vh;
+    padding-bottom: 5vh;
+    
 }
 
 .quote{
