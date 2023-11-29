@@ -214,7 +214,13 @@ hr{
 }
 
 .quote{
-    position: relative;
+    position:absolute;
+    left:0;
+    right:0;
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 600px;
+
     text-align: center;
     /*font-family: 'Manrope', sans-serif;*/
     font-family: 'Roboto', sans-serif;
@@ -245,7 +251,22 @@ hr{
     background-size:cover;
 }
 #project-background{
-    background-image: url(images/google2.jpg);
+    background-image: url(images/pawel-czerwinski-2.jpg);
+    background-position: center;
+    background-size:cover;
+}
+#education-background{
+    background-image: url(images/pawel-czerwinski-3.jpg);
+    background-position: center;
+    background-size:cover;
+}
+#skills-background{
+    background-image: url(images/4.jpg);
+    background-position: center;
+    background-size:cover;
+}
+#experience-background{
+    background-image: url(images/5.jpg);
     background-position: center;
     background-size:cover;
 }
