@@ -172,7 +172,13 @@ hr{
     /*border: 1px solid aqua;*/
 }
 
-
+.ultra-big-title{
+    text-align: left;
+    font-size: 96px;
+    font-weight:800;
+    line-height: 1.04;
+    letter-spacing: -0.03em;
+}
 
 .big-title{
     font-family: 'Manrope', sans-serif;
@@ -342,13 +348,7 @@ hr{
     left:33%;
 }
 
-.ultra-big-title{
-    text-align: left;
-    font-size: 96px;
-    font-weight:800;
-    line-height: 1.04;
-    letter-spacing: -0.015em;
-}
+
 
 /*CSS related to the staggering icons*/
 .container-three-column-cards{
