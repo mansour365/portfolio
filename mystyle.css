@@ -80,8 +80,9 @@ body {
 .section-card{
     position:relative;
     border-radius: 2%/6%;
-    min-height: 400px;
+    height: 400px;
     width:100%;
+    padding:5%
     /*border: 1px solid blue;*/
 }
 hr{
@@ -94,11 +95,14 @@ hr{
 
 
 .text{
-    font-family: 'Manrope', sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    color: rgb(104, 96, 95);
+    /*font-family: 'Manrope', sans-serif;*/
+    font-family: 'Roboto', sans-serif;;
+    font-size: 19px;
+    font-weight: 500;
+    /*color: rgb(104, 96, 95);*/
+    color: #86868b;
     line-height: 40px;
+    /*line-height: 40px;*/
 }
 
 
@@ -118,7 +122,7 @@ hr{
     font-size: 14px;
     padding: 6px 25px;
     background-color: rgb(226, 192, 174);
-    background-color: rgb(241, 177, 127); /*Another option*/
+    /*background-color: rgb(241, 177, 127); /*Another option*/
 }
 .button:hover{
     background-color: rgb(96, 79, 70);
@@ -181,21 +185,20 @@ hr{
     line-height: 1.04;
     /*letter-spacing: -0.04em; /*for manrope*/
     letter-spacing: -0.02em; /*for roboto*/
-    
 }
 .big-title{
     /*font-family: 'Manrope', sans-serif;*/
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    font-size: 96px;
-    font-weight: 700;
+    font-size: 80px;
+    font-weight: 500;
     
     line-height: 1.04;
     letter-spacing: -0.02em;
-    color:black;
+    color:white;
     /*line-height:1.1em;*/
     
-    padding-top: 80px;
+    padding-top: 20px;
     padding-bottom: 80px;
     /*border: 1px solid aqua;*/
 }
@@ -213,9 +216,10 @@ hr{
 .quote{
     position: relative;
     text-align: center;
-    font-family: 'Manrope', sans-serif;
+    /*font-family: 'Manrope', sans-serif;*/
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 40px;
     color: rgb(255, 255, 255);
     bottom: 20px;
@@ -236,7 +240,7 @@ hr{
 
 
 #portfolio-background{
-    background-image: url(images/annie-sprratt.jpg);
+    background-image: url(images/pawel-czerwinski.jpg);
     background-position: center;
     background-size:cover;
 }
@@ -305,7 +309,7 @@ hr{
     flex-wrap: nowrap;
     justify-content:center;
     gap: 14px;
-    border: 1px solid green;
+    /*border: 1px solid green;*/
 }
 .catcard{
     position:relative;
@@ -314,7 +318,7 @@ hr{
     width:24%;   /*previous width:289px;*/
     border-radius: 4%/2%;
     overflow:hidden;/*needed so that image zoom doesnt spill out of div*/
-    border: 1px solid pink;
+    /*border: 1px solid pink;*/
 }
 
 /*Use CSS Nesting, so when we hover over the cat card, then we also activate attributes of another css element cat-image*/
