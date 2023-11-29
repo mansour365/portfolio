@@ -103,8 +103,8 @@ hr{
     font-family: 'Roboto', sans-serif;
     font-size: 19px;
     font-weight: 500;
-    /*color: rgb(104, 96, 95);*/
-    color: #86868b;
+    color: rgb(104, 96, 95);
+    /*color: #86868b;*/
     line-height: 40px;
     /*line-height: 40px;*/
 }
