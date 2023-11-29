@@ -173,11 +173,14 @@ hr{
 }
 
 .ultra-big-title{
+    font-family: 'Roboto', sans-serif;
     text-align: left;
     font-size: 96px;
-    font-weight:800;
+    /*font-weight:800; /*for manrope*/
+    font-weight:700; /*for roboto*/
     line-height: 1.04;
-    letter-spacing: -0.03em;
+    /*letter-spacing: -0.04em; /*for manrope*/
+    letter-spacing: -0.02em; /*for roboto*/
 }
 
 .big-title{
