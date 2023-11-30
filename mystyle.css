@@ -78,7 +78,7 @@ body {
     display:inline-block; 
     text-align: center;  /*Needed to overcome the text-align center of the body*/
     width:1200px;
-    /*border: 1px solid blue;*/
+    border: 1px solid blue;
 }
 .section-card{
     position:relative;
@@ -525,8 +525,8 @@ body {
     }
     .main-content{
         width:100%;
-        padding-left:5%;
-        padding-right:5%;
+        /*padding-left:5%;
+        padding-right:5%;*/
     }
     .small-content{
         width:auto;
@@ -554,11 +554,21 @@ body {
     
 }
 
+/*Start making titles smaller*/
+@media screen and (max-width: 1070px){
+    /*change titles down to 72px*/
+    .ultra-big-title{
+        font-size: 72px;
+    }
+
+}
+
 
 /*FOR EVEN SMALLER SCREENS*/
-@media screen and (max-width: 700px){
+@media screen and (max-width: 765px){
+
     .section-card{
-        border-radius: none;
+        border-radius: 0%/0%;
     }
     .big-title{
         font-size: 300%;
