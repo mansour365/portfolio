@@ -13,7 +13,7 @@ html{
 }
 body {
     background: #fefefe;
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     line-height: 1.6em;
     color: rgb(0, 0, 0);
@@ -36,7 +36,6 @@ body {
     /*border: 1px solid orange; /*for testing puposes*/
 }
 #navbar a {  /*Style the navbar links*/
-    /*font-family: 'Manrope', sans-serif;*/
     font-family: 'Roboto', sans-serif;
     font-weight:500;
     letter-spacing: 0.01em;
@@ -89,24 +88,26 @@ body {
     padding:5%
     /*border: 1px solid blue;*/
 }
-hr{
-    height: 1px;
-    /*Setting border to 0 and border-top to 1px, get a true 1px hr*/
-    border:0;
-    border-top: 1px solid rgb(222,222,222); /*For light mode*/
-    border-top: 1px solid rgb(56, 62, 64); /*For dark mode*/
-}
+
 
 
 .text{
-    /*font-family: 'Manrope', sans-serif;*/
     font-family: 'Roboto', sans-serif;
     font-size: 19px;
     font-weight: 500;
     color: rgb(104, 96, 95);
     /*color: #86868b;*/
     line-height: 40px;
-    /*line-height: 40px;*/
+}
+
+.text-left{
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    font-weight: 500;
+    color: rgb(104, 96, 95);
+    /*color: #86868b;*/
+    line-height: 40px;
 }
 
 
@@ -187,14 +188,11 @@ hr{
     font-family: 'Roboto', sans-serif;
     text-align: left;
     font-size: 96px;
-    /*font-weight:800; /*for manrope*/
     font-weight:700; /*for roboto*/
     line-height: 1.04;
-    /*letter-spacing: -0.04em; /*for manrope*/
     letter-spacing: -0.02em; /*for roboto*/
 }
 .big-title{
-    /*font-family: 'Manrope', sans-serif;*/
     font-family: 'Roboto', sans-serif;
     text-align: center;
     font-size: 80px;
@@ -203,29 +201,19 @@ hr{
     line-height: 1.04;
     letter-spacing: -0.02em;
     color:white;
-    /*line-height:1.1em;*/
     
     padding-top: 20px;
     padding-bottom: 80px;
     /*border: 1px solid aqua;*/
 }
 .title{
-    /*font-family: 'Manrope', sans-serif;*/
     font-family: 'Roboto', sans-serif;
-    /*font-weight: 600;*/
     font-weight: 700;
-    /*line-height:1.1em;*/
     line-height: 1.04;
-    /*font-size: 300%*/
     font-size: 80px;
-
-    /*color:rgb(0, 0, 0);*/
-    
-    /*text-align: center;*/
     text-align:left;
     padding-top: 20vh;
     padding-bottom: 5vh;
-    
 }
 
 .quote{
@@ -237,7 +225,6 @@ hr{
     width: 600px;
 
     text-align: center;
-    /*font-family: 'Manrope', sans-serif;*/
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 500;
@@ -284,6 +271,11 @@ hr{
 }
 #experience-background{
     background-image: url(images/5.jpg);
+    background-position: center;
+    background-size:cover;
+}
+#contact-background{
+    background-image: url(images/6.jpg);
     background-position: center;
     background-size:cover;
 }
@@ -378,6 +370,7 @@ hr{
     transition: 0.4s; 
 }
 .cat-title{
+    font-weight:500;
     position: absolute;
     top:50%;
     left:50%;
