@@ -333,7 +333,7 @@ body {
     width:100%;
 }
 .medium-image-right{
-    width:100%; /*previous width:398px;*/ 
+    width:90%; /*previous width:398px;*/ 
     border-radius:2%/4%;
     /*float:right;*/
 }
@@ -342,7 +342,7 @@ body {
     width:250px;
 }
 .medium-image-left{
-    width: 100%;
+    width: 90%;
     border-radius:2%/4%;
 }
 
