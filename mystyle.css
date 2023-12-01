@@ -93,11 +93,15 @@ body {
 
 .section-card{
     position:relative;
-    border-radius: 2%/6%;
+    /*border-radius: 2%/6%;*/
     height: 400px;
     width:100%;
-    padding:5%
-    /*border: 1px solid blue;*/
+    padding:5%;
+    /*********The Fab Four Technique********* for dynamic border radius*/
+    /*Border radius disapears when window with is 400px or less*/
+    /*24px represents the desired pixel radius*/
+    border-radius: max(0px, min(24px, (100% - 400px + 1px) * 9999)) / 24px;
+    border: 1px solid blue;
 }
 .section-title{
     font-family: 'Roboto', sans-serif;
@@ -141,11 +145,15 @@ body {
 
 .white-section{
     position: relative;
+    /*border-radius: 2%/8%;*/
     float:left;  /*keeps the white section div at the very top of its parent div*/
     background-color: rgb(255, 248, 245);
     width: 100%;
-    border-radius: 2%/8%;
-    /*border: 1px solid rgb(128, 0, 0);*/
+    /*********The Fab Four Technique********* for dynamic border radius*/
+    /*Border radius disapears when window with is 400px or less*/
+    /*24px represents the desired pixel radius*/
+    border-radius: max(0px, min(24px, (100% - 400px + 1px) * 9999)) / 24px;
+    border: 1px solid rgb(128, 0, 0);
 }
 
 
