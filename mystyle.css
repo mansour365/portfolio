@@ -63,6 +63,10 @@ body {
 #burger-icon{  /*Make burger icon normally invisible*/
     display:none; /*By default burger icon not visible*/
 }
+#menu-icon{
+    font-size:25px;
+}
+
 
 
 .main-content{
@@ -124,6 +128,16 @@ body {
     bottom: 20px;
     /*border: 1px solid aqua;*/
 }
+/*For quotes animation*/
+.reveal{
+    /*transform: translateY(150px);*/
+    opacity: 0;
+    transition: 2.5s all ease;
+}
+.reveal.active{
+    /*transform: translateY(0);*/
+    opacity: 1;
+ }
 
 .white-section{
     position: relative;
@@ -238,119 +252,10 @@ body {
   'opsz' 24;
   /*border: 1px solid red;*/
 }
-#menu-icon{
-    font-size:25px;
-}
-
 .link-text{
     color: rgb(0, 0, 0);
     /*border: 1px solid aqua;*/
 }
-
-
-
-
-.title{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    line-height: 1.04;
-    font-size: 80px;
-    text-align:left;
-    padding-top: 20vh;
-    padding-bottom: 5vh;
-}
-
-
-
-
-
-
-
-
-
-#portfolio-background{
-    background-image: url(images/pawel-czerwinski.jpg);
-    background-position: center;
-    background-size:cover;
-}
-#project-background{
-    background-image: url(images/pawel-czerwinski-2.jpg);
-    background-position: center;
-    background-size:cover;
-}
-#education-background{
-    background-image: url(images/pawel-czerwinski-3.jpg);
-    background-position: center;
-    background-size:cover;
-}
-#skills-background{
-    background-image: url(images/4.jpg);
-    background-position: center;
-    background-size:cover;
-}
-#experience-background{
-    background-image: url(images/5.jpg);
-    background-position: center;
-    background-size:cover;
-}
-#contact-background{
-    background-image: url(images/6.jpg);
-    background-position: center;
-    background-size:cover;
-}
-.small-content{
-    text-align: center;
-    width:1200px; 
-    margin: auto; /*for some reason needed to keep content in the middle*/
-    /*border: 1px solid green; */
-}
-
-.very-small-content{
-    text-align: center;
-    width:1200px; 
-    margin: auto; /*for some reason needed to keep content in the middle*/
-    /*border: 1px solid green; */
-}
-
-
-.left-column{
-    float: left;
-    width:48%;
-    /*border: 1px solid red;*/
-}
-.right-column{
-    float: right;
-    width:50%;
-    /*border: 1px solid blue;*/
-}
-
-.wide-image{
-    width:100%;
-    border-radius: 2%/3%;
-}
-
-.main-content .large-image{
-    width:100%;
-}
-.medium-image-right{
-    width:90%; /*previous width:398px;*/ 
-    border-radius:2%/4%;
-    /*float:right;*/
-}
-
-#weather-phone{
-    width:250px;
-}
-.medium-image-left{
-    width: 90%;
-    border-radius:2%/4%;
-}
-
-
-
-
-
- 
 
 
 .categories{
@@ -412,6 +317,81 @@ body {
 
 
 
+#portfolio-background{
+    background-image: url(images/pawel-czerwinski.jpg);
+    background-position: center;
+    background-size:cover;
+}
+#project-background{
+    background-image: url(images/pawel-czerwinski-2.jpg);
+    background-position: center;
+    background-size:cover;
+}
+#education-background{
+    background-image: url(images/pawel-czerwinski-3.jpg);
+    background-position: center;
+    background-size:cover;
+}
+#skills-background{
+    background-image: url(images/4.jpg);
+    background-position: center;
+    background-size:cover;
+}
+#experience-background{
+    background-image: url(images/5.jpg);
+    background-position: center;
+    background-size:cover;
+}
+#contact-background{
+    background-image: url(images/6.jpg);
+    background-position: center;
+    background-size:cover;
+}
+
+
+
+.left-column{
+    float: left;
+    width:48%;
+    /*border: 1px solid red;*/
+}
+.right-column{
+    float: right;
+    width:50%;
+    /*border: 1px solid blue;*/
+}
+
+.wide-image{
+    width:100%;
+    border-radius: 2%/3%;
+}
+
+
+
+#weather-phone{
+    width:250px;
+}
+.medium-image-right{
+    width:90%; /*previous width:398px;*/ 
+    border-radius:2%/4%;
+    /*float:right;*/
+}
+.medium-image-left{
+    width: 90%;
+    border-radius:2%/4%;
+}
+
+
+
+
+
+ 
+
+
+
+
+
+
 /*CSS related to the staggering icons*/
 .container-three-column-cards{
     width:60%;
@@ -456,7 +436,6 @@ body {
     border-radius: 9%;
     /*border: 1px solid #000000;/*border around card*/
 }
-
 .card-image {
     text-align: center;
     width:115px; /*width of image*/
@@ -467,7 +446,6 @@ body {
     height:70%; /*image takes 70% of card*/
     /*border: 1px solid green;*/
 }
-
 .card-title {
     padding: 5px 5px;
     text-align: center;
@@ -475,7 +453,6 @@ body {
     height:30%; /*text takes 30% of card*/
     /*border: 1px solid rgb(200, 0, 0);*/
 }
-
 .card:hover {
     transform: scale(1.05);
     transition: 0.2s;
@@ -483,14 +460,12 @@ body {
                 0 0.5px 0px 0 rgba(255, 255, 255, 0.3) inset; /*inset creates shadow inside the box, needed to add the light shine on top of box*/
     transition-delay: 0ms; 
 }
-
 .hidden{  /*for the staggering icons*/
     opacity:0;
    /* filter: blur(5px);*/
     transform: translateX(-5%);
     transition: all 0.5s;
 }
-
 .show{
     opacity:1;
     /*filter:blur(0);*/
@@ -498,16 +473,7 @@ body {
     transition-delay: var(--delay);
 }
 
-/*For quotes animation*/
-.reveal{
-    /*transform: translateY(150px);*/
-    opacity: 0;
-    transition: 2.5s all ease;
-}
-.reveal.active{
-    /*transform: translateY(0);*/
-    opacity: 1;
- }
+
 
 
 
