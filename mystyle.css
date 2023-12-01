@@ -51,7 +51,6 @@ body {
 #navbar-right {  /*position of the links*/
     float:right;
     font-size: 14px;
-    
 }
 #navbar a:hover{  /*behaviour of the nav links*/
     color: black;
@@ -78,7 +77,18 @@ body {
     display:inline-block; 
     text-align: center;  /*Needed to overcome the text-align center of the body*/
     width:1200px;
-    border: 1px solid blue;
+    margin-top:20px;
+    margin-bottom:20px;
+    /*border: 1px solid blue;*/
+}
+
+.ultra-big-title{
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+    font-size: 96px;
+    font-weight:700; /*for roboto*/
+    line-height: 1.04;
+    letter-spacing: -0.02em; /*for roboto*/
 }
 .section-card{
     position:relative;
@@ -89,15 +99,27 @@ body {
     /*border: 1px solid blue;*/
 }
 
+.white-section{
+    position: relative;
+    float:left;  /*keeps the white section div at the very top of its parent div*/
+    background-color: rgb(255, 248, 245);
+    width: 100%;
+    border-radius: 2%/8%;
+    /*border: 1px solid rgb(128, 0, 0);*/
+}
+
 
 
 .text{
+    display:inline-block;
     font-family: 'Roboto', sans-serif;
     font-size: 19px;
     font-weight: 500;
     color: rgb(104, 96, 95);
-    /*color: #86868b;*/
     line-height: 40px;
+    margin-top:4%;
+    margin-bottom: 4%;
+    /*border: solid 1px red;*/
 }
 
 .text-left{
@@ -106,10 +128,21 @@ body {
     font-size: 19px;
     font-weight: 500;
     color: rgb(104, 96, 95);
-    /*color: #86868b;*/
     line-height: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+    /*border: solid 1px green;*/
 }
 
+.emphasized-text{
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    line-height: 40px;
+    /*border: solid 1px red;*/
+}
 
 
 .link-area{
@@ -118,6 +151,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap:20px;
+    padding-bottom:20px;
     /*border: 1px solid rgb(128, 0, 0);*/
 }
 .button{
@@ -184,15 +218,9 @@ body {
     /*border: 1px solid aqua;*/
 }
 
-.ultra-big-title{
-    font-family: 'Roboto', sans-serif;
-    text-align: left;
-    font-size: 96px;
-    font-weight:700; /*for roboto*/
-    line-height: 1.04;
-    letter-spacing: -0.02em; /*for roboto*/
-}
-.big-title{
+
+
+.section-title{
     font-family: 'Roboto', sans-serif;
     text-align: center;
     font-size: 80px;
@@ -235,15 +263,6 @@ body {
 }
 
 
-.white-section{
-    position:relative;
-    background-color: rgb(255, 248, 245);
-    width: 100%;
-    border-radius: 2%/8%;
-    padding-left:5%;
-    padding-right:5%;
-    /*border: 1px solid rgb(128, 0, 0);*/
-}
 
 
 
@@ -314,16 +333,16 @@ body {
     width:100%;
 }
 .medium-image-right{
-    width:80%; /*previous width:398px;*/ 
+    width:100%; /*previous width:398px;*/ 
     border-radius:2%/4%;
-    float:right;
+    /*float:right;*/
 }
 
 #weather-phone{
     width:250px;
 }
 .medium-image-left{
-    width: 80%;
+    width: 100%;
     border-radius:2%/4%;
 }
 

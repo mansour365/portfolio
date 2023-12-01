@@ -67,6 +67,7 @@
         <link rel="stylesheet" href="mystyle.css">
 
         <script defer src="myscript.js"></script> <!--defer makes it execute after body-->
+        
     </head>
     
     <body>
@@ -77,7 +78,7 @@
                 <a href="#top" id="logo">Mansour's  <b> Portfolio<b></a> <!--Using #top, it scrolls to top of page-->
 
                 <div id = "navbar-right" class = "anchor-links"  onclick="toggleVerticalMenu();">
-                    <a href=#abo class="active">About</a>
+                    <a href=#abo>About</a>
                     <a href=#prj>Projects</a>
                     <a href=#edu>Education</a>
                     <a href=#tec>Skills</a>
@@ -99,19 +100,19 @@
 
 
 
-        <br><br><br><br><br><br><br>
+        <br><br><br><br><br>
+
         <div class="main-content">
             <div class="ultra-big-title">Welcome to my <br> Portfolio.</div>
-            
         </div>
+
         <br><br><br><br><br>
         
         <p id="abo"></p>
-        <br>
         <!--Wide Image starts here  ----------------------------------->
             <div class="main-content">
                 <div class="section-card" id="portfolio-background">
-                    <div class ="big-title">About</div>
+                    <div class ="section-title">About</div>
 
                     <div class="quote reveal">
                         <p>"If there is no struggle, there is no progress." — Frederick Douglass</p>
@@ -120,7 +121,6 @@
             </div>
         <!--Wide Image ends here  ----------------------------------->
 
-        <p></p>   
             
 
         <!--About Me-->
@@ -129,12 +129,10 @@
             <div class="white-section">
 
                 <div class = "text">
-                    <br>
                     My name is Mansour Maqsoudi. <br>
                     I love coding and beautiful design. <br>
                     This website was created from scratch using HTML, CSS, and JavaScript.<br>
                     It has a responsive design, and uses tools such as CSS Grid and Flexbox.<br>
-                    <br>
                 </div> 
                 
                 <div class="link-area">
@@ -159,12 +157,9 @@
                     </a>    
                 </div>
                 
-                <br>   
+
             </div>
         </div>
-
-
-        <br><br>
 
 
         <div class = "main-content">
@@ -198,16 +193,14 @@
 
         </div>
 
-        <br><br><br><br>
+
 
             <p id="prj"></p>
-            <br>
+            
             <!--Wide Image starts here  ----------------------------------->
-                <!--<a name="prj"></a>Needed when we're in contact page-->
-
                 <div class="main-content">
                     <div class = "section-card" id="project-background">
-                        <div class ="big-title">Projects</div>
+                        <div class ="section-title">Projects</div>
 
                         <div class="quote reveal">
                             <p>"A life spent making mistakes is not only more honourable, 
@@ -221,79 +214,61 @@
 
             <!--Weather Website-->
             <div class="main-content">
-                <br>
-                
-                    <div class="title">
-                            Weather Forecast Website
-                    </div>
-                    <div class="text">Inspired by the Apple Weather App</div>
+                <div class="ultra-big-title">Weather Forecast<br> Website.</div>
+                <div class="emphasized-text">Inspired by the Apple Weather App</div>
+            </div>
 
-                    
-                    <br>
-                    <div class="left-column">
-                        <div class="white-section">
-                            <div class="text-left">
+            <div class="main-content">
+                <div class="left-column">
+                    <div class="white-section">
+                        <div class="text-left">
+                            <p>
+                                Developed a weather forecast website with the same style as Apple's Weather App.<br>
+                                Coded from scratch in Visual Studio Code, using HTML, CSS, and JavaScript.<br>
+                                Makes use of the CSS Grid functionality, Flexbox, Weather API, HTML Geolocation API, and the Document Object Model (DOM).<br>
                                 <br>
-                                <p>
-                                    Developed a weather forecast website with the same style as Apple's Weather App.<br>
-                                    Coded from scratch in Visual Studio Code, using HTML, CSS, and JavaScript.<br>
-                                    Makes use of the CSS Grid functionality, Flexbox, Weather API, HTML Geolocation API, and the Document Object Model (DOM).<br>
-                                    <br>
-                                    Features:<br>
-                                    Responsive layout.
-                                    Ability to search any location.<br>
-                                    Hourly weather data for the next 24 hours.<br>
-                                    Daily weather for the next 3 days<br>
-                                    Weather information includes Humidity, Precipitation, 
-                                    Air Quality, Wind, UV index, Visibility, <br>
-                                    Atmospheric Pressure,
-                                    as well as Sunrise and Sunset times for that location.
-                                </p> 
-                            </div>
-                            <div class="link-area">
-        
-                                <a class = "button" href="https://theweather.pages.dev" target="_blank">
-                                    <span class="material-symbols-outlined">web</span>
-                                    <div class="link-text">Website</div>
-                                </a>
-        
-                                <a class = "button" href="https://github.com/mansour365/weather" target="_blank">
-                                    <span><img class="link-icon" id="git-icon" src="images/icons/git.png"></span>
-                                    <div class="link-text">GitHub</div>
-                                </a>
-        
-                            </div>
-                            
-                            <br>
+                                Features:<br>
+                                Responsive layout.
+                                Ability to search any location.<br>
+                                Hourly weather data for the next 24 hours.<br>
+                                Daily weather for the next 3 days<br>
+                                Weather information includes Humidity, Precipitation, 
+                                Air Quality, Wind, UV index, Visibility, <br>
+                                Atmospheric Pressure,
+                                as well as Sunrise and Sunset times for that location.
+                            </p> 
+                        </div>
+                        <div class="link-area">
+                            <a class = "button" href="https://theweather.pages.dev" target="_blank">
+                                <span class="material-symbols-outlined">web</span>
+                                <div class="link-text">Website</div>
+                            </a>
+                            <a class = "button" href="https://github.com/mansour365/weather" target="_blank">
+                                <span><img class="link-icon" id="git-icon" src="images/icons/git.png"></span>
+                                <div class="link-text">GitHub</div>
+                            </a>
                         </div>
                     </div>
+                </div>
 
 
                 <div class="right-column">
                     <img class="wide-image" src="images/project/weather.png">
                     <img class="medium-image-right" id="weather-phone" src="images/project/weather-phone.png" width="50%">
                 </div>
-            
-                <br><br>
             </div>
         
 
-            <!--<hr>-->
-            <p></p>
-
-
-
-
-
             <!--Android App-->
             <div class="main-content">
-                <div class="title">
-                    Counter Android Application
+                <div class="ultra-big-title">
+                    Android Counter<br> Application.
                 </div>
-                <br>
+            </div>
+
+            <div class="main-content">
                 <div class="left-column">
                     <div class="white-section">
-                        <br>
                         <div class = "text-left">
                             <p>
                                 Developed an Android application used for counting.<br>
@@ -315,26 +290,22 @@
                                 <div class="link-text">GitHub</div>
                             </a>
                         </div>
-                        <br>
+                        
                     </div>
-
                 </div>
                 
                 <div class="right-column">
                     <img class="medium-image-right" src="images/project/counter-app.png">
                 </div>
             
-                <br><br>
             </div>
             
-                <!--<hr>-->
-                <p></p>
             <!--Snake Game-->
             <div class="main-content">
-                <div class="title">
-                    Snake Game
-                </div>
-                <br>
+                <div class="ultra-big-title">Snake Game</div>
+            </div>
+
+            <div class="main-content">
                 <div class="left-column">
                     <img class="medium-image-left" src="images/project/snake-game.png">
                 </div>
@@ -343,7 +314,6 @@
                     <div class="white-section">
 
                         <div class = "text-left">
-                            <br>
                             <p>
                                 Developed a Snake game with a graphical user interface.<br>
                                 Coded in Microsoft Visual Studio IDE using C++ and OpenGL<br>
@@ -361,25 +331,20 @@
                                 <div class="link-text">GitHub</div>
                             </a>
                         </div>
-                        <br>
                     </div>
                 </div>
             
-                <br><br>
             </div>
-            <br><br>
-            <!--<hr>-->
-                <p></p>
+
             <!--Battleship Game-->
             <div class="main-content">
-                <div class="title">
-                    BattleShip Game
-                </div>
-                <br>
+                <div class="ultra-big-title">BattleShip Game</div>
+            </div>
+
+            <div class="main-content">
                 <div class="left-column">
                     <div class="white-section">
                         <div class="text-left">
-                            <br>
                             <p>
                                 Developed a BattleShip Game<br>
                                 Coded in the Eclipse IDE, using the Java programming language.<br>
@@ -400,7 +365,6 @@
                                 <div class="link-text">GitHub</div>
                             </a>
                         </div>
-                        <br>
 
                     </div>
                 </div>
@@ -409,25 +373,20 @@
                     <img class="medium-image-right" src="images/project/battleship1.png">
                     <img class="medium-image-right" src="images/project/battleship2.png">
                 </div>
-            
-                <br><br>
             </div>
             
-                <br><br><br>
-                <!--<hr>-->
-                <p></p>
-                <br>
+
 
             <!--Group Projects-->
             <div class="main-content">
-                <div class="title">
-                    3D Penguin Game (Group Project)
-                </div>
-                <br>
+                <div class="ultra-big-title">3D Penguin Game</div>
+                <div class="emphasized-text">(Group Project)</div>
+            </div>
+
+            <div class="main-content">
                 <div class="left-column">
                     <div class="white-section">
                         <div class="text-left">
-                            <br>
                             <p>
                                 Collaborated in a group project to develop a 3D Penguin Game<br>
                                 Coded in the Visual Studio IDE, using the C++ programming language and OpenGL.<br>
@@ -447,7 +406,6 @@
                                 <div class="link-text">GitHub</div>
                             </a>
                         </div>
-                        <br>
                         
                     </div>
                 </div>
@@ -456,21 +414,14 @@
                     <img class="medium-image-right" src="images/project/penguin-game.png">
                 </div>
             
-                <br><br>
             </div>
-        
-        
-            <br><br>
-            <p></p>
-            <br>
 
 
             <p id="edu"></p>
-            <br>
         <!--Wide Image starts here  ----------------------------------->
             <div class="main-content">
                 <div class = "section-card" id="education-background">
-                    <div class ="big-title">Education</div>
+                    <div class ="section-title">Education</div>
 
                     <div class="quote reveal">
                         <p>"Wisdom... comes not from age, but from education and learning." 
@@ -480,17 +431,15 @@
             </div>
         <!--Wide Image ends here  ----------------------------------->
 
-        <br>
 
         <!--Concordia University-->
         <div class="main-content">
-            <br>
             <div class="left-column">
                 <div class="white-section">
-                    <div class="text">
-                        <div>Concordia University</div>
+                    <div class="text-left">
                         <p>
                             Bachelor of Computer Science | 2021<br>
+                            Concordia University<br>
                             Montreal, Quebec, Canada<br>
                             <br>
                             Relevant Courses:<br>
@@ -504,7 +453,6 @@
                             <div class="link-text">Website</div>
                         </a>
                     </div>
-                    <br>
                 </div>
                 
             </div>
@@ -512,25 +460,22 @@
             <div class="right-column">
                 <img class="medium-image-right" src="images/concordia.jpeg">
             </div>
-        
-            <br><br>
+
         </div>
         
-            <!--<hr>-->
-            <p></p>
         <!--Vanier College-->
         <div class="main-content">
-            <br>
+
             <div class="left-column">
                 <img class="medium-image-left" src="images/vanier.jpeg">
             </div>
             
             <div class="right-column">
                 <div class="white-section">
-                    <div class="text">
-                        <div>Vanier College</div>
+                    <div class="text-left">
                         <p>
                             Diploma of College Studies in Social Science | 2014<br>
+                            Vanier College<br>
                             Montreal, Quebec, Canada<br>
                             <br>
                             Relevant Courses:<br>
@@ -545,23 +490,16 @@
                             <div class="link-text">Website</div>
                         </a>
                     </div>
-                    <br>
                 </div>
             </div>
-        
-            <br><br>
         </div>
-        <br><br>
-        
 
-       
         
         <p id="tec"></p>
-        <br>
         <!--Wide Image starts here  ----------------------------------->
             <div class="main-content">
                     <div class = "section-card" id="skills-background">
-                        <div class ="big-title">Technical Skills</div>
+                        <div class ="section-title">Technical Skills</div>
 
                         <div class="quote reveal">
                             <p>"Life is really simple, but we insist on making it 
@@ -571,73 +509,68 @@
             </div>
         <!--Wide Image ends here  ----------------------------------->
 
-        <br>
         <!--Operating Systems-->
-        <div class="small-content">
-            <div class="title">Operating Systems</div>
+        <div class="main-content">
+            <div class="ultra-big-title">Operating Systems</div>
+        </div>
+
+        <div class="main-content">
             <div class="white-section">
-                <br>
                 <div class="text">
                     <p>
                         I am comfortable working with Microsoft Windows, Apple macOS, and Linux
                         operating systems.
                     </p>
-                    <br>
                 </div>
             </div>
-            
-            
         </div>
 
         <div class="main-content">
+            <div class="white-section">
             
-            <!--<div class = container-three-column-cards>-->
-                <div class="white-section">
-                    <br>
-                
-                    <div class="three-column-cards">
+                <div class="three-column-cards">
 
-                        <a href="https://www.microsoft.com/windows" target="_blank" class="card hidden" style="--delay:0.1s;">
-                            <div class="card-image">
-                                <img src="images/logo/Windows.png"  style="width:80%">
-                            </div>
-                            <div class="card-title">
-                                <p>Windows</p>
-                            </div>
-                        </a>
+                    <a href="https://www.microsoft.com/windows" target="_blank" class="card hidden" style="--delay:0.1s;">
+                        <div class="card-image">
+                            <img src="images/logo/Windows.png"  style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <p>Windows</p>
+                        </div>
+                    </a>
 
-                        <a href="https://www.apple.com/ca/macos" target="_blank" class="card hidden" style="--delay:0.2s;">
-                            <div class="card-image">
-                                <img src="images/logo/macOS.png"  style="width:80%">
-                            </div>
-                            
-                            <div class="card-title">
-                                <p>macOS</p>
-                            </div>
-                        </a>
+                    <a href="https://www.apple.com/ca/macos" target="_blank" class="card hidden" style="--delay:0.2s;">
+                        <div class="card-image">
+                            <img src="images/logo/macOS.png"  style="width:80%">
+                        </div>
+                        
+                        <div class="card-title">
+                            <p>macOS</p>
+                        </div>
+                    </a>
 
-                        <a href="https://www.linux.org/pages/download/" target="_blank" class="card hidden" style="--delay:0.3s;">
-                            <div class="card-image">
-                                <img src="images/logo/linux.png"  style="width:80%">
-                            </div>
-                            
-                            <div class="card-title">
-                                <p>Linus</p>
-                            </div>
-                        </a>
+                    <a href="https://www.linux.org/pages/download/" target="_blank" class="card hidden" style="--delay:0.3s;">
+                        <div class="card-image">
+                            <img src="images/logo/linux.png"  style="width:80%">
+                        </div>
+                        
+                        <div class="card-title">
+                            <p>Linus</p>
+                        </div>
+                    </a>
 
-                    </div>
                 </div>
-            <!--</div>-->
+            </div>
         </div>
 
-            <!--<hr>-->
-        <br>
+
         <!--Applications I use-->
-        <div class="small-content">
-            <div class="title">Applications</div>
+        <div class="main-content">
+            <div class="ultra-big-title">Applications</div>
+        </div>
+
+        <div class="main-content">
             <div class="white-section">
-                <br>
                 <div class="text">
                     <p>
                         I have experience working with a wide variety of applications to get
@@ -649,16 +582,12 @@
                     </p>
                 </div>
             </div>
-
-            <p><!--Images of Applications--></p>
-            <br>
         </div>
+
         <div class="main-content">
             <div class="white-section">
-                <br>
                 <div class="five-column-cards">
 
-                    
                     <a href="https://www.eclipse.org/ide/" target="_blank" class="card hidden" style="--delay:0.1s;">
                         <div class="card-image">
                             <img src="images/logo/eclipse.png"  style="width:80%">
@@ -742,29 +671,26 @@
 
         </div>
         
-        <br>
-            <!--<hr>-->
-        <br>
         <!--Programming Languages-->
-        <div class="small-content">
-            <div class="title">Programming</div>
+        <div class="main-content">
+            <div class="ultra-big-title">Programming</div>
+        </div>
+
+        <div class="main-content">
             <div class="white-section">
                 <div class="text">
-                    <br>
                     <p>
                         I also have experience working with a wide variety of programming 
                         languages and frameworks. These include but are not limited to Java, 
                         C++, HTML, CSS, JavaScript, Document Object Model (DOM), ReactJS, PHP, SQL,  
                         MySQL, Python, C, Ruby, C#, Prolog, Aspect-J, and Lisp.
-                        <br><br>
-                        <!--Images of programming languages-->
                     </p>
                 </div>
             </div>
         </div>
+
         <div class="main-content">
             <div class="white-section">
-                <br>
                 <div class="five-column-cards">
 
                     <a href="https://www.java.com/en/" target="_blank" class="card hidden" style="--delay:0.1s;">
@@ -905,16 +831,15 @@
                 </div>
             </div>
         </div>
-        <br>
-            <!--<hr>-->
-        <br>
-        <!--Other Tools-->
-        <div class="small-content">
-            <div class="title">Other Tools</div>
 
+        <!--Other Tools-->
+        <div class="main-content">
+            <div class="ultra-big-title">Other Tools</div>
+        </div>
+
+        <div class="main-content">
             <div class="white-section">
                 <div class="text">
-                    <br>
                     <p>
                         Some of the other tools I have worked with include the version
                         control tool GitHub. Knowledge of Data Structures and Algorithms, 
@@ -923,17 +848,13 @@
                         tools like Intel TBB, OpenCL, etc. An understanding of organizational 
                         diagrams such as UML Diagrams. As well as video editing tools such 
                         as Final Cut Pro and DaVinci Resolve.
-                        <br><br>
                     </p>
                 </div>
             </div>
-
-            <br>
         </div>
 
         <div class="main-content">
             <div class="white-section">
-                <br>
                 <div class="five-column-cards">
                     
                     <a href="https://github.com/mansour365" target="_blank" class="card hidden" style="--delay:0.1s;">
@@ -984,17 +905,13 @@
                 </div>
             </div>
         </div>
-        <br><br>
 
-            
-        
-       
+
         <p id="exp"></p>
-        <br>
          <!--Wide Image starts here  ----------------------------------->
             <div class="main-content">
                 <div class = "section-card" id="experience-background">
-                    <div class ="big-title">Experience</div>
+                    <div class ="section-title">Experience</div>
 
                     <div class="quote reveal">
                         <p>"What you do makes a difference, and you have to decide what 
@@ -1004,12 +921,10 @@
             </div>
         <!--Wide Image ends here  ----------------------------------->
 
-        <br>
         <!--VMC Game Labs-->
-        <div class="small-content">
+        <div class="main-content">
             <div class="white-section">
                 <div class="text">
-                    <br>
                     <div>Tech Tester</div>
             
                     <p>Rtings | 2022<br>
@@ -1021,17 +936,14 @@
                     writers to ensure the final review had no errors. Answered user questions 
                     regarding testing procedures, potential issues, and new firmware updates.
                     </p>
-                    <br>
                 </div>
             </div>
         </div>
 
-        <br>
         <!--VMC Game Labs-->
-        <div class="small-content">
+        <div class="main-content">
             <div class="white-section">
                 <div class="text">
-                    <br>
                     <div>Remote Quality Assurance Tester</div>
                     
                     <p>VMC Game Labs | 2021<br>
@@ -1050,17 +962,14 @@
                         information protected by non-disclosure agreements (NDA).<br>
                         We also take pride in crashing the clients' online game servers.
                     </p>
-                    <br>
                 </div>
             </div>
         </div>
-        <br>
+
         <!--Volunteer-->
         <div class="main-content">
-            <br>
                 <div class="white-section">
                     <div class="text">
-                        <br>
                         <div>Volunteer</div>
                         <p>
                             Montreal General Hospital (MGH) | 2014<br>
@@ -1074,22 +983,14 @@
                             A truly special place to work. I will always cherish the memories I 
                             had meeting both the patients and the other volunteers.
                         </p> 
-                        <br>
                     </div>
                 </div>
-        
-            <br>
         </div>
 
-
-        <br>
-
-
         <!--Other Non-Office Employment-->
-        <div class="small-content">
+        <div class="main-content">
             <div class="white-section">
                 <div class="text">
-                    <br>
                     <div>Other Non-Office Employment</div>
                     
                     <p>Hypertec Group | 2017<br>
@@ -1102,19 +1003,18 @@
                         Performed several tasks in and around the kitchen
                         of a busy restaurant.<br>
                     </p>
-                    <br>
                 </div>
             </div>
         </div>
 
-        <br><br>
-
         <!--About Website-->
         <div class="main-content">
-            <div class="title">About this Website</div>
+            <div class="ultra-big-title">About this Website</div>
+        </div>
+
+        <div class="main-content">
             <div class="white-section">
                 <div class="text">
-                    <br>
                     <p>
                         I hope you enjoyed scrolling and hopefully this site managed to 
                         spark inspiration within you. 
@@ -1124,8 +1024,7 @@
                     This page does not collect any of your browsing information.<br>
                     I believe technology should be transparent and private :)
                     </p>
-                    
-                    <br>
+
                 </div>
 
             </div>
