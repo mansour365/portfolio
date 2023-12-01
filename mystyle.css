@@ -56,19 +56,13 @@ body {
     color: black;
     transition: 0.3s;
 }
-/*Active links under construction*/
-#navbar a.active{
-    border-bottom: 3px solid rgb(96, 79, 70);
-}
 #navbar-content{  /*This is for both the logo and navbar links*/
     width:95%;
     margin: auto;
-    /*border: 1px solid purple; /*for testing puposes*/
 }
 #burger-icon{  /*Make burger icon normally invisible*/
     display:none; /*By default burger icon not visible*/
 }
-
 
 
 .main-content{
@@ -89,7 +83,10 @@ body {
     font-weight:700; /*for roboto*/
     line-height: 1.04;
     letter-spacing: -0.02em; /*for roboto*/
+    margin-top:80px;
+    /*border: 1px solid red;*/
 }
+
 .section-card{
     position:relative;
     border-radius: 2%/6%;
@@ -97,6 +94,35 @@ body {
     width:100%;
     padding:5%
     /*border: 1px solid blue;*/
+}
+.section-title{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 80px;
+    font-weight: 500;
+    line-height: 1.04;
+    letter-spacing: -0.02em;
+    color:white;
+    padding-top: 20px;
+    padding-bottom: 80px;
+    /*border: 1px solid aqua;*/
+}
+
+.quote{
+    position:absolute;
+    left:0;
+    right:0;
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 50%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 40px;
+    color: rgb(255, 255, 255);
+    bottom: 20px;
+    /*border: 1px solid aqua;*/
 }
 
 .white-section{
@@ -109,7 +135,6 @@ body {
 }
 
 
-
 .text{
     display:inline-block;
     font-family: 'Roboto', sans-serif;
@@ -117,8 +142,10 @@ body {
     font-weight: 500;
     color: rgb(104, 96, 95);
     line-height: 40px;
-    margin-top:4%;
-    margin-bottom: 4%;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    margin-right: 60px;
+    margin-left: 60px;
     /*border: solid 1px red;*/
 }
 
@@ -129,8 +156,10 @@ body {
     font-weight: 500;
     color: rgb(104, 96, 95);
     line-height: 40px;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-top:50px;
+    margin-bottom: 30px;
+    margin-left: 60px;
+    margin-right: 60px;
     /*border: solid 1px green;*/
 }
 
@@ -151,7 +180,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap:20px;
-    padding-bottom:20px;
+    padding-bottom:40px;
     /*border: 1px solid rgb(128, 0, 0);*/
 }
 .button{
@@ -220,20 +249,7 @@ body {
 
 
 
-.section-title{
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    font-size: 80px;
-    font-weight: 500;
-    
-    line-height: 1.04;
-    letter-spacing: -0.02em;
-    color:white;
-    
-    padding-top: 20px;
-    padding-bottom: 80px;
-    /*border: 1px solid aqua;*/
-}
+
 .title{
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
@@ -244,23 +260,7 @@ body {
     padding-bottom: 5vh;
 }
 
-.quote{
-    position:absolute;
-    left:0;
-    right:0;
-    margin-left: auto; 
-    margin-right: auto; 
-    width: 600px;
 
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 40px;
-    color: rgb(255, 255, 255);
-    bottom: 20px;
-    /*border: 1px solid aqua;*/
-}
 
 
 
@@ -579,6 +579,19 @@ body {
     .ultra-big-title{
         font-size: 72px;
     }
+    
+
+}
+@media screen and (max-width: 734px){
+    .ultra-big-title{
+        font-size: 48px;
+    }
+    .section-title{
+        font-size: 48px;
+    }
+    .quote{
+        width: 90%;
+    }
 
 }
 
@@ -588,9 +601,6 @@ body {
 
     .section-card{
         border-radius: 0%/0%;
-    }
-    .big-title{
-        font-size: 300%;
     }
     .categories{
         flex-wrap: wrap;
