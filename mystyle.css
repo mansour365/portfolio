@@ -278,7 +278,7 @@ body {
     text-align: center;
     height:auto;   /*previous height: 460px;*/
     width:24%;   /*previous width:289px;*/
-    border-radius: 4%/2%;
+    border-radius: 4%/3%;
     overflow:hidden;/*needed so that image zoom doesnt spill out of div*/
     /*border: 1px solid pink;*/
 }
@@ -294,7 +294,7 @@ body {
 }
 
 .cat-image{
-    border-radius: 4%/2%;
+    border-radius: 4%/3%;
     filter:brightness(60%);
     object-fit: cover; /*image shoudld cover the entire container*/
     height:100%; 
