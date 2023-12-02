@@ -5,14 +5,73 @@
         <title>Mansour M</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
 
+        <!---------- FONTS ------------>
+        <!--Roboto 400, 500 and 700 from google-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+        
+        <!----------  ICONS  ---------->
+        <!--Menu icon from google-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <!--Contact icon from google-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <!--Resume icon from google-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <!--Mail Icon from google-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <!--Web Icon from google-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         
 
-        <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!---------- RESOURCES ---------->
+        <!--
+            https://play.google.com/store/games?device=windows
+            https://artsandculture.google.com/
+            https://store.google.com/category/phones?hl=en-GB
+            https://m3.material.io/develop/web
+            https://m3.material.io/
+            https://fonts.google.com/icons?query=circular
+
+            Wild designs
+            https://design.google/   Intresting design
+
+            Color pallete material 3
+            https://material.io/blog/tone-based-surface-color-m3
+            Possibly better beige wallapper
+            https://www.typewolf.com/google-fonts
+
+
+            Fonts
+            https://fonts.google.com/specimen/Manrope?preview.text=Material%20Design
+
+            linkedin icon
+            https://www.cleanpng.com/png-computer-icons-linkedin-2216994/download-png.html
+
+            Images
+            unsplash
+            Reduce Image size
+            https://www.reduceimages.com/
+
+            beige image
+            https://unsplash.com/photos/brown-and-white-abstract-painting-beBBYVJ_4MM
+
+            other inspiration
+            https://dribbble.com/shots/17465473-Onboarding-Screen/attachments/12599096?mode=media
+            https://webdesigner.withgoogle.com/
+
+            Fab Four Technique
+            https://blog.logrocket.com/responsive-css-border-radius-fab-four-technique/
+            
+            
+
+        -->
 
         <link rel="stylesheet" href="mystyle.css">
 
         <script defer src="myscript.js"></script> <!--defer makes it execute after body-->
+        
     </head>
     
     <body>
@@ -20,7 +79,7 @@
         <nav id="navbar">
             <div id = "navbar-content">
                 
-                <a href="#top" id="logo"><i>MM</i></a> <!--Using #top, it scrolls to top of page-->
+                <a href="#top" id="logo">Mansour's  <b> Portfolio<b></a> <!--Using #top, it scrolls to top of page-->
 
                 <div id = "navbar-right" class = "anchor-links"  onclick="toggleVerticalMenu();">
                     <a href=#abo>About</a>
@@ -33,809 +92,946 @@
 
                 <div id = "burger-icon" onclick="toggleVerticalMenu()">
                     <a href="javascript:void(0);" class="icon">
-                        <i class="fa fa-bars"></i>
+                        <span class="material-symbols-outlined" id="menu-icon">menu</span>
                     </a>
                 </div>  
-
             </div>
         </nav>
 
 
-        <!--Wide Image starts here  ----------------------------------->
-        <div class = "text-overlay">
-            <img class = "wide-image" src="images/elephant.jpg" >
-            <div class="centered" style="top:40%;"><h1 class="image-header">My Portfolio</h1></div>
-            <div class="quote reveal">
-                <p>"If there is no struggle, there is no progress." — Frederick Douglass</p>
-            </div>
+        <br><br><br>
+
+
+
+
+        <br><br><br><br><br>
+
+        <div class="main-content">
+            <div class="ultra-big-title">Welcome to my <br> Portfolio.</div>
         </div>
+
+        <br><br><br><br><br>
+        
+        <p id="abo"></p>
+        <!--Wide Image starts here  ----------------------------------->
+            <div class="main-content">
+                <div class="section-card" id="portfolio-background">
+                    <div class ="section-title">About</div>
+
+                    <div class="quote reveal">
+                        <p>"If there is no struggle, there is no progress." — Frederick Douglass</p>
+                    </div>
+                </div>
+            </div>
         <!--Wide Image ends here  ----------------------------------->
 
-            <p id="abo"><a name="edu"></a><!--Needed when we're in contact page--></p>
             
 
         <!--About Me-->
-        <!--<div class="main-content">-->
-        <div class="small-content">
-            <br>
-            <!--<div class="left-column">-->
-                <h1>About Me</h1>
-                <p>
-                    <br>
-                    My name is Mansour Maqsoudi.<br>
+        <div class="main-content">
+
+            <div class="white-section">
+
+                <div class = "text">
+                    My name is Mansour Maqsoudi. <br>
                     I love coding and beautiful design. <br>
                     This website was created from scratch using HTML, CSS, and JavaScript.<br>
-                    <br>
-                    Enjoy my nature-inspired website.<br>
-                    My hope is that it sparks rumination.
-                </p> 
-            <!--</div>-->
-            <!--
-            <div class="right-column">
-                <img class="medium-image-right" src="images/mac.jpeg">
+                    It has a responsive design, and uses tools such as CSS Grid and Flexbox.<br>
+                </div> 
+                
+                <div class="link-area">
+                    <a class = "button" href="Resume.pdf"  download="Resume">
+                        <span class="material-symbols-outlined">description</span>
+                        <div class="link-text">Resume</div>
+                    </a>
+
+                    <a class = "button" href="https://github.com/mansour365" target="_blank">
+                        <span><img class="link-icon" id="git-icon" src="images/icons/git.png"></span>
+                        <div class="link-text">GitHub</div>
+                    </a>
+
+                    <a class = "button" href="https://linkedin.com/in/mansour-maqsoudi" target="_blank">
+                        <span><img class="link-icon" id = "linkedin-icon" src="images/icons/linkedin.png"></span>
+                        <div class="link-text">LinkedIn</div> 
+                    </a>
+
+                    <a class = "button" href="contact.html">
+                        <span class="material-symbols-outlined">contact_page</span>
+                        <div class="link-text">Contact</div> 
+                    </a>    
+                </div>
+                
+
             </div>
-            -->
+        </div>
+
+
+        <div class = "main-content">
+            <div class = "categories">
+
+                <a class = "catcard" id="cat1" href=#prj>
+                    <img class="cat-image" src="images/cat1.webp">
+                    <div class="cat-title">Projects</div>
+                    <div class="fake-button">Explore</div>
+                </a>
+
+                <a class = "catcard" id = cat2 href=#edu>
+                    <img class="cat-image" src="images/cat2.jpg">
+                    <div class="cat-title">Education</div>
+                    <div class="fake-button">Explore</div>
+                </a>
+
+                <a class = "catcard" id = cat3 href=#tec>
+                    <img class="cat-image" src="images/cat3.jpg">
+                    <div class="cat-title">Skills</div>
+                    <div class="fake-button">Explore</div>
+                </a>
+
+                <a class = "catcard" id = cat4 href=#exp>
+                    <img class="cat-image" src="images/cat4.jpg">
+                    <div class="cat-title">Experience</div>
+                    <div class="fake-button">Explore</div>
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+            <p id="prj"></p>
+            
+            <!--Wide Image starts here  ----------------------------------->
+                <div class="main-content">
+                    <div class = "section-card" id="project-background">
+                        <div class ="section-title">Projects</div>
+
+                        <div class="quote reveal">
+                            <p>"A life spent making mistakes is not only more honourable, 
+                                but more useful than a life spent doing nothing." — George Bernhard Shaw</p>
+                        </div>
+                    </div>
+                </div>
+            <!--Wide Image ends here  ----------------------------------->
+
         
-            <br><br>
-        </div>
 
-        <div class="small-content">
-            <h3 class="link">
-                <a href="https://linkedin.com/in/mansour-maqsoudi" target="_blank">LinkedIn</a> &nbsp&nbsp&nbsp
-                  <a href="https://github.com/mansour365" target="_blank">GitHub</a> &nbsp&nbsp&nbsp
-                  <a href="contact.html">Contact</a></h3>
-            <h3 class="link"> <a href="Resume.pdf" download="Resume"> Download Resume</a> </h3>  
-            <br>
-        </div>
-
-         <!--Wide Image starts here  ----------------------------------->
-         <div class = "text-overlay">
-            <a name="prj"></a><!--Needed when we're in contact page-->
-            <img class = "wide-image" id="prj" src="images/tiger-wide.png" >
-            <div class="centered"><h1 class="image-header">Projects</h1></div>
-            <div class="quote reveal">
-                <p>"A life spent making mistakes is not only more honourable, 
-                    but more useful than a life spent doing nothing." — George Bernhard Shaw</p>
+            <!--Weather Website-->
+            <div class="main-content">
+                <div class="ultra-big-title">Weather Forecast<br> Website.</div>
+                <div class="emphasized-text">Inspired by the Apple Weather App</div>
             </div>
-        </div>
-        <!--Wide Image ends here  ----------------------------------->
 
-        <!--Weather Website-->
-        <div class="main-content">
-            <br>
-            <div class="left-column">
-                <h1>Weather Website - Inspired by the Apple Weather App</h1>
-                <p>
-                    Developed a weather website with the same style as Apple's Weather App.<br>
-                    Coded from scratch in Visual Studio Code, using HTML, CSS, and JavaScript.<br>
-                    Makes use of the CSS Grid functionality, Flexbox, Weather API, HTML Geolocation API, and the Document Object Model (DOM).<br>
-                    <br>
-                    Features Include:<br>
-                    Responsive layout.
-                    Ability to search any location.<br>
-                    Hourly weather data for the next 24 hours.<br>
-                    Daily weather for the next 3 days<br>
-                    Humidity and precipitation information.<br>
-                    Air quality, wind, UV index, visibility, and atmospheric pressure information.
-                    As well as sunrise and sunset times for that location.
-                </p> 
-                <p class="link"><a href="https://theweather.pages.dev" target="_blank">Visit the weather website</a> ></p>
-                <p class="link"><a href="https://github.com/mansour365/weather" target="_blank">Check out the code on my GitHub</a> ></p>
+            <div class="main-content">
+                <div class="left-column">
+                    <div class="white-section">
+                        <div class="text-left">
+                            <p>
+                                Developed a weather forecast website with the same style as Apple's Weather App.<br>
+                                Coded from scratch in Visual Studio Code, using HTML, CSS, and JavaScript.<br>
+                                Makes use of the CSS Grid functionality, Flexbox, Weather API, HTML Geolocation API, and the Document Object Model (DOM).<br>
+                                <br>
+                                Features:<br>
+                                Responsive layout.
+                                Ability to search any location.<br>
+                                Hourly weather data for the next 24 hours.<br>
+                                Daily weather for the next 3 days<br>
+                                Weather information includes Humidity, Precipitation, 
+                                Air Quality, Wind, UV index, Visibility, <br>
+                                Atmospheric Pressure,
+                                as well as Sunrise and Sunset times for that location.
+                            </p> 
+                        </div>
+                        <div class="link-area">
+                            <a class = "button" href="https://theweather.pages.dev" target="_blank">
+                                <span class="material-symbols-outlined">web</span>
+                                <div class="link-text">Website</div>
+                            </a>
+                            <a class = "button" href="https://github.com/mansour365/weather" target="_blank">
+                                <span><img class="link-icon" id="git-icon" src="images/icons/git.png"></span>
+                                <div class="link-text">GitHub</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="right-column">
+                    <img class="wide-image" src="images/project/weather.png">
+                    <img class="medium-image-right" id="weather-phone" src="images/project/weather-phone.png" width="50%">
+                </div>
+            </div>
+        
+
+            <!--Android App-->
+            <div class="main-content">
+                <div class="ultra-big-title">
+                    Android Counter<br> Application.
+                </div>
+            </div>
+
+            <div class="main-content">
+                <div class="left-column">
+                    <div class="white-section">
+                        <div class = "text-left">
+                            <p>
+                                Developed an Android application used for counting.<br>
+                                Coded in the Android Studio IDE, using Java and the Android SDK<br>
+                                <br>
+                                Features Include:<br>
+                                Vibration notification after a user-defined interval.<br>
+                                Ability to toggle Full-Screen mode.<br>
+                                Ability to toggle and set the duration of vibrations.<br>
+                                All these features and more can be adjusted on the settings 
+                                page of the app. The User-interface also takes advantage of 
+                                the power-saving capabilities of a phone with an OLED display.
+                            </p> 
+                        </div>
+                    
+                        <div class="link-area">
+                            <a class = "button" href="https://github.com/mansour365/Counter-App" target="_blank">
+                                <span><img class="link-icon" id="git-icon" src="images/icons/git.png"></span>
+                                <div class="link-text">GitHub</div>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="right-column">
+                    <img class="medium-image-right" src="images/project/counter-app.png">
+                </div>
+            
             </div>
             
-            <div class="right-column">
-                <img class="medium-image-right" src="images/weather.png">
-                <img class="medium-image-right" id="weather-phone" src="images/weather-phone.png" width="50%">
+            <!--Snake Game-->
+            <div class="main-content">
+                <div class="ultra-big-title">Snake Game</div>
             </div>
-        
-            <br><br>
-        </div>
-        
-            <hr>
-            <p></p>
 
+            <div class="main-content">
+                <div class="left-column">
+                    <img class="medium-image-left" src="images/project/snake-game.png">
+                </div>
+                
+                <div class="right-column">
+                    <div class="white-section">
 
+                        <div class = "text-left">
+                            <p>
+                                Developed a Snake game with a graphical user interface.<br>
+                                Coded in Microsoft Visual Studio IDE using C++ and OpenGL<br>
+                                <br>
+                                Features Include:<br>
+                                Collision detection of the snake and either food or the walls.<br>
+                                Real-time user keyboard input.<br>
+                                User interface designed using OpenGL.<br>
+                            </p> 
+                        </div>
 
+                        <div class="link-area">
+                            <a class = "button" href="https://github.com/mansour365/snake" target="_blank">
+                                <span><img class="link-icon" id="git-icon" src="images/icons/git.png"></span>
+                                <div class="link-text">GitHub</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
 
+            <!--Battleship Game-->
+            <div class="main-content">
+                <div class="ultra-big-title">BattleShip Game</div>
+            </div>
 
-        <!--Android App-->
-        <div class="main-content">
-            <br>
-            <div class="left-column">
-                <h1>Counter Android App</h1>
-                <p>
-                    Developed an Android application used for counting.<br>
-                    Coded in the Android Studio IDE, using Java and the Android SDK<br>
-                    <br>
-                    Features Include:<br>
-                    Vibration notification after a user-defined interval.<br>
-                    Ability to toggle Full-Screen mode.<br>
-                    Ability to toggle and set the duration of vibrations.<br>
-                    All these features and more can be adjusted on the settings 
-                    page of the app. The User-interface also takes advantage of 
-                    the power-saving capabilities of a phone with an OLED display.
-                </p> 
-                <p class="link"><a href="https://github.com/mansour365/Counter-App" target="_blank">Check out the App on my GitHub</a> ></p>
+            <div class="main-content">
+                <div class="left-column">
+                    <div class="white-section">
+                        <div class="text-left">
+                            <p>
+                                Developed a BattleShip Game<br>
+                                Coded in the Eclipse IDE, using the Java programming language.<br>
+                                <br>
+                                Features Include:<br>
+                                Making use of Object-oriented programming concepts.<br>
+                                Takes advantage of random number generation to simulate the 
+                                opponents' next move.<br>
+                                Utilises the programming concept of two-dimensional arrays for the board logic.<br>
+                                Includes the option to choose between two difficulty modes.<br>
+                                Was my first programming project!<br>
+                            </p> 
+                        </div>
+
+                        <div class="link-area">
+                            <a class = "button" href="https://github.com/mansour365/battleship" target="_blank">
+                                <span><img class="link-icon" id="git-icon" src="images/icons/git.png"></span>
+                                <div class="link-text">GitHub</div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <div class="right-column">
+                    <img class="medium-image-right" src="images/project/battleship1.png">
+                    <img class="medium-image-right" src="images/project/battleship2.png">
+                </div>
             </div>
             
-            <div class="right-column">
-                <img class="medium-image-right" src="images/counter-app.png">
-            </div>
-        
-            <br><br>
-        </div>
-        
-            <hr>
-            <p></p>
-        <!--Snake Game-->
-        <div class="main-content">
-            <br>
-            <div class="left-column">
-                <img class="medium-image-left" src="images/snake-game.png">
-            </div>
-            
-            <div class="right-column">
-                <h1>Snake Game</h1>
-                <p>
-                    Developed a Snake game with a graphical user interface.<br>
-                    Coded in Microsoft Visual Studio IDE using C++ and OpenGL<br>
-                    <br>
-                    Features Include:<br>
-                    Collision detection of the snake and either food or the walls.<br>
-                    Real-time user keyboard input.<br>
-                    User interface designed using OpenGL.<br>
-                </p> 
-                <p class="link"><a href="https://github.com/mansour365/snake" target="_blank">Check out the game on my GitHub</a> ></p>
-            </div>
-        
-            <br><br>
-        </div>
-        <br><br>
-        <hr>
-            <p></p>
-        <!--Battleship Game-->
-        <div class="main-content">
-            <br>
-            <div class="left-column">
-                <h1>BattleShip Game</h1>
-                <p>
-                    Developed a BattleShip Game<br>
-                    Coded in the Eclipse IDE, using the Java programming language.<br>
-                    <br>
-                    Features Include:<br>
-                    Making use of Object-oriented programming concepts.<br>
-                    Takes advantage of random number generation to simulate the 
-                    opponents' next move.<br>
-                    Utilises the programming concept of two-dimensional arrays for the board logic.<br>
-                    Includes the option to choose between two difficulty modes.<br>
-                    Was my first programming project!<br>
-                </p> 
-                <p class="link"><a href="https://github.com/mansour365/battleship" target="_blank">Check out the game on my GitHub</a> ></p>
-            </div>
-            
-            <div class="right-column">
-                <img class="medium-image-right" src="images/battleship1.png">
-                <img class="medium-image-right" src="images/battleship2.png">
-            </div>
-        
-            <br><br>
-        </div>
-        
-            <br><br><br>
-            <hr>
-            <p></p>
-            <br>
-
-        <!--Group Projects-->
-        <div class="main-content">
-            <br>
-            <div class="left-column">
-                <h1>3D Penguin Game titled "Penguino" (Group Project)</h1>
-                <p>
-                    Collaborated in a group project to develop a 3D Penguin Game<br>
-                    Coded in the Visual Studio IDE, using the C++ programming language and OpenGL.<br>
-                    <br>
-                    Features Include:<br>
-                    Amusing Minecraft-inspired design.<br>
-                    Collision detection.<br>
-                    Takes advantage of random number generation to simulate random object positions.<br>
-                    A virtual sun that runs its course. Alternating between night and day.<br>
-                    Real-time shadows and more.<br>
-                </p> 
-                <p class="link"><a href="https://github.com/MartensCedric/COMP371-Project" target="_blank">Check out the game on GitHub</a> ></p>
-            </div>
-            
-            <div class="right-column">
-                <img class="medium-image-right" src="images/penguin-game.png">
-            </div>
-        
-            <br><br>
-        </div>
-        
-            <br><br>
-            <p></p>
-            <br>
 
 
+            <!--Group Projects-->
+            <div class="main-content">
+                <div class="ultra-big-title">3D Penguin Game</div>
+                <div class="emphasized-text">Group Project</div>
+            </div>
+
+            <div class="main-content">
+                <div class="left-column">
+                    <div class="white-section">
+                        <div class="text-left">
+                            <p>
+                                Collaborated in a group project to develop a 3D Penguin Game<br>
+                                Coded in the Visual Studio IDE, using the C++ programming language and OpenGL.<br>
+                                <br>
+                                Features Include:<br>
+                                Amusing Minecraft-inspired design.<br>
+                                Collision detection.<br>
+                                Takes advantage of random number generation to simulate random object positions.<br>
+                                A virtual sun that runs its course. Alternating between night and day.<br>
+                                Real-time shadows and more.<br>
+                            </p> 
+                        </div>
+
+                        <div class="link-area">
+                            <a class = "button" href="https://github.com/MartensCedric/COMP371-Project" target="_blank">
+                                <span><img class="link-icon" id="git-icon" src="images/icons/git.png"></span>
+                                <div class="link-text">GitHub</div>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="right-column">
+                    <img class="medium-image-right" src="images/project/penguin-game.png">
+                </div>
+            
+            </div>
+
+
+            <p id="edu"></p>
         <!--Wide Image starts here  ----------------------------------->
-        <div class = "text-overlay">
-            <a name="edu"></a><!--Needed when we're in contact page-->
-            <img class = "wide-image" id="edu" src="images/bird-wide.jpeg" >
-            <div class="centered"><h1 class="image-header">Education</h1></div>
-            <div class="quote reveal">
-                <p>"Wisdom... comes not from age, but from education and learning." 
-                    — Anton Chekhov</p>
+            <div class="main-content">
+                <div class = "section-card" id="education-background">
+                    <div class ="section-title">Education</div>
+
+                    <div class="quote reveal">
+                        <p>"Wisdom... comes not from age, but from education and learning." 
+                            — Anton Chekhov</p>
+                    </div>
+                </div>
             </div>
-        </div>
         <!--Wide Image ends here  ----------------------------------->
 
-        <br>
 
         <!--Concordia University-->
         <div class="main-content">
-            <br>
             <div class="left-column">
-                <h1>Concordia University</h1>
-                <p>
-                    Bachelor of Computer Science | 2021<br>
-                    Concordia University<br>
-                    Montreal, Quebec, Canada<br>
-                    <br>
-                    Relevant Courses:<br>
-                    Data Structures and Algorithms, Data Analytics, 
-                    Web Programming, Databases
-                </p> 
-                <p class="link"><a href="https://www.concordia.ca/" target="_blank">Check out Concordia University</a> ></p>
+                <div class="white-section">
+                    <div class="text-left">
+                        <p>
+                            Bachelor of Computer Science | 2021<br>
+                            Concordia University<br>
+                            Montreal, Quebec, Canada<br>
+                            <br>
+                            Relevant Courses:<br>
+                            Data Structures and Algorithms, Data Analytics, Web Programming, Databases
+                        </p> 
+                    </div>
+
+                    <div class="link-area">
+                        <a class = "button" href="https://www.concordia.ca/" target="_blank">
+                            <span class="material-symbols-outlined">web</span>
+                            <div class="link-text">Website</div>
+                        </a>
+                    </div>
+                </div>
                 
             </div>
             
             <div class="right-column">
                 <img class="medium-image-right" src="images/concordia.jpeg">
             </div>
-        
-            <br><br>
+
         </div>
         
-            <hr>
-            <p></p>
         <!--Vanier College-->
         <div class="main-content">
-            <br>
+
             <div class="left-column">
                 <img class="medium-image-left" src="images/vanier.jpeg">
             </div>
             
             <div class="right-column">
-                <h1>Vanier College</h1>
-                <p>
-                    Diploma of College Studies in Social Science | 2014<br>
-                    Vanier College<br>
+                <div class="white-section">
+                    <div class="text-left">
+                        <p>
+                            Diploma of College Studies in Social Science | 2014<br>
+                            Vanier College<br>
+                            Montreal, Quebec, Canada<br>
+                            <br>
+                            Relevant Courses:<br>
+                            Quantitative Methods, Macroeconomics, Microeconomics, Research Methods
+                        </p> 
+
+                        
+                    </div>
+                    <div class="link-area">
+                        <a class = "button" href="https://www.vaniercollege.qc.ca/" target="_blank">
+                            <span class="material-symbols-outlined">web</span>
+                            <div class="link-text">Website</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <p id="tec"></p>
+        <!--Wide Image starts here  ----------------------------------->
+            <div class="main-content">
+                    <div class = "section-card" id="skills-background">
+                        <div class ="section-title">Technical Skills</div>
+
+                        <div class="quote reveal">
+                            <p>"Life is really simple, but we insist on making it 
+                                complicated." — Confucius</p>
+                        </div>
+                    </div>
+            </div>
+        <!--Wide Image ends here  ----------------------------------->
+
+        <!--Operating Systems-->
+        <div class="main-content">
+            <div class="ultra-big-title">Operating Systems</div>
+        </div>
+
+        <div class="main-content">
+            <div class="white-section">
+                <div class="text">
+                    <p>
+                        I am comfortable working with Microsoft Windows, Apple macOS, and Linux
+                        operating systems.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="white-section">
+            
+                <div class="three-column-cards">
+
+                    <a href="https://www.microsoft.com/windows" target="_blank" class="card hidden" style="--delay:0.1s;">
+                        <div class="card-image">
+                            <img src="images/logo/Windows.png"  style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <p>Windows</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.apple.com/ca/macos" target="_blank" class="card hidden" style="--delay:0.2s;">
+                        <div class="card-image">
+                            <img src="images/logo/macOS.png"  style="width:80%">
+                        </div>
+                        
+                        <div class="card-title">
+                            <p>macOS</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.linux.org/pages/download/" target="_blank" class="card hidden" style="--delay:0.3s;">
+                        <div class="card-image">
+                            <img src="images/logo/linux.png"  style="width:80%">
+                        </div>
+                        
+                        <div class="card-title">
+                            <p>Linus</p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!--Applications I use-->
+        <div class="main-content">
+            <div class="ultra-big-title">Applications</div>
+        </div>
+
+        <div class="main-content">
+            <div class="white-section">
+                <div class="text">
+                    <p>
+                        I have experience working with a wide variety of applications to get
+                        work done. These include IDEs such as Eclipse, Microsoft Visual Studio, 
+                        Visual Studio Code, NetBeans, Android Studio, and more.
+                        <br><br>
+                        I am also quite familiar with the Microsoft Office Suite, which includes 
+                        Word, Excel, PowerPoint, and more.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="white-section">
+                <div class="five-column-cards">
+
+                    <a href="https://www.eclipse.org/ide/" target="_blank" class="card hidden" style="--delay:0.1s;">
+                        <div class="card-image">
+                            <img src="images/logo/eclipse.png"  style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <p>Eclipse</p>
+                        </div>
+                    </a>
+
+                    <a href="https://visualstudio.microsoft.com/" target="_blank" class="card hidden" style="--delay:0.2s;">
+                        <div class="card-image">
+                            <img src="images/logo/visual studio ide.png"  style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <p>Visual Studio</p>
+                        </div>
+                    </a>
+
+                    <a href="https://code.visualstudio.com/" target="_blank" class="card hidden" style="--delay:0.3s;">
+                        <div class="card-image">
+                            <img src="images/logo/visual studio code ide.png"  style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <p>VS Code</p>
+                        </div>
+                    </a>
+
+                    <a href="https://netbeans.apache.org/" target="_blank" class="card hidden" style="--delay:0.4s;">
+                        <div class="card-image">
+                            <img src="images/logo/netbeans.png"  style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <p>NetBeans</p>
+                        </div>
+                    </a>
+
+                    <a href="https://developer.android.com/studio" target="_blank" class="card hidden" style="--delay:0.5s;">
+                        <div class="card-image">
+                            <img src="images/logo/android studio.png"  style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <p>Android Studio</p>
+                        </div>
+                    </a>
+
+                    <div class="card" id="spacer" style="visibility: hidden;">
+                    </div>
+
+                    <a href="https://www.microsoft.com/en-us/microsoft-365/word" target="_blank" class="card hidden" style="--delay:0.1s;">
+                        <div class="card-image">
+                            <img src="images/logo/word.png"  style="width:100%">
+                        </div>
+                        <div class="card-title">
+                            <p>Microsoft Word</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.microsoft.com/en-us/microsoft-365/excel" target="_blank" class="card hidden" style="--delay:0.2s;">
+                        <div class="card-image">
+                            <img src="images/logo/excel.png"  style="width:100%">
+                        </div>
+                        <div class="card-title">
+                            <p>Microsoft Excel</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.microsoft.com/en-us/microsoft-365/powerpoint" target="_blank" class="card hidden" style="--delay:0.3s;">
+                        <div class="card-image">
+                            <img src="images/logo/powerpoint.png"  style="width:100%">
+                        </div>
+                        <div class="card-title">
+                            <p>Microsoft Powerpoint</p>
+                        </div>
+                    </a>
+
+                    <div class="card"  style="visibility: hidden;">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        
+        <!--Programming Languages-->
+        <div class="main-content">
+            <div class="ultra-big-title">Programming</div>
+        </div>
+
+        <div class="main-content">
+            <div class="white-section">
+                <div class="text">
+                    <p>
+                        I also have experience working with a wide variety of programming 
+                        languages and frameworks. These include but are not limited to Java, 
+                        C++, HTML, CSS, JavaScript, Document Object Model (DOM), ReactJS, PHP, SQL,  
+                        MySQL, Python, C, Ruby, C#, Prolog, Aspect-J, and Lisp.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="white-section">
+                <div class="five-column-cards">
+
+                    <a href="https://www.java.com/en/" target="_blank" class="card hidden" style="--delay:0.1s;">
+                        <div class="card-image">
+                            <img src="images/logo/java.png"  style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <p>Java</p>
+                        </div>
+                    </a>
+
+                    <a href="https://isocpp.org/" target="_blank" class="card hidden" style="--delay:0.2s;">
+                        <div class="card-image">
+                            <img src="images/logo/C++.png"  style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <p>C++</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.python.org/" target="_blank" class="card hidden" style="--delay:0.3s;">
+                        <div class="card-image">
+                            <img src="images/logo/python.png"  style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <p>Python</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.mysql.com/" target="_blank" class="card hidden" style="--delay:0.4s;">
+                        <div class="card-image">
+                            <img src="images/logo/mysql.png"  style="width:80%; padding-top: 20px;">
+                        </div>
+                        <div class="card-title">
+                            <p>MySQL</p>
+                        </div>
+                    </a>
+
+                    <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank" class="card hidden" style="--delay:0.5s;">
+                        <div class="card-image">
+                            <img src="images/logo/C.png"  style="width:70%">
+                        </div>
+                        <div class="card-title">
+                            <p>C</p>
+                        </div>
+                    </a>
+
+                    <a href="https://html.spec.whatwg.org/multipage/" target="_blank" class="card hidden" style="--delay:0.1s;">
+                        <div class="card-image">
+                            <img src="images/logo/html.png"  style="width:70%; padding-top: 6px;">
+                        </div>
+                        <div class="card-title">
+                            <p>HTML</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.w3.org/TR/CSS/" target="_blank" class="card hidden" style="--delay:0.2s;">
+                        <div class="card-image">
+                            <img src="images/logo/css.png"  style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <p>CSS</p>
+                        </div>
+                    </a>
+
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="card hidden" style="--delay:0.3s;">
+                        <div class="card-image">
+                            <img src="images/logo/javascript.png"  style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <p>JavaScript</p>
+                        </div>
+                    </a>
+
+                    <a href="https://reactjs.org/" target="_blank" class="card hidden" style="--delay:0.4s;">
+                        <div class="card-image">
+                            <img src="images/logo/reactjs.png"  style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <p>ReactJS</p>
+                        </div>
+                    </a>
+
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction" target="_blank" class="card hidden" style="--delay:0.5s;">
+                        <div class="card-image">
+                            <img src="images/logo/dom.png"  style="width:80%; padding-top: 20px;">
+                        </div>
+                        <div class="card-title">
+                            <p>DOM</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.ruby-lang.org/en/" target="_blank" class="card hidden" style="--delay:0.1s;">
+                        <div class="card-image">
+                            <img src="images/logo/ruby.png"  style="width:70%; padding-top: 10px;">
+                        </div>
+                        <div class="card-title">
+                            <p>Ruby</p>
+                        </div>
+                    </a>
+
+                    <a href="https://learn.microsoft.com/en-us/dotnet/csharp/" target="_blank" class="card hidden" style="--delay:0.2s;">
+                        <div class="card-image">
+                            <img src="images/logo/csharp.png"  style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <p>CSharp</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.eclipse.org/aspectj/" target="_blank" class="card hidden" style="--delay:0.3s;">
+                        <div class="card-image">
+                            <img src="images/logo/aspectj.jpg"  style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <p>AspectJ</p>
+                        </div>
+                    </a>
+
+                    <a href="https://common-lisp.net/" target="_blank" class="card hidden" style="--delay:0.4s;">
+                        <div class="card-image">
+                            <img src="images/logo/lisp.png"  style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <p>Lisp</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.swi-prolog.org/" target="_blank" class="card hidden" style="--delay:0.5s;">
+                        <div class="card-image">
+                            <img src="images/logo/prolog.png"  style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <p>Prolog</p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <!--Other Tools-->
+        <div class="main-content">
+            <div class="ultra-big-title">Other Tools</div>
+        </div>
+
+        <div class="main-content">
+            <div class="white-section">
+                <div class="text">
+                    <p>
+                        Some of the other tools I have worked with include the version
+                        control tool GitHub. Knowledge of Data Structures and Algorithms, 
+                        Knowledge of Data Analytics using programs like OpenRefine and 
+                        Jupyter Notebook. An understanding of multicore programming using 
+                        tools like Intel TBB, OpenCL, etc. An understanding of organizational 
+                        diagrams such as UML Diagrams. As well as video editing tools such 
+                        as Final Cut Pro and DaVinci Resolve.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="white-section">
+                <div class="five-column-cards">
+                    
+                    <a href="https://github.com/mansour365" target="_blank" class="card hidden" style="--delay:0.1s;">
+                        <div class="card-image">
+                            <img src="images/logo/github.png"  style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <p>GitHub</p>
+                        </div>
+                    </a>
+
+                    <a href="https://openrefine.org/" target="_blank" class="card hidden" style="--delay:0.2s;">
+                        <div class="card-image">
+                            <img src="images/logo/openrefine.png"  style="width:80%">
+                        </div>
+                        <div class="card-title">
+                            <p>OpenRefine</p>
+                        </div>
+                    </a>
+
+                    <a href="https://jupyter.org/" target="_blank" class="card hidden" style="--delay:0.3s;">
+                        <div class="card-image">
+                            <img src="images/logo/jupyter notebook.png"  style="width:70%">
+                        </div>
+                        <div class="card-title">
+                            <p>Jupyter Notebook</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.khronos.org/opencl/" target="_blank" class="card hidden" style="--delay:0.4s;">
+                        <div class="card-image">
+                            <img src="images/logo/opencl.png"  style="width:80%; padding-top: 30px;">
+                        </div>
+                        <div class="card-title">
+                            <p>OpenCL</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.apple.com/final-cut-pro/" target="_blank" class="card hidden" style="--delay:0.5s;">
+                        <div class="card-image">
+                            <img src="images/logo/final cut pro.png"  style="width:80%; padding-top: 5px;">
+                        </div>
+                        <div class="card-title">
+                            <p>Final Cut Pro</p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+
+        <p id="exp"></p>
+         <!--Wide Image starts here  ----------------------------------->
+            <div class="main-content">
+                <div class = "section-card" id="experience-background">
+                    <div class ="section-title">Experience</div>
+
+                    <div class="quote reveal">
+                        <p>"What you do makes a difference, and you have to decide what 
+                            kind of difference you want to make." — Jane Goodall</p>
+                    </div>
+                </div>
+            </div>
+        <!--Wide Image ends here  ----------------------------------->
+
+        <!--VMC Game Labs-->
+        <div class="main-content">
+            <div class="white-section">
+                <div class="text">
+                    <div>Tech Tester</div>
+            
+                    <p>Rtings | 2022<br>
                     Montreal, Quebec, Canada<br>
                     <br>
-                    Relevant Courses:<br>
-                    Quantitative Methods, Macroeconomics, Microeconomics, 
-                    Research Methods
-                </p> 
-                <p class="link"><a href="https://www.vaniercollege.qc.ca/" target="_blank">Check out Vanier College</a> ></p>
-            </div>
-        
-            <br><br>
-        </div>
-        <br><br>
-        
-
-       
-        
-
-        <!--Wide Image starts here  ----------------------------------->
-        <div class = "text-overlay">
-            <a name="tec"></a><!--Needed when we're in contact page-->
-            <img class = "wide-image" id="tec" src="images/forest-wide.jpg" >
-            <div class="centered"><h1 class="image-header">Technical Skills</h1></div>
-            <div class="quote reveal">
-                <p>"Life is really simple, but we insist on making it 
-                    complicated." — Confucius</p>
+                    Tested and understood new products by carrying out extensive research 
+                    and following a test bench procedure. Investigated and troubleshooted 
+                    issues with the performance of products. Revised the work done by technical 
+                    writers to ensure the final review had no errors. Answered user questions 
+                    regarding testing procedures, potential issues, and new firmware updates.
+                    </p>
+                </div>
             </div>
         </div>
-        <!--Wide Image ends here  ----------------------------------->
 
-        <br>
-        <!--Operating Systems-->
-        <div class="small-content">
-            <h1>Operating Systems</h1>
-            
-            <p>
-                I am comfortable working with both Microsoft Windows and Apple macOS
-                operating systems.
-            </p>
-            
-            
-        </div>
-
-
-        <div class = container-two-column-cards>
-            <section class="hidden">
-            <div class="two-column-cards">
-
-                <a href="https://www.microsoft.com/windows" target="_blank" class="card hidden" style="--delay:0.1s;">
-                    <div class="card-image">
-                        <img src="icons/Windows.png"  style="width:80%">
-                    </div>
-                    <div class="card-title">
-                        <p>Windows</p>
-                    </div>
-                </a>
-
-                <a href="https://www.apple.com/ca/macos" target="_blank" class="card hidden" style="--delay:0.2s;">
-                    <div class="card-image">
-                        <img src="icons/macOS.png"  style="width:80%">
-                    </div>
+        <!--VMC Game Labs-->
+        <div class="main-content">
+            <div class="white-section">
+                <div class="text">
+                    <div>Remote Quality Assurance Tester</div>
                     
-                    <div class="card-title">
-                        <p>macOS</p>
-                    </div>
-                </a>
-
-            </div>
-            </section>
-        </div>
-
-            <hr>
-        <br>
-        <!--Applications I use-->
-        <div class="small-content">
-            <h1>Applications</h1>
-            
-            <p>
-                I have experience working with a wide variety of applications to get
-                work done. These include IDEs such as Eclipse, Microsoft Visual Studio, 
-                Visual Studio Code, NetBeans, Android Studio, and more.
-                <br><br>
-                I am also quite familiar with the Microsoft Office Suite, which includes 
-                Word, Excel, PowerPoint, and more.
-            </p>
-
-            <p><!--Images of Applications--></p>
-            <br>
-        </div>
-        <section class="hidden">
-        <div class="five-column-cards">
-
-            <a href="https://www.eclipse.org/ide/" target="_blank" class="card hidden" style="--delay:0.1s;">
-                <div class="card-image">
-                    <img src="icons/eclipse.png"  style="width:80%">
+                    <p>VMC Game Labs | 2021<br>
+                        Montreal, Quebec, Canada<br>
+                        <br>
+                        Test games that are currently in development for quality assurance.
+                        This involves playing the game, and stress-testing elements like 
+                        the user interface or online servers. Collaborating with colleagues 
+                        to perform in-game tasks that the developers assign. 
+                        Reporting on any bugs or issues we discover. While simultaneously 
+                        we monitor the current manager's directions, in case there has been 
+                        a change to the current testing path. Making new suggestions 
+                        and feature requests for future game updates. Being sure to 
+                        document logs, fill out inquiries, and send them back to the developers 
+                        for further analysis. This also involves handling confidential 
+                        information protected by non-disclosure agreements (NDA).<br>
+                        We also take pride in crashing the clients' online game servers.
+                    </p>
                 </div>
-                <div class="card-title">
-                    <p>Eclipse</p>
-                </div>
-            </a>
-
-            <a href="https://visualstudio.microsoft.com/" target="_blank" class="card hidden" style="--delay:0.2s;">
-                <div class="card-image">
-                    <img src="icons/visual studio ide.png"  style="width:80%">
-                </div>
-                <div class="card-title">
-                    <p>Visual Studio</p>
-                </div>
-            </a>
-
-            <a href="https://code.visualstudio.com/" target="_blank" class="card hidden" style="--delay:0.3s;">
-                <div class="card-image">
-                    <img src="icons/visual studio code ide.png"  style="width:80%">
-                </div>
-                <div class="card-title">
-                    <p>VS Code</p>
-                </div>
-            </a>
-
-            <a href="https://netbeans.apache.org/" target="_blank" class="card hidden" style="--delay:0.4s;">
-                <div class="card-image">
-                    <img src="icons/netbeans.png"  style="width:80%">
-                </div>
-                <div class="card-title">
-                    <p>NetBeans</p>
-                </div>
-            </a>
-
-            <a href="https://developer.android.com/studio" target="_blank" class="card hidden" style="--delay:0.5s;">
-                <div class="card-image">
-                    <img src="icons/android studio.png"  style="width:80%">
-                </div>
-                <div class="card-title">
-                    <p>Android Studio</p>
-                </div>
-            </a>
-
-            <div class="card" id="spacer" style="visibility: hidden;">
-            </div>
-
-            <a href="https://www.microsoft.com/en-us/microsoft-365/word" target="_blank" class="card hidden" style="--delay:0.1s;">
-                <div class="card-image">
-                    <img src="icons/word.png"  style="width:100%">
-                </div>
-                <div class="card-title">
-                    <p>Microsoft Word</p>
-                </div>
-            </a>
-
-            <a href="https://www.microsoft.com/en-us/microsoft-365/excel" target="_blank" class="card hidden" style="--delay:0.2s;">
-                <div class="card-image">
-                    <img src="icons/excel.png"  style="width:100%">
-                </div>
-                <div class="card-title">
-                    <p>Microsoft Excel</p>
-                </div>
-            </a>
-
-            <a href="https://www.microsoft.com/en-us/microsoft-365/powerpoint" target="_blank" class="card hidden" style="--delay:0.3s;">
-                <div class="card-image">
-                    <img src="icons/powerpoint.png"  style="width:100%">
-                </div>
-                <div class="card-title">
-                    <p>Microsoft Powerpoint</p>
-                </div>
-            </a>
-
-            <div class="card"  style="visibility: hidden;">
-            </div>
-
-        </div>
-        </section>
-        <br>
-            <hr>
-        <br>
-        <!--Programming Languages-->
-        <div class="small-content">
-            <h1>Programming</h1>
-            
-            <p>
-                I also have experience working with a wide variety of programming 
-                languages and frameworks. These include but are not limited to Java, 
-                C++, HTML, CSS, JavaScript, Document Object Model (DOM), ReactJS, PHP, SQL,  
-                MySQL, Python, C, Ruby, C#, Prolog, Aspect-J, and Lisp.
-                <br><br>
-                <!--Images of programming languages-->
-            </p>
-            
-        </div>
-
-        <div class="five-column-cards">
-
-            <a href="https://www.java.com/en/" target="_blank" class="card hidden" style="--delay:0.1s;">
-                <div class="card-image">
-                    <img src="icons/java.png"  style="width:80%">
-                </div>
-                <div class="card-title">
-                    <p>Java</p>
-                </div>
-            </a>
-
-            <a href="https://isocpp.org/" target="_blank" class="card hidden" style="--delay:0.2s;">
-                <div class="card-image">
-                    <img src="icons/C++.png"  style="width:80%">
-                </div>
-                <div class="card-title">
-                    <p>C++</p>
-                </div>
-            </a>
-
-            <a href="https://www.python.org/" target="_blank" class="card hidden" style="--delay:0.3s;">
-                <div class="card-image">
-                    <img src="icons/python.png"  style="width:80%">
-                </div>
-                <div class="card-title">
-                    <p>Python</p>
-                </div>
-            </a>
-
-            <a href="https://www.mysql.com/" target="_blank" class="card hidden" style="--delay:0.4s;">
-                <div class="card-image">
-                    <img src="icons/mysql.png"  style="width:80%; padding-top: 20px;">
-                </div>
-                <div class="card-title">
-                    <p>MySQL</p>
-                </div>
-            </a>
-
-            <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank" class="card hidden" style="--delay:0.5s;">
-                <div class="card-image">
-                    <img src="icons/C.png"  style="width:70%">
-                </div>
-                <div class="card-title">
-                    <p>C</p>
-                </div>
-            </a>
-
-            <a href="https://html.spec.whatwg.org/multipage/" target="_blank" class="card hidden" style="--delay:0.1s;">
-                <div class="card-image">
-                    <img src="icons/html.png"  style="width:70%; padding-top: 6px;">
-                </div>
-                <div class="card-title">
-                    <p>HTML</p>
-                </div>
-            </a>
-
-            <a href="https://www.w3.org/TR/CSS/" target="_blank" class="card hidden" style="--delay:0.2s;">
-                <div class="card-image">
-                    <img src="icons/css.png"  style="width:80%">
-                </div>
-                <div class="card-title">
-                    <p>CSS</p>
-                </div>
-            </a>
-
-            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="card hidden" style="--delay:0.3s;">
-                <div class="card-image">
-                    <img src="icons/javascript.png"  style="width:80%">
-                </div>
-                <div class="card-title">
-                    <p>JavaScript</p>
-                </div>
-            </a>
-
-            <a href="https://reactjs.org/" target="_blank" class="card hidden" style="--delay:0.4s;">
-                <div class="card-image">
-                    <img src="icons/reactjs.png"  style="width:80%">
-                </div>
-                <div class="card-title">
-                    <p>ReactJS</p>
-                </div>
-            </a>
-
-            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction" target="_blank" class="card hidden" style="--delay:0.5s;">
-                <div class="card-image">
-                    <img src="icons/dom.png"  style="width:80%; padding-top: 20px;">
-                </div>
-                <div class="card-title">
-                    <p>DOM</p>
-                </div>
-            </a>
-
-            <a href="https://www.ruby-lang.org/en/" target="_blank" class="card hidden" style="--delay:0.1s;">
-                <div class="card-image">
-                    <img src="icons/ruby.png"  style="width:70%; padding-top: 10px;">
-                </div>
-                <div class="card-title">
-                    <p>Ruby</p>
-                </div>
-            </a>
-
-            <a href="https://learn.microsoft.com/en-us/dotnet/csharp/" target="_blank" class="card hidden" style="--delay:0.2s;">
-                <div class="card-image">
-                    <img src="icons/csharp.png"  style="width:80%">
-                </div>
-                <div class="card-title">
-                    <p>CSharp</p>
-                </div>
-            </a>
-
-            <a href="https://www.eclipse.org/aspectj/" target="_blank" class="card hidden" style="--delay:0.3s;">
-                <div class="card-image">
-                    <img src="icons/aspectj.jpg"  style="width:80%">
-                </div>
-                <div class="card-title">
-                    <p>AspectJ</p>
-                </div>
-            </a>
-
-            <a href="https://common-lisp.net/" target="_blank" class="card hidden" style="--delay:0.4s;">
-                <div class="card-image">
-                    <img src="icons/lisp.png"  style="width:80%">
-                </div>
-                <div class="card-title">
-                    <p>Lisp</p>
-                </div>
-            </a>
-
-            <a href="https://www.swi-prolog.org/" target="_blank" class="card hidden" style="--delay:0.5s;">
-                <div class="card-image">
-                    <img src="icons/prolog.png"  style="width:80%">
-                </div>
-                <div class="card-title">
-                    <p>Prolog</p>
-                </div>
-            </a>
-
-        </div>
-        <br>
-            <hr>
-        <br>
-        <!--Other Tools-->
-        <div class="small-content">
-            <h1>Other Tools</h1>
-            
-            <p>
-                Some of the other tools I have worked with include the version
-                control tool GitHub. Knowledge of Data Structures and Algorithms, 
-                Knowledge of Data Analytics using programs like OpenRefine and 
-                Jupyter Notebook. An understanding of multicore programming using 
-                tools like Intel TBB, OpenCL, etc. An understanding of organizational 
-                diagrams such as UML Diagrams. As well as video editing tools such 
-                as Final Cut Pro and DaVinci Resolve.
-                <br><br>
-                <!--Images of other tools-->
-            </p>
-            <br>
-        </div>
-
-        <div class="five-column-cards">
-
-            <a href="https://github.com/mansour365" target="_blank" class="card hidden" style="--delay:0.1s;">
-                <div class="card-image">
-                    <img src="icons/github.png"  style="width:80%">
-                </div>
-                <div class="card-title">
-                    <p>GitHub</p>
-                </div>
-            </a>
-
-            <a href="https://openrefine.org/" target="_blank" class="card hidden" style="--delay:0.2s;">
-                <div class="card-image">
-                    <img src="icons/openrefine.png"  style="width:80%">
-                </div>
-                <div class="card-title">
-                    <p>OpenRefine</p>
-                </div>
-            </a>
-
-            <a href="https://jupyter.org/" target="_blank" class="card hidden" style="--delay:0.3s;">
-                <div class="card-image">
-                    <img src="icons/jupyter notebook.png"  style="width:70%">
-                </div>
-                <div class="card-title">
-                    <p>Jupyter Notebook</p>
-                </div>
-            </a>
-
-            <a href="https://www.khronos.org/opencl/" target="_blank" class="card hidden" style="--delay:0.4s;">
-                <div class="card-image">
-                    <img src="icons/opencl.png"  style="width:80%; padding-top: 30px;">
-                </div>
-                <div class="card-title">
-                    <p>OpenCL</p>
-                </div>
-            </a>
-
-            <a href="https://www.apple.com/final-cut-pro/" target="_blank" class="card hidden" style="--delay:0.5s;">
-                <div class="card-image">
-                    <img src="icons/final cut pro.png"  style="width:80%; padding-top: 5px;">
-                </div>
-                <div class="card-title">
-                    <p>Final Cut Pro</p>
-                </div>
-            </a>
-
-        </div>
-        <br><br>
-
-            
-        
-       
-        
-         <!--Wide Image starts here  ----------------------------------->
-         <div class = "text-overlay">
-            <a name="exp"></a><!--Needed when we're in contact page-->
-            <img class = "wide-image" id="exp" src="images/sea-wide.jpg" >
-            <div class="centered"><h1 class="image-header">Experience</h1></div>
-            <div class="quote reveal">
-                <p>"What you do makes a difference, and you have to decide what 
-                    kind of difference you want to make." — Jane Goodall</p>
             </div>
         </div>
-        <!--Wide Image ends here  ----------------------------------->
 
-        <br>
-        <!--VMC Game Labs-->
-        <div class="small-content">
-            <h1>Tech Tester</h1>
-            
-            <p>Rtings | 2022<br>
-                Montreal, Quebec, Canada<br>
-                <br>
-                Tested and understood new products by carrying out extensive research 
-                and following a test bench procedure. Investigated and troubleshooted 
-                issues with the performance of products. Revised the work done by technical 
-                writers to ensure the final review had no errors. Answered user questions 
-                regarding testing procedures, potential issues, and new firmware updates.<br>
-            </p>
-            <br>
-        </div>
-
-            <hr>
-        <br>
-
-        <br>
-        <!--VMC Game Labs-->
-        <div class="small-content">
-            <h1>Remote Quality Assurance Tester</h1>
-            
-            <p>VMC Game Labs | 2021<br>
-                Montreal, Quebec, Canada<br>
-                <br>
-                Test games that are currently in development for quality assurance.
-                This involves playing the game, and stress-testing elements like 
-                the user interface or online servers. Collaborating with colleagues 
-                to perform in-game tasks that the developers assign. 
-                Reporting on any bugs or issues we discover. While simultaneously 
-                we monitor the current manager's directions, in case there has been 
-                a change to the current testing path. Making new suggestions 
-                and feature requests for future game updates. Being sure to 
-                document logs, fill out inquiries, and send them back to the developers 
-                for further analysis. This also involves handling confidential 
-                information protected by non-disclosure agreements (NDA).<br>
-                We also take pride in crashing the clients' online game servers.
-            </p>
-            <br>
-        </div>
-
-            <hr>
-        <br>
         <!--Volunteer-->
         <div class="main-content">
-            <br>
-            <div class="left-column">
-                <h1>Volunteer</h1>
-                <p>
-                    Montreal General Hospital (MGH) | 2014<br>
-                    Montreal, Quebec, Canada<br>
-                    <br>
-                    Reflection:<br>
-                    Assisted the patients that were being hospitalized. Provided them 
-                    with drinks, meals, and anything that could make their stay 
-                    more hospitable. Also gave them company and someone to talk to.
-                    <br>
-                    A truly special place to work. I will always cherish the memories I 
-                    had meeting both the patients and the other volunteers.
-                </p> 
-                <p class="link"><a href="https://muhc.ca/montreal-general-hospital" target="_blank">Check out Montreal General Hospital</a> ></p>
-                
-            </div>
-            
-            <div class="right-column">
-                <img class="medium-image-right" src="images/hospital.webp">
-            </div>
-        
-            <br><br>
+                <div class="white-section">
+                    <div class="text">
+                        <div>Volunteer</div>
+                        <p>
+                            Montreal General Hospital (MGH) | 2014<br>
+                            Montreal, Quebec, Canada<br>
+                            <br>
+                            
+                            Assisted the patients that were being hospitalized. Provided them 
+                            with drinks, meals, and anything that could make their stay 
+                            more hospitable. Also gave them company and someone to talk to.
+                            <br>
+                            A truly special place to work. I will always cherish the memories I 
+                            had meeting both the patients and the other volunteers.
+                        </p> 
+                    </div>
+                </div>
         </div>
-        <br><br>
-        <hr>
-        <br>
-
 
         <!--Other Non-Office Employment-->
-        <div class="small-content">
-            <h1>Other Non-Office Employment</h1>
-            
-            <p>Hypertec Group | 2017<br>
-                Montreal, Quebec, Canada<br>
-                Handling and transportation of computer servers.<br>
-            </p>
-            <br>
-            <p>Restaurant Da Franco | 2012<br>
-                Montreal, Quebec, Canada<br>
-                Performed several tasks in and around the kitchen
-                of a busy restaurant.<br>
-            </p>
+        <div class="main-content">
+            <div class="white-section">
+                <div class="text">
+                    <div>Other Non-Office Employment</div>
+                    
+                    <p>Hypertec Group | 2017<br>
+                        Montreal, Quebec, Canada<br>
+                        Handling and transportation of computer servers.<br>
+                    </p>
+                    <br>
+                    <p>Restaurant Da Franco | 2012<br>
+                        Montreal, Quebec, Canada<br>
+                        Performed several tasks in and around the kitchen
+                        of a busy restaurant.<br>
+                    </p>
+                </div>
+            </div>
         </div>
-        
-        <br>
-        <hr>
-        <br><br>
 
         <!--About Website-->
-        <div class="very-small-content">
-            <h2>About this Website</h2>
-            <p>
-                I hope you enjoyed scrolling and hopefully this site managed to 
-                spark inspiration within you. 
-            </p>
+        <div class="main-content">
+            <div class="ultra-big-title">About this Website</div>
+        </div>
 
-            <p>
-               This page does not collect any of your browsing information.<br>
-               I believe technology should be transparent and private :)
-            </p>
-            
-            <br>
+        <div class="main-content">
+            <div class="white-section">
+                <div class="text">
+                    <p>
+                        I hope you enjoyed scrolling and hopefully this site managed to 
+                        spark inspiration within you. 
+                    </p>
+
+                    <p>
+                    This page does not collect any of your browsing information.<br>
+                    I believe technology should be transparent and private :)
+                    </p>
+
+                </div>
+
+            </div>
         </div>
             
         

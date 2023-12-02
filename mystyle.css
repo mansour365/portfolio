@@ -1,3 +1,9 @@
+/*
+Color THEME from pixel phone
+Dark color: 96, 79, 70
+Medium color: 205, 162, 140
+Light color: 226, 192, 174
+*/
 * {
     box-sizing: border-box;
 }
@@ -7,121 +13,347 @@ html{
 }
 body {
     background: #fefefe;
-    font-family:  Arial, Helvetica, sans-serif;
-    /*A recommended font stack i found online */
-    /*font-family: Helvetica Neue, Helvetica, Arial, sans-serif;*/
-    
-    font-weight: 100;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
     line-height: 1.6em;
-    color: rgb(160, 160, 160);
-    background-color: rgb(24,26,27); 
-    /*background-color: white; /*For light mode*/
-    /*Important because first we need main-content to disaply as inline block
-    in order to avoid overlapping with other divs
-    But then inline block will nalway float to the right
-    So putting text-align: center; in the body css fixes this*/
+    color: rgb(0, 0, 0);
+    background-color: rgb(248, 239, 236); /*Material you background color*/  /*Another option rgb(250, 243, 237);*/
+    /*Important because first we need main-content to display as inline block in order to avoid overlapping 
+    with other divs. But then inline block will always float to the right. Put text-align: center; in body fixes this*/
     text-align:center; 
     margin:0; /*Make navbar, body and wide images all reach the very max of the window width */
-}
-p{
-    font-size: 1.08em;
-}
-h1{
-    font-weight: 100;
-    font-size: 2.4em;
-    color:rgb(187, 187, 187);
-    margin-top:1%; /*Make header start right a top of column , inline with image*/
-    line-height:1.1em;
-}
-.image-header{
-    color:rgb(232,230,227);
-    font-size: 2.9em;
-    line-height:1.1em;
-}
-h2{
-    font-weight:100;
-    line-height: 1.1em;
-    color:rgb(182, 182, 182);
-}
-h3{
-    font-weight:100;
-    line-height: 1.1em;
-    font-size: 1.3em;
-}
-hr{
-    height: 1px;
-    /*Setting border to 0 and border-top to 1px, get a true 1px hr*/
-    border:0;
-    border-top: 1px solid rgb(222,222,222); /*For light mode*/
-    border-top: 1px solid rgb(56, 62, 64); /*For dark mode*/
-}
-.main-content p{
-    font-size: 1.3em;
-    line-height: 1.6em;
-}
-.small-content p{
-    font-size: 1.3em;
-    line-height: 1.6em;
-}
-.link{
-    color:rgb(20, 175, 240); /*Needed for the ">" sign after a link*/
-}
-.quote{
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(30px);
-    color: rgb(228, 226, 223);
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius:1%/8%;
-}
-/*How the blue links will behave*/
-.link a:link{
-    color:rgb(20, 175, 240); /*Make sure links are blue by default*/
-    text-decoration:none; /*If we dont have this, the link will be underlined by default*/
+    overflow-x: hidden;
 }
 
-.link a:visited{
-    color:rgb(20, 175, 240); /*Make sure visited links still stay blue*/
+#navbar{  /*Create a sticky/fixed navbar*/
+    position: fixed; /*this make it sticky/fixed nav bar*/
+    top: 0; /* 0 pixels away from the top (might not be necessary)*/
+    width: 100%; /*Make sure navbar take full span of screen*/
+    padding: 6px 0px; /* top/bottom padding:6px, left/right:0px;  (give navbar desired thickness)*/ 
+    z-index: 99; /* make sure its always on top of everything else: put a big value */
+    background-color:white;
+    box-shadow: none; /*May not be necessary*/
+    /*border: 1px solid orange; /*for testing puposes*/
+}
+#navbar a {  /*Style the navbar links*/
+    font-family: 'Roboto', sans-serif;
+    font-weight:500;
+    letter-spacing: 0.01em;
+    float: left; /*All of the navbar links float on same line (left)*/
+    color: #5f6368; /*color of the links in the navbar*/
+    text-decoration: none; /*We don't want the default link underline*/
+    padding: 10px 17px; /*top and bottom: 10px, right and left: 12px */ /*Padding around each link*/
+    line-height: 25px; /*the height of the navbar link button */
+}
+#navbar #logo {  /*Style the logo*/
+    font-size: 18px; /*font size of logo*/
+}
+#navbar-right {  /*position of the links*/
+    float:right;
+    font-size: 14px;
+}
+#navbar a:hover{  /*behaviour of the nav links*/
+    color: black;
+    transition: 0.3s;
+}
+#navbar-content{  /*This is for both the logo and navbar links*/
+    width:95%;
+    margin: auto;
+}
+#burger-icon{  /*Make burger icon normally invisible*/
+    display:none; /*By default burger icon not visible*/
+}
+#menu-icon{
+    font-size:25px;
 }
 
-.link a:hover{
-    text-decoration:underline;
-}
-
-/*
-.links-div{
-    font-size: 1.3em;
-    line-height: 1.6em;
-    border: 1px solid aqua;
-}
-*/
 
 
 .main-content{
     /*Make the div not overlap with other div*/
     /*But causes entire div to float left, fix with text-align center in body*/
     display:inline-block; 
-    /*Needed to overcome the text-align center of the body*/
-    text-align:left; 
-    width:1340px;
+    text-align: center;  /*Needed to overcome the text-align center of the body*/
+    width:1200px;
+    margin-top:20px;
+    margin-bottom:20px;
     /*border: 1px solid blue;*/
 }
-.small-content{
-    text-align: center;
-    width:1340px; 
-    margin: auto; /*for some reason needed to keep content in the middle*/
-    /*border: 1px solid green; */
+
+.ultra-big-title{
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+    font-size: 96px;
+    font-weight:700; /*for roboto*/
+    line-height: 1.04;
+    letter-spacing: -0.02em; /*for roboto*/
+    margin-top:80px;
+    /*border: 1px solid red;*/
 }
 
-.very-small-content{
-    text-align: center;
-    width:1340px; 
-    margin: auto; /*for some reason needed to keep content in the middle*/
-    /*border: 1px solid green; */
+.section-card{
+    position:relative;
+    /*border-radius: 2%/6%;*/
+    height: 400px;
+    width:100%;
+    padding:5%;
+    /*********The Fab Four Technique********* for dynamic border radius*/
+    /*Border radius disapears 400px or less, 24px represents the desired pixel radius */
+    border-radius: max(0px, min(24px, (100% - 400px + 1px) * 9999)) / 24px;
+    /*border: 1px solid blue;*/
 }
+.section-title{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 80px;
+    font-weight: 500;
+    line-height: 1.04;
+    letter-spacing: -0.02em;
+    color:white;
+    padding-top: 20px;
+    padding-bottom: 80px;
+    /*border: 1px solid aqua;*/
+}
+
+.quote{
+    position:absolute;
+    left:0;
+    right:0;
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 50%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 40px;
+    color: rgb(255, 255, 255);
+    bottom: 20px;
+    /*border: 1px solid aqua;*/
+}
+/*For quotes animation*/
+.reveal{
+    /*transform: translateY(150px);*/
+    opacity: 0;
+    transition: 2.5s all ease;
+}
+.reveal.active{
+    /*transform: translateY(0);*/
+    opacity: 1;
+ }
+
+.white-section{
+    position: relative;
+    /*border-radius: 2%/8%;*/
+    float:left;  /*keeps the white section div at the very top of its parent div*/
+    background-color: rgb(255, 248, 245);
+    width: 100%;
+    /*********The Fab Four Technique********* for dynamic border radius*/
+    /*Border radius disapears 400px or less, 24px represents the desired pixel radius */
+    border-radius: max(0px, min(24px, (100% - 400px + 1px) * 9999)) / 24px;
+    /*border: 1px solid rgb(128, 0, 0);*/
+}
+
+
+.text{
+    display:inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    font-weight: 500;
+    color: rgb(104, 96, 95);
+    line-height: 40px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    margin-right: 60px;
+    margin-left: 60px;
+    /*border: solid 1px red;*/
+}
+
+.text-left{
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    font-weight: 500;
+    color: rgb(104, 96, 95);
+    line-height: 40px;
+    margin-top:50px;
+    margin-bottom: 30px;
+    margin-left: 60px;
+    margin-right: 60px;
+    /*border: solid 1px green;*/
+}
+
+.emphasized-text{
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    line-height: 40px;
+    /*border: solid 1px red;*/
+}
+
+
+.link-area{
+    color:#1f1f1f; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:20px;
+    padding-bottom:40px;
+    /*border: 1px solid rgb(128, 0, 0);*/
+}
+.button{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    position:relative;
+    display:flex;
+    border-radius: 25px;
+    font-size: 14px;
+    padding: 6px 25px;
+    padding-top: 8px;
+    background-color: rgb(226, 192, 174);
+    /*background-color: rgb(241, 177, 127); /*Another option*/
+}
+.button:hover{
+    background-color: rgb(96, 79, 70);
+    cursor: pointer;
+}
+.button:hover .link-text{
+    color:white;
+}
+.button:hover .material-symbols-outlined{
+    color:white;
+}
+.button:hover img{
+    filter: invert(1);
+}
+
+
+/*How the blue links will behave*/
+.link-area a:link{
+    color:black; /*Make sure links are blue by default*/
+    text-decoration:none; /*If we dont have this, the link will be underlined by default*/
+}
+.link-area a:visited{
+    color:black; /*Make sure visited links still stay blue*/
+}
+
+
+.link-icon{
+    width:20px;
+    padding-right:6px;
+    padding-top:5px;
+    /*border: 1px solid red;*/
+}
+/*For the icons from google*/
+.material-symbols-outlined {
+  font-size:17px;
+  padding-right:5px;
+  padding-top: 4px;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+  /*border: 1px solid red;*/
+}
+.link-text{
+    color: rgb(0, 0, 0);
+    /*border: 1px solid aqua;*/
+}
+
+
+.categories{
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content:center;
+    gap: 14px;
+    /*border: 1px solid green;*/
+}
+.catcard{
+    position:relative;
+    text-align: center;
+    height:auto;   /*previous height: 460px;*/
+    width:24%;   /*previous width:289px;*/
+    border-radius: 4%/3%;
+    overflow:hidden;/*needed so that image zoom doesnt spill out of div*/
+    /*border: 1px solid pink;*/
+}
+
+/*Use CSS Nesting, so when we hover over the cat card, then we also activate attributes of another css element cat-image*/
+.catcard:hover{
+    cursor: pointer;
+
+    > .cat-image{
+        filter:brightness(35%);
+        transform:scale(1.1);
+    }
+}
+
+.cat-image{
+    border-radius: 4%/3%;
+    filter:brightness(60%);
+    object-fit: cover; /*image shoudld cover the entire container*/
+    height:100%; 
+    width:100%;
+    transition: 0.4s; 
+}
+.cat-title{
+    font-weight:500;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    font-size: 22px;
+    color:white;
+    user-select: none;
+}
+.fake-button{
+    position: absolute;
+    font-size: 13px;
+    font-weight:500;
+    color: white;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 4px 25px;
+    display:inline;
+    top:85%;
+    left:33%;
+}
+
+
+
+#portfolio-background{
+    background-image: url(images/pawel-czerwinski.jpg);
+    background-position: center;
+    background-size:cover;
+}
+#project-background{
+    background-image: url(images/pawel-czerwinski-2.jpg);
+    background-position: center;
+    background-size:cover;
+}
+#education-background{
+    background-image: url(images/pawel-czerwinski-3.jpg);
+    background-position: center;
+    background-size:cover;
+}
+#skills-background{
+    background-image: url(images/4.jpg);
+    background-position: center;
+    background-size:cover;
+}
+#experience-background{
+    background-image: url(images/5.jpg);
+    background-position: center;
+    background-size:cover;
+}
+#contact-background{
+    background-image: url(images/6.jpg);
+    background-position: center;
+    background-size:cover;
+}
+
 
 
 .left-column{
@@ -137,111 +369,31 @@ hr{
 
 .wide-image{
     width:100%;
+    border-radius: 2%/3%;
 }
-.medium-image-right{
-    /*width:398px;*/ /*old value*/
-    width:80%;
-    border-radius:2%/4%;
-    float:right;
-}
+
+
 
 #weather-phone{
     width:250px;
 }
+.medium-image-right{
+    width:90%; /*previous width:398px;*/ 
+    border-radius:2%/4%;
+    /*float:right;*/
+}
 .medium-image-left{
-    width: 80%;
+    width: 90%;
     border-radius:2%/4%;
 }
-
-/*Title on top of Wide Image*/
-.text-overlay{
-    position: relative;
-    text-align: center;
-}
-.centered{
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-
- /*Create a sticky/fixed navbar*/
- #navbar{
-    background-color: rgb(0, 0, 0, 0.77); /*background color of navbar (default is white) */
-    backdrop-filter: blur(30px);
-    padding-top: 54px; /*give the navbar the desired thickness*/
-    padding-bottom: 54px; /*give the navbar the desired thickness*/
-    transition: 0.4s; /*transition effect length when padding is decreased */
-    position: fixed; /*this make it sticky/fixed nav bar*/
-    width: 100%; /*Make sure navbar take full span of screen*/
-    top: 0; /* 0 pixels away from the top */
-    z-index: 99; /* make sure its always on top of everything else: put a big value */
-    /*border: 1px solid orange; /*for testing puposes*/
-}
-
-/*Style the navbar links*/
-#navbar a {
-    text-decoration: none;
-    float: left; /*All of the navbar links float on same line (left)*/
-    /*Padding around each link*/
-    padding: 10px 12px; /*top and bottom: 8px, right and left: 12px */
-    /*padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 40px;
-    padding-right: 6px;*/
-    color: rgb(208, 208, 208); /*color of the links in the navbar*/
-    line-height: 25px; /*the height of the navbar link button */
-    font-family: Arial, Helvetica, sans-serif;/*This line might be useless*/
-}
-
-/*Style the logo*/
-#navbar #logo {
-    font-family: Arial, Helvetica, sans-serif; /*font familly of logo*/
-    font-weight:100;
-    font-size: 35px; /*font size of logo*/
-    transition: 0.4s; /*transition speed of the logo when navbar size changes */
-    float: left; /*logo floats to left by default*/
-    /*border: 1px solid blue; /*for testing puposes*/
-    padding-left:0;
-    margin-bottom: 1px;
-}
-
-/*position of the links*/
-#navbar-right {
-    float:right;
-    font-size: 13px;
-    /*border: 1px solid red; /*for testing puposes*/
-}
-
-/*behaviour of the nav links*/
-#navbar a:hover{
-    color: white;
-    transition: 0.3s;
-}
-
-/*This is for both the logo and navbar links*/
-#navbar-content{
-    width:1340px;
-    margin: auto;
-    /*border: 1px solid purple; /*for testing puposes*/
-}
-
-/*Make burger icon normally invisible*/
-#burger-icon{
-    display:none; /*By default burger icon not visible*/
-    /*border: 1px solid red;/*for testing puposes*/
-}
-
-
 
 
 
 /*CSS related to the staggering icons*/
-.container-two-column-cards{
+.container-three-column-cards{
     width:60%;
-    /*border: 1px solid red;*/
     margin: 50px auto;
+    /*border: 1px solid red;*/
 }
 .card-container {   /*Currently not used*/
     width: 100%;
@@ -268,67 +420,50 @@ hr{
 }
 
 .card{
-    /*border: 1px solid #000000;/*border around card*/
     text-align: center;
     padding: 10px 10px; /*padding inside card*/
+    margin-top:10%;
     margin-bottom: 10%; /*margin outside card*/
-
-    max-width: 200px; /*max width of card*/
-    min-width: 200px;/*min width of card*/
-    max-height: 200px; /*max height of card*/
-    min-height: 200px;/*min height of card*/
-
-    /*make image centered inside block*/
-    margin-left: auto;
-    margin-right: auto;
-
-    background: rgb(39, 39, 39); /*Color of card*/
-    color: rgb(255, 255, 255);/*Text color*/
+    width: 200px; /*max width of card*/
+    height: 200px; /*max height of card*/
+    margin-left: auto;/*make image centered inside block*/
+    margin-right: auto;/*make image centered inside block*/
+    background: rgb(238, 231, 227); /*Color of card*/
+    color: rgb(104, 96, 95);/*Text color*/
     text-decoration: none; /*removes underline from text, since underline appears when make card a link*/
-    border-radius: 5%;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3), 
-                0 3px 2px rgba(0, 0, 0, 0.2), 
-                0 7px 7px rgba(0, 0, 0, 0.15),
-                0 0.5px 0px 0 rgba(255, 255, 255, 0.3) inset; /*inset creates shadow inside the box, needed to add the light shine on top of box*/
+    border-radius: 9%;
+    /*border: 1px solid #000000;/*border around card*/
 }
-
 .card-image {
     text-align: center;
-    /*border: 1px solid green;*/
-    max-width:115px; /*max width of image*/
-    min-width:115px; /*min width of image*/
-
+    width:115px; /*width of image*/
     padding-top: 25px;
-    
     margin-top: 0%;
     margin-left: auto;
     margin-right: auto;
     height:70%; /*image takes 70% of card*/
+    /*border: 1px solid green;*/
 }
-
 .card-title {
-    /*border: 1px solid rgb(200, 0, 0);*/
     padding: 5px 5px;
     text-align: center;
-    /*font-size: 18px;*/
+    font-size: 16px;
     height:30%; /*text takes 30% of card*/
+    /*border: 1px solid rgb(200, 0, 0);*/
 }
-
 .card:hover {
     transform: scale(1.05);
     transition: 0.2s;
     box-shadow: 0 0 40px -10px rgba(0, 0, 0, 1),
                 0 0.5px 0px 0 rgba(255, 255, 255, 0.3) inset; /*inset creates shadow inside the box, needed to add the light shine on top of box*/
-    transition-delay: 0ms;     
+    transition-delay: 0ms; 
 }
-
 .hidden{  /*for the staggering icons*/
     opacity:0;
    /* filter: blur(5px);*/
     transform: translateX(-5%);
     transition: all 0.5s;
 }
-
 .show{
     opacity:1;
     /*filter:blur(0);*/
@@ -336,22 +471,13 @@ hr{
     transition-delay: var(--delay);
 }
 
-/*For quotes animation*/
-.reveal{
-    /*transform: translateY(150px);*/
-    opacity: 0;
-    transition: 2.5s all ease;
-}
-.reveal.active{
-    /*transform: translateY(0);*/
-    opacity: 1;
- }
 
 
 
-@media screen and (max-width: 1340px){
+
+@media screen and (max-width: 1217px){
     .five-column-cards{
-        grid-template-columns: repeat(4, 1fr); /*2 columns*/
+        grid-template-columns: repeat(4, 1fr); /*4 columns*/
     }
     #spacer{
         display:none;
@@ -359,11 +485,11 @@ hr{
 }
 
 @media screen and (max-width: 900px){
-    .container-two-column-cards{
-        width:100%;
+    .three-column-cards{
+        grid-template-columns: repeat(2, 1fr);
     }
     .five-column-cards{
-        grid-template-columns: repeat(3, 1fr); /*2 columns*/
+        grid-template-columns: repeat(3, 1fr); /*3 columns*/
     }
 }
 
@@ -371,22 +497,19 @@ hr{
     .five-column-cards{
         grid-template-columns: repeat(2, 1fr); /*2 columns*/
     }
-    
-
 }
 
 /*End of stagerred icons section*/
 
 /*FOR SMALLER SCREENS*/
-@media screen and (max-width: 1340px){
+@media screen and (max-width: 1217px){
     #navbar-content{
-        width:auto;
+        width:95%;
     }
     .main-content{
-        width:auto;
-        text-align: center;
-        padding-left:5%;
-        padding-right:5%;
+        width:100%;
+        /*padding-left:5%;
+        padding-right:5%;*/
     }
     .small-content{
         width:auto;
@@ -414,9 +537,41 @@ hr{
     
 }
 
+/*Start making titles smaller*/
+@media screen and (max-width: 1070px){
+    /*change titles down to 72px*/
+    .ultra-big-title{
+        font-size: 72px;
+    }
+    
+
+}
+@media screen and (max-width: 734px){
+    .ultra-big-title{
+        font-size: 48px;
+    }
+    .section-title{
+        font-size: 48px;
+    }
+    .quote{
+        width: 90%;
+    }
+
+}
+
 
 /*FOR EVEN SMALLER SCREENS*/
-@media screen and (max-width: 700px){
+@media screen and (max-width: 765px){
+
+    .section-card{
+        border-radius: 0%/0%;
+    }
+    .categories{
+        flex-wrap: wrap;
+    }
+    .catcard{
+        width:146px;
+    }
     .main-content{
         width:100%;
         text-align: center;
@@ -470,7 +625,7 @@ hr{
         transition: 0.5s; /*Transition speed when opening and closing vertical menu*/
         position: fixed;
         z-index: 100; /*Make vertical menu appear above all other content*/
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(226, 192, 174, 0.7); /*226, 192, 174*/
         top: 45px; /*How far from the top the vertical menu appears*/
         left: 0;
     }
@@ -478,6 +633,7 @@ hr{
     .anchor-links a {  /*Change the size of the Anchor links in vertical menu*/
         font-size: 120%; 
         border-bottom: 1px solid rgb(173, 173, 173);
+        border-bottom: hidden;
         text-align: center;
         margin: 5%; /*Add a bit of space around all the anchor links in vertical menu*/
     }
@@ -490,19 +646,40 @@ hr{
 
     #burger-icon{
         display:unset; /*Make burger icon visible when screen is small */
-        /*position:fixed;*/
         float: left;
         font-size: 28px; /*Font size of burger icon*/
         margin-left: 1%; /*Add a bit of spacing on left side of burger icon*/
         margin-bottom: 7px;
     }
-
-
 }
 
 /*Tiny screens*/
 @media screen and (max-width: 550px){
+    .big-title{
+        font-size: 200%;
+    }
     .quote{
         visibility: hidden;
+    }
+    .link-area{
+        flex:50%;
+        max-width:100%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    /*Need to start shrinking the logo cards*/
+    .three-column-cards{
+        border: solid 2px pink;
+    }
+    .card{  /*all new logo card values are 75% or original size*/
+        width:150px;
+        height:150px;
+    }
+    .card-image{
+        width:86px;
+    }
+    .card-title {
+        font-size: 12px;
     }
 }

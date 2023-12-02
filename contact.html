@@ -5,9 +5,24 @@
         <title>Contact</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
 
+        <!---------- FONTS ------------>
+        <!--Roboto 400, 500 and 700 from google-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-        <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!----------  ICONS  ---------->
+        <!--Menu icon from google-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <!--Contact icon from google-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <!--Resume icon from google-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <!--Mail Icon from google-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <!--Web Icon from google-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        
 
         <link rel="stylesheet" href="mystyle.css">
         
@@ -16,59 +31,90 @@
     </head>
     
     <body>
+        <!--Navigation Bar-->
         <nav id="navbar">
             <div id = "navbar-content">
                 
-                <a href="index.html" id="logo"><i>MM</i></a> <!--Using #top, it scrolls to top of page-->
+                <a href="index.html" id="logo">Mansour's  <b> Portfolio<b></a>
 
                 <div id = "navbar-right" class = "anchor-links"  onclick="toggleVerticalMenu();">
                     <a href="index.html#abo">About</a>
+                    <a href="index.html#prj">Projects</a>
                     <a href="index.html#edu">Education</a>
                     <a href="index.html#tec">Skills</a>
-                    <a href="index.html#prj">Projects</a>
                     <a href="index.html#exp">Experience</a>
                     <a href=#con>Contact</a> 
                 </div>
 
                 <div id = "burger-icon" onclick="toggleVerticalMenu()">
                     <a href="javascript:void(0);" class="icon">
-                        <i class="fa fa-bars"></i>
+                        <span class="material-symbols-outlined" id="menu-icon">menu</span>
                     </a>
                 </div>  
-
             </div>
         </nav>
 
 
-        
+        <br><br><br>
 
-        <!--Wide Image starts here  ----------------------------------->
-        <div class = "text-overlay">
-            <img class = "wide-image" id="con" src="images/14.jpg" >
-            <div class="centered" style="top:50%;"><h1 class="image-header">Contact</h1></div>
-            <div class="quote reveal">
-                <p>"There are colors we can't see, but they're connected to the ones we can,
-                     There's a connection between everything. — Wayne Shorter</p>
+         <!--Wide Image starts here  ----------------------------------->
+         <div class="main-content">
+            <div class = "section-card" id="contact-background">
+                <div class ="section-title">Contact</div>
+
+                <div class="quote">
+                    <p>"There are colors we can't see, but they're connected to the ones we can,
+                        There's a connection between everything. — Wayne Shorter</p>
+                </div>
             </div>
         </div>
         <!--Wide Image ends here  ----------------------------------->
+
 
         <p></p>
             
         <div class="main-content">
             <br>
             <div class="left-column">
-                <h1>Contact Me</h1>
-                <p>
-                    Location: <br>
-                    Montreal, Quebec, Canada<br>
+                <div class="white-section">
                     <br>
-                    Availability:<br> 
-                    Send me an email. I usually check email at least once a day.<br>
+                    <div class="text">
+                        <div>Contact Me</div>
+                        <p>
+                            Location: <br>
+                            Montreal, Quebec, Canada<br>
+                            <br>
+                            Availability:<br> 
+                            Send me an email. I usually check email at least once a day.<br>
+                    </div>
+                              
+                    <div class="link-area">
+
+                        <a class = "button" href="mailto:maqsoudi99@gmail.com">
+                            <span class="material-symbols-outlined">mail</span>
+                            <div class="link-text">Email</div>
+                        </a> 
+
+                        <a class = "button" href="Resume.pdf"  download="Resume">
+                            <span class="material-symbols-outlined">description</span>
+                            <div class="link-text">Resume</div>
+                        </a>
+
+                        <a class = "button" href="https://github.com/mansour365" target="_blank">
+                            <span><img class="link-icon" id="git-icon" src="images/icons/git.png"></span>
+                            <div class="link-text">GitHub</div>
+                        </a>
+    
+                        <a class = "button" href="https://linkedin.com/in/mansour-maqsoudi" target="_blank">
+                            <span><img class="link-icon" id = "linkedin-icon" src="images/icons/linkedin.png"></span>
+                            <div class="link-text">LinkedIn</div> 
+                        </a>
+
+                    </div>
+
                     
-                    <h3 class="link"><a href="mailto:maqsoudi99@gmail.com">Email Me</a> ></h3>
-                    
-                </p> 
+                </div>
+                
             </div>
 
             
@@ -78,17 +124,9 @@
         
             <br><br>
         </div>
-
-        <div class="small-content">
-            <h3 class="link">
-                <a href="https://linkedin.com/in/mansour-maqsoudi" target="_blank">LinkedIn</a> &nbsp&nbsp&nbsp
-                <a href="https://github.com/mansour365" target="_blank">GitHub</a> &nbsp&nbsp&nbsp
-                <a href="Resume.pdf" download="Resume"> Download Resume</a> </h3>  
-            <br>
-        </div>
             
         
-        <br><br><br><br><br><br><br>
+        <br><br><br>
         
 
     </body>
