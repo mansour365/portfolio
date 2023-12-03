@@ -327,9 +327,14 @@ body {
     color: white;
     border: 2px solid rgb(255, 255, 255);
     padding: 4px 25px;
-    display:inline;
-    top:85%;
-    left:33%;
+    display:inline; /*keeps the borders from stretching to edges*/
+    /*positioning in absolute*/
+    top: 85%;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    width:100px; /*need width to make this positioning work*/
 }
 
 
