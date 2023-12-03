@@ -91,6 +91,17 @@ body {
     /*border: 1px solid red;*/
 }
 
+.smaller-title{
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+    font-size: 48px;
+    font-weight:700; /*for roboto*/
+    line-height: 1.04;
+    letter-spacing: -0.02em; /*for roboto*/
+    margin-top:80px;
+    /*border: 1px solid red;*/
+}
+
 .section-card{
     position:relative;
     /*border-radius: 2%/6%;*/
