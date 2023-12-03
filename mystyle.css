@@ -324,32 +324,32 @@ body {
 
 
 #portfolio-background{
-    background-image: url(images/pawel-czerwinski.jpg);
+    background-image: url(images/section/pawel-czerwinski-1.jpg);
     background-position: center;
     background-size:cover;
 }
 #project-background{
-    background-image: url(images/pawel-czerwinski-2.jpg);
+    background-image: url(images/section/pawel-czerwinski-2.jpg);
     background-position: center;
     background-size:cover;
 }
 #education-background{
-    background-image: url(images/pawel-czerwinski-3.jpg);
+    background-image: url(images/section/pawel-czerwinski-3.jpg);
     background-position: center;
     background-size:cover;
 }
 #skills-background{
-    background-image: url(images/4.jpg);
+    background-image: url(images/section/pawel-czerwinski-4.jpg);
     background-position: center;
     background-size:cover;
 }
 #experience-background{
-    background-image: url(images/5.jpg);
+    background-image: url(images/section/pawel-czerwinski-5.jpg);
     background-position: center;
     background-size:cover;
 }
 #contact-background{
-    background-image: url(images/6.jpg);
+    background-image: url(images/section/pawel-czerwinski-6.jpg);
     background-position: center;
     background-size:cover;
 }
@@ -470,6 +470,9 @@ body {
     transform: translateX(0);
     transition-delay: var(--delay);
 }
+
+
+
 
 
 
