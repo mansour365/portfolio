@@ -393,7 +393,12 @@ body {
 
 
 #weather-phone{
+    position:absolute;
     width:250px;
+}
+#weather-phone2{
+    position:absolute;
+    width:175px;
 }
 .medium-image-right{
     width:90%; /*previous width:398px;*/ 
