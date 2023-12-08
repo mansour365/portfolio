@@ -408,6 +408,7 @@ body {
     width:99%;
     /*border: solid red 1px;*/
 }
+
 #weather-tablet{
     position:absolute;
     width:250px;
@@ -422,6 +423,9 @@ body {
     right:10%;
     transform: rotate(10deg);
 }
+
+
+
 
 
 
