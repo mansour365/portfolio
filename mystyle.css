@@ -380,6 +380,7 @@ body {
     /*border: 1px solid red;*/
 }
 .right-column{
+    position: relative;
     float: right;
     width:50%;
     /*border: 1px solid blue;*/
@@ -392,14 +393,7 @@ body {
 
 
 
-#weather-phone{
-    position:absolute;
-    width:250px;
-}
-#weather-phone2{
-    position:absolute;
-    width:175px;
-}
+
 .medium-image-right{
     width:90%; /*previous width:398px;*/ 
     border-radius:2%/4%;
@@ -408,6 +402,25 @@ body {
 .medium-image-left{
     width: 90%;
     border-radius:2%/4%;
+}
+
+#weather-desktop{
+    width:99%;
+    /*border: solid red 1px;*/
+}
+#weather-tablet{
+    position:absolute;
+    width:250px;
+    top:80%;
+    left:10%;
+    transform: rotate(-10deg);
+}
+#weather-phone{
+    position:absolute;
+    width:175px;
+    top:102%;
+    right:10%;
+    transform: rotate(10deg);
 }
 
 
@@ -560,6 +573,15 @@ body {
     .medium-image-left{
         width:49%;
     }
+    #weather-desktop{
+        width:70%;
+    }
+    #weather-tablet{
+        display:none;
+    }
+    #weather-phone{
+        display:none;
+    }
     
 }
 
@@ -696,7 +718,7 @@ body {
 @media screen and (max-width: 500px){
     /*Need to start shrinking the logo cards*/
     .three-column-cards{
-        border: solid 2px pink;
+        /*border: solid 2px pink;*/
     }
     .card{  /*all new logo card values are 75% or original size*/
         width:150px;
