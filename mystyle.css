@@ -623,6 +623,9 @@ body {
     .catcard{
         width:146px;
     }
+    .fake-button{
+        border: none;
+    }
     .main-content{
         width:100%;
         text-align: center;
@@ -740,7 +743,6 @@ body {
         margin-right: 5%;
         margin-left: 5%;
     }
-
     .text-left{
         margin-top:5%;
         margin-bottom: 5%;
