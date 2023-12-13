@@ -60,6 +60,8 @@ const observer = new IntersectionObserver((entries)=>{     //class that takes ca
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));  //loop over all hidden elements, tell observer to observe each one of them
 
+const desktop = document.querySelectorAll('.medium-image-right-desktop');
+desktop.forEach((el) => observer.observe(el));
 
 
 
