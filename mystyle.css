@@ -386,22 +386,66 @@ body {
     /*border: 1px solid blue;*/
 }
 
+
+
+
+
+
+.left-column-school{
+    float: left;
+    width:48%;
+    height:439px;
+}
+.right-column-school{
+    position: relative;
+    float: right;
+    width:48%;
+    height:439px;
+}
+.image-container{
+    height: 100%;
+    background-color: rgb(233, 225, 222);
+    /*********The Fab Four Technique********* for dynamic border radius*/
+    /*Border radius disapears 400px or less, 24px represents the desired pixel radius */
+    border-radius: max(0px, min(24px, (100% - 400px + 1px) * 9999)) / 24px;
+    overflow: hidden;
+}
+.image-portion{
+    height:75%;
+    /*border: solid green 1px;*/
+}
+.image-footer{
+    height:25%;
+    /*border: solid purple 1px;*/
+}
+.school-image{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+}
+.image-footer{
+    text-align: left;
+    font-size: 120%;
+    padding: 5%;
+}
+
+
+
+
 .wide-image{
     width:100%;
     border-radius: 2%/3%;
 }
 
-
-
-
 .medium-image-right{
     width:90%; /*previous width:398px;*/ 
-    border-radius:2%/4%;
+    /*border-radius:2%/4%;*/
+    /*border: solid red 1px;*/
     /*float:right;*/
 }
 .medium-image-left{
     width: 90%;
-    border-radius:2%/4%;
+    /*border-radius:2%/4%;*/
 }
 
 .medium-image-right-desktop{
@@ -563,6 +607,16 @@ body {
     }
     .right-column{
         width:100%;
+    }
+    .left-column-school{
+        margin-left:auto;
+        margin-right:auto;
+        float:none;
+        display:inline-block;
+    }
+    .right-column-school{
+        float:none;
+        display:inline-block;
     }
     .very-small-content{
         width: 100%;
