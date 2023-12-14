@@ -382,7 +382,7 @@ body {
 .right-column{
     position: relative;
     float: right;
-    width:50%;
+    width:48%;
     /*border: 1px solid blue;*/
 }
 
@@ -391,15 +391,15 @@ body {
 
 
 
-.left-column-school{
+.left-column-school-image{
     float: left;
-    width:48%;
+    width:576px;
     height:439px;
 }
-.right-column-school{
+.right-column-school-image{
     position: relative;
     float: right;
-    width:48%;
+    width:576px;
     height:439px;
 }
 .image-container{
@@ -425,8 +425,14 @@ body {
 }
 .image-footer{
     text-align: left;
-    font-size: 120%;
-    padding: 5%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    font-weight: 500;
+    color: rgb(104, 96, 95);
+    line-height: 36px;
+    padding-top: 18px;
+    padding-bottom: 5px;
+    padding-left: 30px;
 }
 
 
@@ -608,13 +614,13 @@ body {
     .right-column{
         width:100%;
     }
-    .left-column-school{
+    .left-column-school-image{
         margin-left:auto;
         margin-right:auto;
         float:none;
         display:inline-block;
     }
-    .right-column-school{
+    .right-column-school-image{
         float:none;
         display:inline-block;
     }
@@ -699,6 +705,14 @@ body {
         width:100%;
     }
 
+    .left-column-school-image{
+        width:80%;
+    }
+    .right-column-school-image{
+        width:80%;
+    }
+
+
     /****** Navbar Small Screen ******/
     #navbar{ /*Entire navbar when screen small*/
         padding: 0px 0px  !important; /*Since menu vertical, reduce top and bottom padding*/
@@ -768,6 +782,13 @@ body {
         flex:50%;
         max-width:100%;
     }
+    .left-column-school-image{
+        width:100%;
+    }
+    .right-column-school-image{
+        width:100%;
+    }
+
 }
 
 @media screen and (max-width: 500px){
