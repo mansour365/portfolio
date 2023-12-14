@@ -456,9 +456,9 @@ body {
 
 .medium-image-right-desktop{
     width:99%;
-    opacity:0;
+    /*opacity:0;  Caused jittering issue when resizing the page
     transform: translateY(-5%);
-    transition: all 2s;
+    transition: all 2s;*/
 }
 
 .medium-image-right-tablet{
