@@ -1,0 +1,253 @@
+@media screen and (max-width: 1217px){
+    .five-column-cards{
+        grid-template-columns: repeat(4, 1fr); /*4 columns*/
+    }
+    #spacer{
+        display:none;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .three-column-cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .five-column-cards{
+        grid-template-columns: repeat(3, 1fr); /*3 columns*/
+    }
+}
+
+@media screen and (max-width: 680px){
+    .five-column-cards{
+        grid-template-columns: repeat(2, 1fr); /*2 columns*/
+    }
+}
+
+/*End of stagerred icons section*/
+
+/*FOR SMALLER SCREENS*/
+@media screen and (max-width: 1217px){
+    #navbar-content{
+        width:95%;
+    }
+    .main-content{
+        width:100%;
+        /*padding-left:5%;
+        padding-right:5%;*/
+    }
+    .small-content{
+        width:auto;
+        padding-left:5%;
+        padding-right:5%;
+    }
+    .left-column{
+        width: 100%;
+    }
+    .right-column{
+        width:100%;
+    }
+    .left-column-school-image{
+        margin-left:auto;
+        margin-right:auto;
+        float:none;
+        display:inline-block;
+    }
+    .right-column-school-image{
+        float:none;
+        display:inline-block;
+    }
+    .very-small-content{
+        width: 100%;
+        padding-left:5%;
+        padding-right:5%;
+    }
+    .medium-image-right{
+        float:none;
+        width:49%;
+    }
+    .medium-image-left{
+        width:49%;
+    }
+    .medium-image-right-desktop{
+        width:70%;
+    }
+    .medium-image-right-tablet{
+        display:none;
+    }
+    .medium-image-right-phone{
+        display:none;
+    }
+    
+}
+
+/*Start making titles smaller*/
+@media screen and (max-width: 1070px){
+    /*change titles down to 72px*/
+    .ultra-big-title{
+        font-size: 72px;
+    }
+}
+
+@media screen and (max-width: 734px){
+    .ultra-big-title{
+        font-size: 48px;
+    }
+    .section-title{
+        font-size: 48px;
+    }
+    .quote{
+        width: 90%;
+    }
+}
+
+/*FOR EVEN SMALLER SCREENS*/
+@media screen and (max-width: 765px){
+    .section-card{
+        border-radius: 0%/0%;
+    }
+    .categories{
+        flex-wrap: wrap;
+    }
+    .catcard{
+        width:146px;
+    }
+    .fake-button{
+        border: none;
+    }
+    .main-content{
+        width:100%;
+        text-align: center;
+    }
+    .small-content{
+        width:auto;
+    }
+    .left-column{
+        width: 100%;
+    }
+    .right-column{
+        width:100%;
+    }
+    .very-small-content{
+        width: 100%;
+    }
+    .medium-image-right{
+        width:100%;
+    }
+    .medium-image-left{
+        width:100%;
+    }
+
+    .left-column-school-image{
+        width:80%;
+    }
+    .right-column-school-image{
+        width:80%;
+    }
+
+
+    /****** Navbar Small Screen ******/
+    #navbar{ /*Entire navbar when screen small*/
+        padding: 0px 0px  !important; /*Since menu vertical, reduce top and bottom padding*/
+        backdrop-filter: none; /*when screen is small need to set blur to none, otherwise navbar will glitch and burger wont open properly*/
+    }
+    #navbar a{ /*All links in navbar*/
+        float: none;    /*makes the nav links stacked vertically */
+        display: block; /*makes the nav links stacked vertically */
+        padding: 3px;   /*reduce padding between links */
+        padding-top: 10px;
+        text-align: left;
+        transition: 0.3; /*is this even needed???????????????????*/
+        /*border: 1px solid purple;*/
+    }
+
+    #navbar #logo {
+        text-align: center;
+        float: right; /*When window is small, logo appears on right side*/
+        padding: 8 12px; /* Add padding under logo, so not too close to links*/
+        margin-right: 2%; /*Add a bit of space on right side of logo when screen small*/
+    }
+
+    .anchor-links{ /*When burger menu is closed links have height of 0%*/
+        width: 100%;
+        height: 0%; /*When burger menu closed, vertical menu has height of 0*/
+        overflow: hidden;
+        transition: 0.5s; /*Transition speed when opening and closing vertical menu*/
+        position: fixed;
+        z-index: 100; /*Make vertical menu appear above all other content*/
+        background-color: rgba(226, 192, 174, 0.7); /*226, 192, 174*/
+        top: 45px; /*How far from the top the vertical menu appears*/
+        left: 0;
+    }
+
+    .anchor-links a {  /*Change the size of the Anchor links in vertical menu*/
+        font-size: 120%; 
+        border-bottom: 1px solid rgb(173, 173, 173);
+        border-bottom: hidden;
+        text-align: center;
+        margin: 5%; /*Add a bit of space around all the anchor links in vertical menu*/
+    }
+
+    .anchor-links.responsive{ /*if burger menu is open */
+        height:100%; /*Make vertical menu take full height of window */
+        padding: 5%; /*5% padding around the collection of vertical menu links */
+        backdrop-filter: blur(30px);
+    }
+
+    #burger-icon{
+        display:unset; /*Make burger icon visible when screen is small */
+        float: left;
+        font-size: 28px; /*Font size of burger icon*/
+        margin-left: 1%; /*Add a bit of spacing on left side of burger icon*/
+        margin-bottom: 7px;
+    }
+}
+
+/*Tiny screens*/
+@media screen and (max-width: 550px){
+    .big-title{
+        font-size: 200%;
+    }
+    .quote{
+        visibility: hidden;
+    }
+    .link-area{
+        flex:50%;
+        max-width:100%;
+    }
+    .left-column-school-image{
+        width:100%;
+    }
+    .right-column-school-image{
+        width:100%;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+    /*Need to start shrinking the logo cards*/
+    .three-column-cards{
+        /*border: solid 2px pink;*/
+    }
+    .card{  /*all new logo card values are 75% or original size*/
+        width:150px;
+        height:150px;
+    }
+    .card-image{
+        width:86px;
+    }
+    .card-title {
+        font-size: 12px;
+    }
+
+    .text{
+        margin-top: 5%;
+        margin-bottom: 5%;;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+    .text-left{
+        margin-top:5%;
+        margin-bottom: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
